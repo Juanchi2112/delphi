@@ -9,10 +9,7 @@
   },
   "25 de mayo salesiana__Buenos Aires": null,
   "25demayo__Bs As": null,
-  "3 retoños__Chaco": {
-    "lat": -24.8984732,
-    "lon": -65.5751946
-  },
+  "3 retoños__Chaco": null,
   "4bocas__Santiago Del Estero": null,
   "acegua__nan": null,
   "acegua__Uruguay": null,
@@ -70,12 +67,12 @@
     "lon": -61.9629214
   },
   "arenal grande__nan": {
-    "lat": -24.5688272,
-    "lon": -67.3972279
+    "lat": -33.6840731,
+    "lon": -58.3400676
   },
   "arenal grande__Uruguay": {
-    "lat": -24.5688272,
-    "lon": -67.3972279
+    "lat": -33.6840731,
+    "lon": -58.3400676
   },
   "arenaza__Buenos Aires": {
     "lat": -34.9851797,
@@ -231,16 +228,16 @@
     "lon": -60.6981674
   },
   "campana__nan": {
-    "lat": -34.1636631,
-    "lon": -58.9586837
+    "lat": -34.032615,
+    "lon": -57.9029104
   },
   "campana__Uruguay": {
-    "lat": -34.1636631,
-    "lon": -58.9586837
+    "lat": -34.032615,
+    "lon": -57.9029104
   },
   "campo de cielo__Formosa": {
-    "lat": -27.6085808,
-    "lon": -61.6819082
+    "lat": -24.4770616,
+    "lon": -60.4039576
   },
   "campo de cielo__Santiago Del Estero": {
     "lat": -27.6085808,
@@ -267,12 +264,12 @@
     "lon": -61.3296663
   },
   "canelones__nan": {
-    "lat": -33.7775284,
-    "lon": -58.5524607
+    "lat": -34.6222482,
+    "lon": -55.9903797
   },
   "canelones__Uruguay": {
-    "lat": -33.7775284,
-    "lon": -58.5524607
+    "lat": -34.6222482,
+    "lon": -55.9903797
   },
   "capdevilla__Chaco": {
     "lat": -27.4231079,
@@ -283,12 +280,12 @@
     "lon": -63.6521477
   },
   "cardona__nan": {
-    "lat": -32.6117981,
-    "lon": -63.576628
+    "lat": -33.8707543,
+    "lon": -57.3671369
   },
   "cardona__Uruguay": {
-    "lat": -32.6117981,
-    "lon": -63.576628
+    "lat": -33.8707543,
+    "lon": -57.3671369
   },
   "carhue__Buenos Aires": {
     "lat": -37.1799683,
@@ -378,8 +375,8 @@
     "lon": -62.0352689
   },
   "chilca__Tucumán": {
-    "lat": -27.7860633,
-    "lon": -65.2789917
+    "lat": -27.35,
+    "lon": -65.28
   },
   "chilibroste__Córdoba": {
     "lat": -32.3326684,
@@ -413,8 +410,8 @@
     "lon": -60.5632036
   },
   "colonia__nan": {
-    "lat": -34.644318,
-    "lon": -58.3958213
+    "lat": -34.4698592,
+    "lon": -57.8433679
   },
   "colonia__Uruguay": {
     "lat": -32.6706265,
@@ -461,12 +458,12 @@
     "lon": -60.3558532
   },
   "constancia__nan": {
-    "lat": -32.7411566,
-    "lon": -60.7516716
+    "lat": -32.2039074,
+    "lon": -58.0058847
   },
   "constancia__Uruguay": {
-    "lat": -32.7411566,
-    "lon": -60.7516716
+    "lat": -32.2039074,
+    "lon": -58.0058847
   },
   "copo quiles__Salta": null,
   "coronel baigorria__Córdoba": {
@@ -548,16 +545,16 @@
     "lon": -59.8905685
   },
   "don luciano__Chaco": {
-    "lat": -26.9964119,
-    "lon": -54.4810064
+    "lat": -26.9262074,
+    "lon": -60.0484514
   },
   "durazno__nan": {
-    "lat": -31.9846208,
-    "lon": -59.2805947
+    "lat": -33.0833329,
+    "lon": -56.0833331
   },
   "durazno__Uruguay": {
-    "lat": -31.9846208,
-    "lon": -59.2805947
+    "lat": -33.0833329,
+    "lon": -56.0833331
   },
   "el abra__Catamarca": {
     "lat": -28.0819035,
@@ -745,8 +742,8 @@
     "lon": -62.0480101
   },
   "germania__Santa Fe": {
-    "lat": -34.5768249,
-    "lon": -62.0480101
+    "lat": -33.85,
+    "lon": -62.0
   },
   "gobernador castro__Buenos Aires": {
     "lat": -33.6585733,
@@ -873,8 +870,8 @@
     "lon": -56.6893413
   },
   "j v gonzales__Salta": {
-    "lat": -32.8578358,
-    "lon": -60.723139
+    "lat": -24.7251482,
+    "lon": -65.4948839
   },
   "j. b. molina__Santa Fe": {
     "lat": -33.4938205,
@@ -915,16 +912,16 @@
   },
   "jv gonzales__Salta": null,
   "kempe__Chaco": {
-    "lat": -54.8708646,
-    "lon": -64.4840031
+    "lat": -26.7855991,
+    "lon": -60.4393954
   },
   "la angelina__San Luís": {
     "lat": -34.3817392,
     "lon": -65.4538409
   },
   "la bajada__Tucumán": {
-    "lat": -28.383254,
-    "lon": -65.6209226
+    "lat": -26.78,
+    "lon": -65.22
   },
   "la camila__Santa Fe": {
     "lat": -30.0792473,
@@ -935,8 +932,8 @@
     "lon": -63.2934951
   },
   "la cocha__Tucumán": {
-    "lat": -27.7700082,
-    "lon": -65.5883539
+    "lat": -27.77,
+    "lon": -65.5884
   },
   "la cruz__Tucumán": {
     "lat": -26.6322766,
@@ -1200,8 +1197,8 @@
     "lon": -63.445206
   },
   "mercedes__nan": {
-    "lat": -23.525351,
-    "lon": -46.713494
+    "lat": -33.2484204,
+    "lon": -58.0298671
   },
   "mercedes__Corrientes": {
     "lat": -29.1835645,
@@ -1224,12 +1221,12 @@
     "lon": -64.0002537
   },
   "miguelete__nan": {
-    "lat": -34.5810717,
-    "lon": -58.5172365
+    "lat": -34.0068496,
+    "lon": -57.6472815
   },
   "miguelete__Uruguay": {
-    "lat": -34.5810717,
-    "lon": -58.5172365
+    "lat": -34.0068496,
+    "lon": -57.6472815
   },
   "moctezuma__Buenos Aires": {
     "lat": -35.4778726,
@@ -1260,8 +1257,8 @@
     "lon": -63.8894972
   },
   "monte de oca__Santa Fe": {
-    "lat": -27.4784296,
-    "lon": -55.1389253
+    "lat": -30.65,
+    "lon": -60.59
   },
   "monte del rosario__Córdoba": {
     "lat": -30.9822469,
@@ -1349,12 +1346,12 @@
   },
   "otumpas__Santiago Del Estero": null,
   "palmitas__nan": {
-    "lat": -27.6161061,
-    "lon": -64.1350174
+    "lat": -33.5091893,
+    "lon": -57.8006663
   },
   "palmitas__Uruguay": {
-    "lat": -27.6161061,
-    "lon": -64.1350174
+    "lat": -33.5091893,
+    "lon": -57.8006663
   },
   "palpala__Jujuy": {
     "lat": -24.2554935,
@@ -1431,8 +1428,8 @@
     "lon": -64.2269308
   },
   "piedra buena__Tucumán": {
-    "lat": -32.9525252,
-    "lon": -68.8012085
+    "lat": -27.1,
+    "lon": -65.5
   },
   "piedrabuena__Tucumán": {
     "lat": -26.8184342,
@@ -1589,44 +1586,44 @@
     "lon": -61.970349
   },
   "rocha__nan": {
-    "lat": -23.3091193,
-    "lon": -46.7254499
+    "lat": -34.0,
+    "lon": -54.0
   },
   "rocha__Uruguay": {
-    "lat": -41.076218,
-    "lon": -71.1722657
+    "lat": -34.0,
+    "lon": -54.0
   },
   "rolón__nan": {
-    "lat": -37.1666159,
-    "lon": -63.4149531
+    "lat": -32.6364823,
+    "lon": -56.8934673
   },
   "rolón__Uruguay": {
-    "lat": -34.462218,
-    "lon": -58.5472057
+    "lat": -32.6364823,
+    "lon": -56.8934673
   },
   "rosario__nan": {
-    "lat": -30.2565911,
-    "lon": -54.9262684
+    "lat": -34.3115588,
+    "lon": -57.3512918
   },
   "rosario__Uruguay": {
-    "lat": -32.4227274,
-    "lon": -63.2047947
+    "lat": -34.3115588,
+    "lon": -57.3512918
   },
   "rosario de la frontera__Salta": {
     "lat": -25.7985752,
     "lon": -64.9739247
   },
   "rosello__Santiago Del Estero": {
-    "lat": -37.3422766,
-    "lon": -59.149123
+    "lat": -27.92,
+    "lon": -63.9
   },
   "roversi__Santiago Del Estero": {
     "lat": -27.5911418,
     "lon": -61.945006
   },
   "rumi punco__Tucumán": {
-    "lat": -27.9848359,
-    "lon": -65.5739654
+    "lat": -27.62,
+    "lon": -65.48
   },
   "río ceballos__Córdoba": {
     "lat": -31.1709088,
@@ -1680,10 +1677,7 @@
     "lat": -32.1382161,
     "lon": -60.9844823
   },
-  "san fernando__Entre Ríos": {
-    "lat": -34.4593091,
-    "lon": -58.5544926
-  },
+  "san fernando__Entre Ríos": null,
   "san francisco__Córdoba": {
     "lat": -31.4249815,
     "lon": -62.0840299
@@ -1745,12 +1739,12 @@
     "lon": -61.5716039
   },
   "sanchez__nan": {
-    "lat": -34.6939477,
-    "lon": -58.6528938
+    "lat": -34.6538556,
+    "lon": -54.1831619
   },
   "sanchez__Uruguay": {
-    "lat": -33.0452115,
-    "lon": -58.6525545
+    "lat": -34.6538556,
+    "lon": -54.1831619
   },
   "santa catalina__Córdoba": {
     "lat": -33.2053017,
@@ -1794,8 +1788,8 @@
     "lon": -60.373615
   },
   "sebastián el cano__Córdoba": {
-    "lat": -33.9210365,
-    "lon": -60.5936912
+    "lat": -30.1603346,
+    "lon": -63.5927172
   },
   "sebastián elcano__Córdoba": {
     "lat": -30.1603346,
@@ -1806,8 +1800,8 @@
     "lon": -64.0939374
   },
   "soledad__Santa Fe": {
-    "lat": 20.0216092,
-    "lon": -100.7194059
+    "lat": -30.0,
+    "lon": -60.3
   },
   "soledad12__Santa Fe": null,
   "sotos cueva__Santiago Del Estero": null,
@@ -1830,8 +1824,8 @@
     "lon": -62.6050617
   },
   "taco ralo__Tucumán": {
-    "lat": -27.8357346,
-    "lon": -65.1959141
+    "lat": -27.5,
+    "lon": -65.27
   },
   "tala norte__Córdoba": {
     "lat": -31.1166205,
@@ -1919,8 +1913,8 @@
     "lon": -60.691351
   },
   "vergara__nan": {
-    "lat": -35.3828153,
-    "lon": -57.8041006
+    "lat": -32.9376731,
+    "lon": -53.9377544
   },
   "vergara__Uruguay": {
     "lat": -35.3828153,
@@ -2030,8 +2024,8 @@
     "lon": -61.0480619
   },
   "young__nan": {
-    "lat": -34.8502609,
-    "lon": -58.3072474
+    "lat": -32.6995318,
+    "lon": -57.6341992
   },
   "young__Uruguay": {
     "lat": -34.8502609,
