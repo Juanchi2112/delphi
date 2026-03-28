@@ -62,6 +62,9 @@ SEASONS = {
     },
 }
 
+# Mapping temporada → temporada anterior (para features de historial)
+PREV_SEASON_MAP = {"2025-2026": "2024-2025"}
+
 # Mapping informe → temporada
 REPORT_SEASON_MAP = {i: "2024-2025" for i in range(1, 22)}
 REPORT_SEASON_MAP.update({i: "2025-2026" for i in range(22, 39)})

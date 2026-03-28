@@ -19,3 +19,30 @@ def compute_geographic_features(lat: float, lon: float) -> dict:
         "lon": lon,
         "dist_zona_endemica_km": _haversine(lat, lon, ENDEMIC_LAT, ENDEMIC_LON),
     }
+
+
+def compute_nearest_outbreak(lat: float, lon: float, prev_outbreaks: list[dict]) -> dict:
+    """
+    Calcula features de proximidad a outbreaks de la temporada anterior.
+
+    Args:
+        prev_outbreaks: lista de dicts con {lat, lon, max_capturas}
+    """
+    if not prev_outbreaks:
+        return {
+            "dist_nearest_outbreak_km": float("nan"),
+            "dist_nearest_high_outbreak_km": float("nan"),
+            "n_outbreaks_within_100km": 0,
+            "n_outbreaks_within_200km": 0,
+        }
+
+    distances = [_haversine(lat, lon, o["lat"], o["lon"]) for o in prev_outbreaks]
+    high_outbreaks = [i for i, o in enumerate(prev_outbreaks) if o["max_capturas"] >= 100]
+    high_distances = [distances[i] for i in high_outbreaks] if high_outbreaks else [float("nan")]
+
+    return {
+        "dist_nearest_outbreak_km": float(min(distances)),
+        "dist_nearest_high_outbreak_km": float(min(high_distances)),
+        "n_outbreaks_within_100km": int(sum(1 for d in distances if d <= 100)),
+        "n_outbreaks_within_200km": int(sum(1 for d in distances if d <= 200)),
+    }

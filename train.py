@@ -64,7 +64,7 @@ def main():
     # 4. EVALUATION
     # ========================
     y_pred_proba = model.predict_proba(X_test)[:, 1]
-    y_pred = (y_pred_proba > 0.5).astype(int)
+    y_pred = (y_pred_proba > 0.3).astype(int)
 
     print("\n" + "=" * 50)
     print("RESULTADOS")

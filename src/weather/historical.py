@@ -1,3 +1,5 @@
+import time
+
 import requests
 import pandas as pd
 
@@ -14,7 +16,6 @@ def fetch_weather(lat: float, lon: float, start_date: str, end_date: str) -> pd.
     """
     WEATHER_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Cache key
     cache_file = WEATHER_CACHE_DIR / f"{lat:.4f}_{lon:.4f}_{start_date}_{end_date}.parquet"
     if cache_file.exists():
         return pd.read_parquet(cache_file)
