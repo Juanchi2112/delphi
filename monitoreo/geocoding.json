@@ -1,0 +1,2056 @@
+{
+  "12 de octubre__Buenos Aires": {
+    "lat": -38.7388808,
+    "lon": -62.21265
+  },
+  "17 de agosto__Buenos Aires": {
+    "lat": -37.3331543,
+    "lon": -59.1455469
+  },
+  "25 de mayo salesiana__Buenos Aires": null,
+  "25demayo__Bs As": null,
+  "3 retoños__Chaco": {
+    "lat": -24.8984732,
+    "lon": -65.5751946
+  },
+  "4bocas__Santiago Del Estero": null,
+  "acegua__nan": null,
+  "acegua__Uruguay": null,
+  "acequiones__Tucumán": {
+    "lat": -26.3007093,
+    "lon": -65.2674583
+  },
+  "adelia maría__Córdoba": {
+    "lat": -33.6336195,
+    "lon": -64.0240394
+  },
+  "alberdi__Buenos Aires": {
+    "lat": -36.8836862,
+    "lon": -60.3348534
+  },
+  "aldao__Santa Fe": {
+    "lat": -32.7046372,
+    "lon": -60.8159601
+  },
+  "alejandra__Santa Fe": {
+    "lat": -29.9091987,
+    "lon": -59.82723
+  },
+  "alto verde__Tucumán": {
+    "lat": -27.1176529,
+    "lon": -65.4838827
+  },
+  "ambosio__Corrientes": null,
+  "ambrosetti__Santa Fe": {
+    "lat": -32.9313606,
+    "lon": -60.7377669
+  },
+  "ambrosio__Corrientes": {
+    "lat": -28.2266753,
+    "lon": -58.7750307
+  },
+  "américa__Buenos Aires": {
+    "lat": -35.4891187,
+    "lon": -62.9756868
+  },
+  "ana zumaran__Córdoba": {
+    "lat": -32.3913744,
+    "lon": -63.0575084
+  },
+  "anguil__La Pampa": {
+    "lat": -36.5269604,
+    "lon": -64.0079566
+  },
+  "antilla__Salta": {
+    "lat": -26.119575,
+    "lon": -64.5934507
+  },
+  "arbol blanco__Santiago Del Estero": {
+    "lat": -26.8372055,
+    "lon": -61.9629214
+  },
+  "arenal grande__nan": {
+    "lat": -24.5688272,
+    "lon": -67.3972279
+  },
+  "arenal grande__Uruguay": {
+    "lat": -24.5688272,
+    "lon": -67.3972279
+  },
+  "arenaza__Buenos Aires": {
+    "lat": -34.9851797,
+    "lon": -61.7739101
+  },
+  "arias__Córdoba": {
+    "lat": -33.6422088,
+    "lon": -62.4038413
+  },
+  "armstrong__Buenos Aires": {
+    "lat": -33.3772429,
+    "lon": -60.1983129
+  },
+  "armstrong__Santa Fe": {
+    "lat": -32.7862754,
+    "lon": -61.6035897
+  },
+  "arrecifes__Buenos Aires": {
+    "lat": -34.0674983,
+    "lon": -60.108738
+  },
+  "arroyito__Córdoba": {
+    "lat": -31.4192409,
+    "lon": -63.0509405
+  },
+  "arroyo barú__Entre Ríos": {
+    "lat": -31.8661139,
+    "lon": -58.4463106
+  },
+  "arroyo cabral__Córdoba": {
+    "lat": -32.4894728,
+    "lon": -63.4022008
+  },
+  "arroyo cabral__Santa Fe": {
+    "lat": -33.4814482,
+    "lon": -60.9195029
+  },
+  "arroyo ceibal__Santa Fe": {
+    "lat": -28.723128,
+    "lon": -59.4778497
+  },
+  "ascasubi__Buenos Aires": {
+    "lat": -34.708059,
+    "lon": -58.2695113
+  },
+  "ataliva__Santa Fe": {
+    "lat": -30.9966491,
+    "lon": -61.4309514
+  },
+  "ayacucho__Buenos Aires": {
+    "lat": -37.1527482,
+    "lon": -58.4884187
+  },
+  "balcarce__Buenos Aires": {
+    "lat": -37.8464435,
+    "lon": -58.2555452
+  },
+  "ballester__Buenos Aires": {
+    "lat": -34.6105531,
+    "lon": -58.5981373
+  },
+  "ballesteros__Córdoba": {
+    "lat": -32.5453242,
+    "lon": -62.9811138
+  },
+  "ballivián__Salta": {
+    "lat": -22.9343587,
+    "lon": -63.8598092
+  },
+  "bandera__Santiago Del Estero": {
+    "lat": -28.8878546,
+    "lon": -62.2688764
+  },
+  "basail__Chaco": {
+    "lat": -27.887641,
+    "lon": -59.2816402
+  },
+  "bdo de irigoyen__Santa Fe": null,
+  "belgrano__Santiago Del Estero": {
+    "lat": -25.8670384,
+    "lon": -63.8985072
+  },
+  "bella vista__Corrientes": {
+    "lat": -28.5073653,
+    "lon": -59.0452284
+  },
+  "benjamín gould__Córdoba": {
+    "lat": -33.5874801,
+    "lon": -62.7282108
+  },
+  "bermejo__Chaco": {
+    "lat": -27.4327491,
+    "lon": -58.9818944
+  },
+  "bernardo de irigoyen__Santa Fe": {
+    "lat": -32.1679854,
+    "lon": -61.1574104
+  },
+  "berraondo__Bs As": {
+    "lat": -38.4138301,
+    "lon": -62.8176345
+  },
+  "berraondo__Buenos Aires": {
+    "lat": -38.4138301,
+    "lon": -62.8176345
+  },
+  "bobadal__Santiago Del Estero": {
+    "lat": -26.7223111,
+    "lon": -64.3987974
+  },
+  "bolivar__Buenos Aires": {
+    "lat": -34.6097375,
+    "lon": -58.3741113
+  },
+  "bombal__Santa Fe": {
+    "lat": -33.4579984,
+    "lon": -61.3181595
+  },
+  "bordenave__Buenos Aires": {
+    "lat": -37.8046981,
+    "lon": -63.0410532
+  },
+  "bragado__Buenos Aires": {
+    "lat": -35.1155766,
+    "lon": -60.489771
+  },
+  "buchardo__Córdoba": {
+    "lat": -34.7238062,
+    "lon": -63.5073178
+  },
+  "buena esperanza__San Luis": {
+    "lat": -34.7578641,
+    "lon": -65.2535837
+  },
+  "buena esperanza__San Luís": {
+    "lat": -34.7578641,
+    "lon": -65.2535837
+  },
+  "burruyacu__Tucumán": {
+    "lat": -26.4995747,
+    "lon": -64.7434868
+  },
+  "bustinza__Santa Fe": {
+    "lat": -32.738261,
+    "lon": -61.2908751
+  },
+  "calamuchita__Córdoba": {
+    "lat": -31.4778016,
+    "lon": -64.2137256
+  },
+  "calchaquí__Santa Fe": {
+    "lat": -32.9700302,
+    "lon": -60.6981674
+  },
+  "campana__nan": {
+    "lat": -34.1636631,
+    "lon": -58.9586837
+  },
+  "campana__Uruguay": {
+    "lat": -34.1636631,
+    "lon": -58.9586837
+  },
+  "campo de cielo__Formosa": {
+    "lat": -27.6085808,
+    "lon": -61.6819082
+  },
+  "campo de cielo__Santiago Del Estero": {
+    "lat": -27.6085808,
+    "lon": -61.6819082
+  },
+  "campo del cielo__Formosa": {
+    "lat": -24.4770616,
+    "lon": -60.4039576
+  },
+  "campo del cielo__Santiago Del Estero": {
+    "lat": -27.8703526,
+    "lon": -61.8047772
+  },
+  "campo gallo__Chaco": {
+    "lat": -26.5838748,
+    "lon": -62.8470969
+  },
+  "campo gallo__Santiago Del Estero": {
+    "lat": -26.5838748,
+    "lon": -62.8470969
+  },
+  "campo piaggio__Santa Fe": {
+    "lat": -31.9666741,
+    "lon": -61.3296663
+  },
+  "canelones__nan": {
+    "lat": -33.7775284,
+    "lon": -58.5524607
+  },
+  "canelones__Uruguay": {
+    "lat": -33.7775284,
+    "lon": -58.5524607
+  },
+  "capdevilla__Chaco": {
+    "lat": -27.4231079,
+    "lon": -61.4770484
+  },
+  "capilla de sitón__Córdoba": {
+    "lat": -30.5720747,
+    "lon": -63.6521477
+  },
+  "cardona__nan": {
+    "lat": -32.6117981,
+    "lon": -63.576628
+  },
+  "cardona__Uruguay": {
+    "lat": -32.6117981,
+    "lon": -63.576628
+  },
+  "carhue__Buenos Aires": {
+    "lat": -37.1799683,
+    "lon": -62.7494197
+  },
+  "carios tejedor__Buenos Aires": null,
+  "carlos tejedor__Buenos Aires": {
+    "lat": -35.3916961,
+    "lon": -62.4197892
+  },
+  "carmen de areco__Buenos Aires": {
+    "lat": -34.3766574,
+    "lon": -59.8227267
+  },
+  "carrilobo__Córdoba": {
+    "lat": -31.8715895,
+    "lon": -63.1157318
+  },
+  "casbas__Buenos Aires": {
+    "lat": -36.7576589,
+    "lon": -62.5043542
+  },
+  "casey__Buenos Aires": {
+    "lat": -36.6876044,
+    "lon": -62.3506481
+  },
+  "casilda__Santa Fe": {
+    "lat": -33.0443368,
+    "lon": -61.1641779
+  },
+  "castelli__Chaco": {
+    "lat": -25.4551276,
+    "lon": -62.7128792
+  },
+  "catriló__Buenos Aires": {
+    "lat": -34.6696654,
+    "lon": -58.521334
+  },
+  "catriló__La Pampa": {
+    "lat": -36.4066583,
+    "lon": -63.4233114
+  },
+  "cañada de gómez__Santa Fe": {
+    "lat": -32.8234448,
+    "lon": -61.3905125
+  },
+  "cañada de luque__Córdoba": {
+    "lat": -30.7352678,
+    "lon": -63.7240686
+  },
+  "cañada rosquín__Santa Fe": {
+    "lat": -32.0531883,
+    "lon": -61.5996697
+  },
+  "cañada seca__Córdoba": {
+    "lat": -34.4167208,
+    "lon": -62.960475
+  },
+  "ceibalito__Salta": {
+    "lat": -25.1101879,
+    "lon": -64.2752752
+  },
+  "centeno__Santa Fe": {
+    "lat": -32.2959681,
+    "lon": -61.4080671
+  },
+  "ceres__Santa Fe": {
+    "lat": -29.8819399,
+    "lon": -61.9451954
+  },
+  "chacabuco__Buenos Aires": {
+    "lat": -34.6297043,
+    "lon": -60.470185
+  },
+  "chaguaral__Salta": {
+    "lat": -24.0591633,
+    "lon": -64.0045169
+  },
+  "chamizo__nan": null,
+  "chamizo__Uruguay": null,
+  "chascomús__Buenos Aires": {
+    "lat": -35.5786869,
+    "lon": -58.0138252
+  },
+  "chañar ladeado__Santa Fe": {
+    "lat": -33.3261137,
+    "lon": -62.0352689
+  },
+  "chilca__Tucumán": {
+    "lat": -27.7860633,
+    "lon": -65.2789917
+  },
+  "chilibroste__Córdoba": {
+    "lat": -32.3326684,
+    "lon": -62.5108461
+  },
+  "chillar__Buenos Aires": {
+    "lat": -37.3128702,
+    "lon": -59.985229
+  },
+  "chillibroste__Córdoba": null,
+  "chivilcoy__Buenos Aires": {
+    "lat": -34.8969591,
+    "lon": -60.0190499
+  },
+  "christophersen__Santa Fe": {
+    "lat": -34.1814252,
+    "lon": -62.0245275
+  },
+  "clucellas__Santa Fe": {
+    "lat": -31.5242756,
+    "lon": -61.720569
+  },
+  "col alpina__Santiago Del Estero": {
+    "lat": -30.0598238,
+    "lon": -62.1059232
+  },
+  "col hersilia__Santa Fe": null,
+  "col. hersilia__Santa Fe": null,
+  "col. la camila__Santa Fe": {
+    "lat": -30.0792473,
+    "lon": -60.5632036
+  },
+  "colonia__nan": {
+    "lat": -34.644318,
+    "lon": -58.3958213
+  },
+  "colonia__Uruguay": {
+    "lat": -32.6706265,
+    "lon": -58.3252464
+  },
+  "colonia alpina__Santiago Del Estero": {
+    "lat": -30.0598238,
+    "lon": -62.1059232
+  },
+  "colonia celina__Entre Ríos": {
+    "lat": -31.6127841,
+    "lon": -60.2736401
+  },
+  "colonia tirolesa__Córdoba": {
+    "lat": -31.2372536,
+    "lon": -64.0666039
+  },
+  "colón__Buenos Aires": {
+    "lat": -33.8969428,
+    "lon": -61.0993135
+  },
+  "colón__Córdoba": {
+    "lat": -31.4368519,
+    "lon": -64.1548087
+  },
+  "comandante fontana__Formosa": {
+    "lat": -25.3335851,
+    "lon": -59.6848511
+  },
+  "concepcion del bermejo__Chaco": {
+    "lat": -26.6003306,
+    "lon": -60.9463769
+  },
+  "concepción del bermejo__Chaco": {
+    "lat": -26.6003306,
+    "lon": -60.9463769
+  },
+  "concepción del uruguay__Entre Ríos": {
+    "lat": -32.4851849,
+    "lon": -58.2320232
+  },
+  "conesa__Buenos Aires": {
+    "lat": -33.5957269,
+    "lon": -60.3558532
+  },
+  "constancia__nan": {
+    "lat": -32.7411566,
+    "lon": -60.7516716
+  },
+  "constancia__Uruguay": {
+    "lat": -32.7411566,
+    "lon": -60.7516716
+  },
+  "copo quiles__Salta": null,
+  "coronel baigorria__Córdoba": {
+    "lat": -32.8476673,
+    "lon": -64.3611585
+  },
+  "coronel dorrego__Buenos Aires": {
+    "lat": -38.7187129,
+    "lon": -61.288505
+  },
+  "coronel moldes__Córdoba": {
+    "lat": -33.620793,
+    "lon": -64.5918428
+  },
+  "coronel suarez__Buenos Aires": {
+    "lat": -37.4585755,
+    "lon": -61.9329038
+  },
+  "corral de bustos__Córdoba": {
+    "lat": -33.2832106,
+    "lon": -62.1863973
+  },
+  "corralito__Córdoba": {
+    "lat": -32.0236774,
+    "lon": -64.192075
+  },
+  "corrientes__Corrientes": {
+    "lat": -27.5246618,
+    "lon": -58.7662564
+  },
+  "crespo__Entre Ríos": {
+    "lat": -32.0307826,
+    "lon": -60.3062469
+  },
+  "crispi__Santa Fe": {
+    "lat": -31.7398619,
+    "lon": -62.037608
+  },
+  "cuatro bocas__Santiago Del Estero": {
+    "lat": -28.8642078,
+    "lon": -61.8575993
+  },
+  "cuatro vientos__Córdoba": {
+    "lat": -33.0720427,
+    "lon": -64.5785213
+  },
+  "cuchilla del perdido__nan": null,
+  "cuchilla del perdido__Uruguay": null,
+  "cura malal__Buenos Aires": {
+    "lat": -37.4838787,
+    "lon": -62.1044832
+  },
+  "daireaux__Buenos Aires": {
+    "lat": -36.6034232,
+    "lon": -61.7477079
+  },
+  "de isletas__Entre Ríos": {
+    "lat": -32.1779796,
+    "lon": -60.1970273
+  },
+  "desvío la paloma__Santiago Del Estero": {
+    "lat": -27.564955,
+    "lon": -61.8532774
+  },
+  "devoto__Córdoba": {
+    "lat": -31.4015972,
+    "lon": -62.3060014
+  },
+  "diamante__Entre Ríos": {
+    "lat": -32.0670391,
+    "lon": -60.6426494
+  },
+  "don cristobal__Entre Ríos": {
+    "lat": -32.1526698,
+    "lon": -59.8905685
+  },
+  "don cristóbal__Entre Ríos": {
+    "lat": -32.1526698,
+    "lon": -59.8905685
+  },
+  "don luciano__Chaco": {
+    "lat": -26.9964119,
+    "lon": -54.4810064
+  },
+  "durazno__nan": {
+    "lat": -31.9846208,
+    "lon": -59.2805947
+  },
+  "durazno__Uruguay": {
+    "lat": -31.9846208,
+    "lon": -59.2805947
+  },
+  "el abra__Catamarca": {
+    "lat": -28.0819035,
+    "lon": -65.4294044
+  },
+  "el araza__Santa Fe": {
+    "lat": -29.1321979,
+    "lon": -59.947748
+  },
+  "el arazá__Santa Fe": {
+    "lat": -29.1321979,
+    "lon": -59.947748
+  },
+  "el bananal__Jujuy": {
+    "lat": -24.2780584,
+    "lon": -65.2230287
+  },
+  "el bordo__Salta": {
+    "lat": -24.6606733,
+    "lon": -65.1055563
+  },
+  "el carmen__Jujuy": {
+    "lat": -24.3888414,
+    "lon": -65.2615664
+  },
+  "el charco__Santiago Del Estero": {
+    "lat": -27.2272489,
+    "lon": -64.6991261
+  },
+  "el colorado__Formosa": {
+    "lat": -26.3083815,
+    "lon": -59.3720661
+  },
+  "el colorado__Santiago Del Estero": {
+    "lat": -27.9146149,
+    "lon": -62.1771313
+  },
+  "el divisorio__Buenos Aires": {
+    "lat": -38.3246784,
+    "lon": -61.4504587
+  },
+  "el fortin__Santa Fe": {
+    "lat": -32.8922185,
+    "lon": -60.7941236
+  },
+  "el fortín__Córdoba": {
+    "lat": -31.9697703,
+    "lon": -62.3003476
+  },
+  "el fortín__Santa Fe": {
+    "lat": -32.8922185,
+    "lon": -60.7941236
+  },
+  "el galpón__Salta": {
+    "lat": -25.3806631,
+    "lon": -64.6515946
+  },
+  "el mojón__Santiago Del Estero": {
+    "lat": -26.0926866,
+    "lon": -64.30926
+  },
+  "el naranjo__Formosa": {
+    "lat": -24.2858042,
+    "lon": -61.0466353
+  },
+  "el palomar__Santiago Del Estero": {
+    "lat": -26.8850922,
+    "lon": -64.6014054
+  },
+  "el timbo pampa__Chaco": null,
+  "el tocon bermejo__Chaco": null,
+  "el trébol__Santa Fe": {
+    "lat": -32.1972868,
+    "lon": -61.7099311
+  },
+  "el tunal__Salta": {
+    "lat": -25.253895,
+    "lon": -64.395205
+  },
+  "el tío__Córdoba": {
+    "lat": -31.3815586,
+    "lon": -62.8289642
+  },
+  "embarcación__Salta": {
+    "lat": -23.2101359,
+    "lon": -64.0973737
+  },
+  "emilia__Santa Fe": {
+    "lat": -33.747517,
+    "lon": -61.9676859
+  },
+  "esperanza__Santa Fe": {
+    "lat": -31.448994,
+    "lon": -60.9304048
+  },
+  "esquina__Corrientes": {
+    "lat": -30.0170807,
+    "lon": -59.5340904
+  },
+  "estancia el rocio copra__Corrientes": null,
+  "estancia el rocío copra__Corrientes": null,
+  "eufrasio loza__Córdoba": {
+    "lat": -29.9257056,
+    "lon": -63.5896591
+  },
+  "fcaunne__Corrientes": null,
+  "feliciano__Entre Ríos": {
+    "lat": -31.7456578,
+    "lon": -60.5230575
+  },
+  "ferré__Buenos Aires": {
+    "lat": -34.1257562,
+    "lon": -61.1338078
+  },
+  "fraile pintado__Jujuy": {
+    "lat": -23.9425671,
+    "lon": -64.8023369
+  },
+  "freyre__Córdoba": {
+    "lat": -31.1645209,
+    "lon": -62.0963059
+  },
+  "frias__Santiago Del Estero": {
+    "lat": -28.6377023,
+    "lon": -65.1288391
+  },
+  "frías__Santiago Del Estero": {
+    "lat": -28.6377023,
+    "lon": -65.1288391
+  },
+  "gancedo__Chaco": {
+    "lat": -27.4907695,
+    "lon": -61.6764798
+  },
+  "garmendia__Tucumán": {
+    "lat": -26.8383727,
+    "lon": -65.1800307
+  },
+  "general arenales__Buenos Aires": {
+    "lat": -34.3037291,
+    "lon": -61.3062916
+  },
+  "general cabrera__Córdoba": {
+    "lat": -32.8143925,
+    "lon": -63.8749511
+  },
+  "general dorrego__Buenos Aires": {
+    "lat": -38.049152,
+    "lon": -57.5399387
+  },
+  "general levalle__Córdoba": {
+    "lat": -34.0074973,
+    "lon": -63.923389
+  },
+  "general madariaga__Buenos Aires": {
+    "lat": -36.9952343,
+    "lon": -57.1369265
+  },
+  "general paz__La Pampa": {
+    "lat": -37.3779168,
+    "lon": -64.6104376
+  },
+  "general pico__La Pampa": {
+    "lat": -35.6591085,
+    "lon": -63.7576103
+  },
+  "general pinedo__Chaco": {
+    "lat": -27.3253583,
+    "lon": -61.2809988
+  },
+  "general pizarro__Salta": {
+    "lat": -24.2277683,
+    "lon": -63.9897804
+  },
+  "general roca__Córdoba": {
+    "lat": -32.7310158,
+    "lon": -61.915915
+  },
+  "general villegas__Buenos Aires": {
+    "lat": -35.032594,
+    "lon": -63.0148473
+  },
+  "germania__Buenos Aires": {
+    "lat": -34.5768249,
+    "lon": -62.0480101
+  },
+  "germania__Santa Fe": {
+    "lat": -34.5768249,
+    "lon": -62.0480101
+  },
+  "gobernador castro__Buenos Aires": {
+    "lat": -33.6585733,
+    "lon": -59.8675097
+  },
+  "godoy__Santa Fe": {
+    "lat": -32.9650858,
+    "lon": -60.7211951
+  },
+  "gonzález moreno__Buenos Aires": {
+    "lat": -35.5551806,
+    "lon": -63.3799806
+  },
+  "goya__Corrientes": {
+    "lat": -29.1444046,
+    "lon": -59.2649825
+  },
+  "gualeguay__Entre Ríos": {
+    "lat": -33.1504259,
+    "lon": -59.3106789
+  },
+  "gualeguaychú__Entre Ríos": {
+    "lat": -33.0078908,
+    "lon": -58.5109859
+  },
+  "guaminí__Buenos Aires": {
+    "lat": -37.0109187,
+    "lon": -62.422215
+  },
+  "guanaco__Buenos Aires": {
+    "lat": -35.7147753,
+    "lon": -61.6495335
+  },
+  "guatimozin__Córdoba": {
+    "lat": -33.4642953,
+    "lon": -62.4381621
+  },
+  "gálvez__Santa Fe": {
+    "lat": -32.0253403,
+    "lon": -61.2196794
+  },
+  "güemes__Salta": {
+    "lat": -24.6744733,
+    "lon": -65.0467556
+  },
+  "helvecia__Santa Fe": {
+    "lat": -31.1017987,
+    "lon": -60.0888941
+  },
+  "henderson__Buenos Aires": {
+    "lat": -36.301954,
+    "lon": -61.7139204
+  },
+  "hernando__Córdoba": {
+    "lat": -32.4279251,
+    "lon": -63.7343423
+  },
+  "hersilia__Santa Fe": {
+    "lat": -30.0008702,
+    "lon": -61.831678
+  },
+  "hinojal__Entre Ríos": {
+    "lat": -32.3840166,
+    "lon": -60.1450092
+  },
+  "horcones__Salta": {
+    "lat": -25.7199736,
+    "lon": -64.9040735
+  },
+  "huasa pampa__Tucumán": {
+    "lat": -27.2416098,
+    "lon": -65.4845131
+  },
+  "hughes__Santa Fe": {
+    "lat": -33.8345362,
+    "lon": -61.3810914
+  },
+  "huinca renanco__Córdoba": {
+    "lat": -34.8410441,
+    "lon": -64.3749321
+  },
+  "humboldt__Santa Fe": {
+    "lat": -32.8946516,
+    "lon": -60.8588767
+  },
+  "idiazabal__Córdoba": {
+    "lat": -32.8125067,
+    "lon": -63.0324333
+  },
+  "inés indart__Buenos Aires": {
+    "lat": -34.3974645,
+    "lon": -60.5414165
+  },
+  "iriarte__Santa Fe": {
+    "lat": -32.8777252,
+    "lon": -60.6900679
+  },
+  "isca yacu__Santiago Del Estero": {
+    "lat": -27.0261757,
+    "lon": -64.6117067
+  },
+  "isla baja__Santiago Del Estero": {
+    "lat": -29.0178961,
+    "lon": -62.3133464
+  },
+  "isletas__Entre Ríos": {
+    "lat": -32.1977701,
+    "lon": -60.2894315
+  },
+  "ismael cortinas__nan": {
+    "lat": -33.9609458,
+    "lon": -57.0862754
+  },
+  "ismael cortinas__Uruguay": {
+    "lat": -33.9609458,
+    "lon": -57.0862754
+  },
+  "ituzaingo__Corrientes": {
+    "lat": -27.5896182,
+    "lon": -56.6893413
+  },
+  "ituzaingó__Corrientes": {
+    "lat": -27.5896182,
+    "lon": -56.6893413
+  },
+  "j v gonzales__Salta": {
+    "lat": -32.8578358,
+    "lon": -60.723139
+  },
+  "j. b. molina__Santa Fe": {
+    "lat": -33.4938205,
+    "lon": -60.5108701
+  },
+  "jesus maría__Córdoba": {
+    "lat": -30.9764132,
+    "lon": -64.0957082
+  },
+  "jesús maría__Córdoba": {
+    "lat": -30.9764132,
+    "lon": -64.0957082
+  },
+  "jovita__Córdoba": {
+    "lat": -34.518857,
+    "lon": -63.9440228
+  },
+  "juamarita__Santa Fe": null,
+  "juan jorba__San Luis": {
+    "lat": -33.6128728,
+    "lon": -65.2728081
+  },
+  "juan jorba__San Luís": {
+    "lat": -33.6128728,
+    "lon": -65.2728081
+  },
+  "juan josé castelli__Chaco": {
+    "lat": -25.9467092,
+    "lon": -60.6200235
+  },
+  "junín__Buenos Aires": {
+    "lat": -34.5934412,
+    "lon": -60.9461678
+  },
+  "justiniano posse__Córdoba": {
+    "lat": -32.883489,
+    "lon": -62.6797946
+  },
+  "jv gonzales__Salta": null,
+  "kempe__Chaco": {
+    "lat": -54.8708646,
+    "lon": -64.4840031
+  },
+  "la angelina__San Luís": {
+    "lat": -34.3817392,
+    "lon": -65.4538409
+  },
+  "la bajada__Tucumán": {
+    "lat": -28.383254,
+    "lon": -65.6209226
+  },
+  "la camila__Santa Fe": {
+    "lat": -30.0792473,
+    "lon": -60.5632036
+  },
+  "la carlota__Córdoba": {
+    "lat": -33.4179364,
+    "lon": -63.2934951
+  },
+  "la cocha__Tucumán": {
+    "lat": -27.7700082,
+    "lon": -65.5883539
+  },
+  "la cruz__Tucumán": {
+    "lat": -26.6322766,
+    "lon": -64.8817717
+  },
+  "la invensible__Buenos Aires": null,
+  "la invernada__Tucumán": {
+    "lat": -27.631565,
+    "lon": -65.5768528
+  },
+  "la maria__Santa Fe": {
+    "lat": -32.969953,
+    "lon": -60.6862133
+  },
+  "la maría__Santa Fe": {
+    "lat": -32.969953,
+    "lon": -60.6862133
+  },
+  "la niña__Buenos Aires": {
+    "lat": -35.40865,
+    "lon": -61.2077017
+  },
+  "la osca__Santa Fe": null,
+  "la paloma__Santiago Del Estero": {
+    "lat": -26.4088165,
+    "lon": -63.3052732
+  },
+  "la paz__Entre Ríos": {
+    "lat": -30.7422896,
+    "lon": -59.6439325
+  },
+  "la pelada__Santa Fe": {
+    "lat": -30.8663481,
+    "lon": -60.9683813
+  },
+  "la penca__Santa Fe": {
+    "lat": -30.3481641,
+    "lon": -60.5206904
+  },
+  "la penca y caraguatá__Santa Fe": {
+    "lat": -30.3481641,
+    "lon": -60.5206904
+  },
+  "la playosa__Córdoba": {
+    "lat": -32.0994456,
+    "lon": -63.032641
+  },
+  "la rosita__Santiago Del Estero": {
+    "lat": -27.7377285,
+    "lon": -64.2607721
+  },
+  "la sarita__Santa Fe": {
+    "lat": -28.973039,
+    "lon": -59.8504271
+  },
+  "la toma__San Luis": {
+    "lat": -33.0534553,
+    "lon": -65.6214721
+  },
+  "la violeta__Buenos Aires": {
+    "lat": -33.7330396,
+    "lon": -60.1685881
+  },
+  "la virginia__Tucumán": {
+    "lat": -26.745486,
+    "lon": -64.7867557
+  },
+  "laguna de robles__Tucumán": {
+    "lat": -26.2561581,
+    "lon": -64.6494651
+  },
+  "laguna larga__Córdoba": {
+    "lat": -31.7757039,
+    "lon": -63.800346
+  },
+  "landeta__Santa Fe": {
+    "lat": -32.0106546,
+    "lon": -62.0601572
+  },
+  "las armas__Buenos Aires": {
+    "lat": -37.0863026,
+    "lon": -57.829146
+  },
+  "las astillas__Córdoba": {
+    "lat": -30.9064179,
+    "lon": -63.8807881
+  },
+  "las bajadas__Córdoba": {
+    "lat": -32.0971007,
+    "lon": -64.3307876
+  },
+  "las breñas__Chaco": {
+    "lat": -27.0863246,
+    "lon": -61.0859456
+  },
+  "las cejas__Tucumán": {
+    "lat": -26.8884593,
+    "lon": -64.7411658
+  },
+  "las chilcas__Córdoba": {
+    "lat": -30.0673866,
+    "lon": -64.3263432
+  },
+  "las chilcas__San Luis": {
+    "lat": -32.416667,
+    "lon": -65.316667
+  },
+  "las delicias__Santiago Del Estero": {
+    "lat": -26.6777429,
+    "lon": -64.0072692
+  },
+  "las garzas__Corrientes": {
+    "lat": -28.455352,
+    "lon": -58.947382
+  },
+  "las garzas__Entre Ríos": {
+    "lat": -32.449963,
+    "lon": -58.2581601
+  },
+  "las lajitas__Salta": {
+    "lat": -24.7269289,
+    "lon": -64.1953709
+  },
+  "las lomitas__Formosa": {
+    "lat": -24.7075268,
+    "lon": -60.5942732
+  },
+  "las numancias__Buenos Aires": {
+    "lat": -37.7233852,
+    "lon": -59.1005337
+  },
+  "las piedritas__Chaco": {
+    "lat": -26.8236989,
+    "lon": -61.5657582
+  },
+  "las rosas__Santa Fe": {
+    "lat": -32.4756443,
+    "lon": -61.5761736
+  },
+  "las yerbas la paloma__Santiago Del Estero": null,
+  "lavalle__Santiago Del Estero": {
+    "lat": -25.9337138,
+    "lon": -62.7066135
+  },
+  "leales__Tucumán": {
+    "lat": -27.1937478,
+    "lon": -65.310329
+  },
+  "leandro n. alem__Buenos Aires": {
+    "lat": -34.6029769,
+    "lon": -58.3697268
+  },
+  "lecueder__Córdoba": {
+    "lat": -34.4955295,
+    "lon": -64.8096741
+  },
+  "lilo viejo__Santiago Del Estero": {
+    "lat": -26.9368803,
+    "lon": -62.9504737
+  },
+  "llambi__Santa Fe": {
+    "lat": -31.1853754,
+    "lon": -60.7509283
+  },
+  "llambi campbell__Santa Fe": {
+    "lat": -31.1863587,
+    "lon": -60.745736
+  },
+  "llambí campbell__Santa Fe": {
+    "lat": -31.1863587,
+    "lon": -60.745736
+  },
+  "logroño__Santa Fe": {
+    "lat": -29.5038105,
+    "lon": -61.6961816
+  },
+  "los altos__Catamarca": {
+    "lat": -28.0468719,
+    "lon": -65.4997332
+  },
+  "los frentones__Chaco": {
+    "lat": -26.4088995,
+    "lon": -61.4131341
+  },
+  "los juries__Santiago Del Estero": {
+    "lat": -28.4633987,
+    "lon": -62.1100222
+  },
+  "los molles__San Luis": {
+    "lat": -32.4388986,
+    "lon": -65.0097867
+  },
+  "los molles__San Luís": {
+    "lat": -32.4388986,
+    "lon": -65.0097867
+  },
+  "los pereyra__Tucumán": {
+    "lat": -26.9462385,
+    "lon": -64.8820143
+  },
+  "los puestos__Tucumán": {
+    "lat": -27.2808347,
+    "lon": -65.0175023
+  },
+  "los toldos__Buenos Aires": {
+    "lat": -35.0002026,
+    "lon": -61.0384006
+  },
+  "lujan__Buenos Aires": {
+    "lat": -34.5661734,
+    "lon": -59.1152598
+  },
+  "lópez__Santa Fe": {
+    "lat": -31.9037969,
+    "lon": -61.2770597
+  },
+  "macachín__La Pampa": {
+    "lat": -37.1369966,
+    "lon": -63.6667496
+  },
+  "macapillo__Salta": {
+    "lat": -25.4031119,
+    "lon": -63.9820685
+  },
+  "maipú__Buenos Aires": {
+    "lat": -34.5129556,
+    "lon": -58.4874923
+  },
+  "malabrigo__Santa Fe": {
+    "lat": -29.3489728,
+    "lon": -59.9700883
+  },
+  "manfredi__Córdoba": {
+    "lat": -31.8457855,
+    "lon": -63.747563
+  },
+  "marcos juarez__Córdoba": {
+    "lat": -32.6946933,
+    "lon": -62.104385
+  },
+  "margarita__Santa Fe": {
+    "lat": -32.9124814,
+    "lon": -60.8114526
+  },
+  "mari lauque__Buenos Aires": null,
+  "maria juana__Santa Fe": {
+    "lat": -31.6755638,
+    "lon": -61.7516598
+  },
+  "maria teresa__Santa Fe": {
+    "lat": -34.010723,
+    "lon": -61.9195385
+  },
+  "mariajuanas castellanos__Santa Fe": null,
+  "marull__Córdoba": {
+    "lat": -30.9945073,
+    "lon": -62.8247511
+  },
+  "melo__Córdoba": {
+    "lat": -34.3487625,
+    "lon": -63.445206
+  },
+  "mercedes__nan": {
+    "lat": -23.525351,
+    "lon": -46.713494
+  },
+  "mercedes__Corrientes": {
+    "lat": -29.1835645,
+    "lon": -58.0799951
+  },
+  "mercedes__Uruguay": {
+    "lat": -32.4864848,
+    "lon": -58.226709
+  },
+  "metan__Salta": {
+    "lat": -25.4971644,
+    "lon": -64.9709701
+  },
+  "metán__Salta": {
+    "lat": -25.4971644,
+    "lon": -64.9709701
+  },
+  "mi granja__Córdoba": {
+    "lat": -31.3504301,
+    "lon": -64.0002537
+  },
+  "miguelete__nan": {
+    "lat": -34.5810717,
+    "lon": -58.5172365
+  },
+  "miguelete__Uruguay": {
+    "lat": -34.5810717,
+    "lon": -58.5172365
+  },
+  "moctezuma__Buenos Aires": {
+    "lat": -35.4778726,
+    "lon": -61.4956816
+  },
+  "moisés ville__Santa Fe": {
+    "lat": -30.7155114,
+    "lon": -61.469608
+  },
+  "molina__Santa Fe": {
+    "lat": -32.8965154,
+    "lon": -60.7045697
+  },
+  "molino doll__Entre Ríos": {
+    "lat": -32.3061868,
+    "lon": -60.4254498
+  },
+  "mollinedo__Salta": {
+    "lat": -24.5399351,
+    "lon": -64.1007255
+  },
+  "monte buey__Córdoba": {
+    "lat": -32.919699,
+    "lon": -62.4559927
+  },
+  "monte de los gauchos__Córdoba": {
+    "lat": -33.6391139,
+    "lon": -63.8894972
+  },
+  "monte de oca__Santa Fe": {
+    "lat": -27.4784296,
+    "lon": -55.1389253
+  },
+  "monte del rosario__Córdoba": {
+    "lat": -30.9822469,
+    "lon": -63.6019485
+  },
+  "montecristo__Córdoba": {
+    "lat": -31.3886599,
+    "lon": -64.1396496
+  },
+  "montes de oca__Santa Fe": {
+    "lat": -32.566261,
+    "lon": -61.7683388
+  },
+  "montoya__Entre Ríos": {
+    "lat": -32.4557816,
+    "lon": -59.8862934
+  },
+  "morse__Buenos Aires": {
+    "lat": -34.7600669,
+    "lon": -60.8445036
+  },
+  "morse junín__Buenos Aires": {
+    "lat": -34.7600669,
+    "lon": -60.8445036
+  },
+  "morteros__Córdoba": {
+    "lat": -30.7107038,
+    "lon": -62.0067058
+  },
+  "mosconi__Salta": {
+    "lat": -25.4968588,
+    "lon": -64.9821133
+  },
+  "máximo paz__Santa Fe": {
+    "lat": -33.5224068,
+    "lon": -60.9472367
+  },
+  "naschel__San Luis": {
+    "lat": -32.916652,
+    "lon": -65.3721781
+  },
+  "naschel__San Luís": {
+    "lat": -32.916652,
+    "lon": -65.3721781
+  },
+  "necochea__Buenos Aires": {
+    "lat": -38.5545494,
+    "lon": -58.7392624
+  },
+  "nogoya__Entre Ríos": {
+    "lat": -32.3985574,
+    "lon": -59.787777
+  },
+  "nuestra señora de talavera__Salta": {
+    "lat": -25.4605474,
+    "lon": -63.7805985
+  },
+  "nueva esperanza__Santiago Del Estero": {
+    "lat": -26.2004067,
+    "lon": -64.2402756
+  },
+  "nueva galia__San Luís": {
+    "lat": -35.1152181,
+    "lon": -65.2587163
+  },
+  "obispo trejo__Córdoba": {
+    "lat": -30.7810682,
+    "lon": -63.4101362
+  },
+  "olivero__Santa Fe": {
+    "lat": -31.6742087,
+    "lon": -60.7618564
+  },
+  "ordoñez__Córdoba": {
+    "lat": -32.8410457,
+    "lon": -62.8659311
+  },
+  "orense__Buenos Aires": {
+    "lat": -38.6882222,
+    "lon": -59.7807284
+  },
+  "otumpa__Santiago Del Estero": {
+    "lat": -27.3282875,
+    "lon": -62.2249069
+  },
+  "otumpas__Santiago Del Estero": null,
+  "palmitas__nan": {
+    "lat": -27.6161061,
+    "lon": -64.1350174
+  },
+  "palmitas__Uruguay": {
+    "lat": -27.6161061,
+    "lon": -64.1350174
+  },
+  "palpala__Jujuy": {
+    "lat": -24.2554935,
+    "lon": -65.2093985
+  },
+  "pampa__Chaco": {
+    "lat": -27.4546394,
+    "lon": -58.9864301
+  },
+  "pampa cejas__Chaco": {
+    "lat": -26.9661386,
+    "lon": -61.4515534
+  },
+  "pampa de los guanacos__Chaco": {
+    "lat": -26.2315682,
+    "lon": -61.8345299
+  },
+  "pampa de los guanacos__Santiago Del Estero": {
+    "lat": -26.2315682,
+    "lon": -61.8345299
+  },
+  "pampa del infierno__Chaco": {
+    "lat": -26.5034702,
+    "lon": -61.1764799
+  },
+  "pampa pozo__Santiago Del Estero": {
+    "lat": -26.49377,
+    "lon": -64.5158346
+  },
+  "pampa toloza__Chaco": {
+    "lat": -26.0714048,
+    "lon": -60.7397234
+  },
+  "pampatoloza__Chaco": null,
+  "paraje fra pal__Buenos Aires": null,
+  "parana__Entre Ríos": {
+    "lat": -31.7330145,
+    "lon": -60.5298511
+  },
+  "paraná__Entre Ríos": {
+    "lat": -31.7330145,
+    "lon": -60.5298511
+  },
+  "pasman__Buenos Aires": {
+    "lat": -37.2244756,
+    "lon": -62.1630242
+  },
+  "paso de las piedras__Entre Ríos": {
+    "lat": -31.692676,
+    "lon": -60.111681
+  },
+  "pehuajó__Buenos Aires": {
+    "lat": -35.8104933,
+    "lon": -61.899055
+  },
+  "pergamino__Buenos Aires": {
+    "lat": -33.897495,
+    "lon": -60.575046
+  },
+  "perin__Formosa": {
+    "lat": -25.5671358,
+    "lon": -59.9655158
+  },
+  "piaggio-2__Santa Fe": {
+    "lat": -32.8850597,
+    "lon": -60.6917317
+  },
+  "piamonte__Santa Fe": {
+    "lat": -32.1439613,
+    "lon": -61.980515
+  },
+  "pichanal__Salta": {
+    "lat": -23.3220599,
+    "lon": -64.2269308
+  },
+  "piedra buena__Tucumán": {
+    "lat": -32.9525252,
+    "lon": -68.8012085
+  },
+  "piedrabuena__Tucumán": {
+    "lat": -26.8184342,
+    "lon": -65.183807
+  },
+  "pigüé__Buenos Aires": {
+    "lat": -37.6027951,
+    "lon": -62.4023096
+  },
+  "piquete cabado__Salta": {
+    "lat": -24.8199213,
+    "lon": -64.1779238
+  },
+  "piquillin__Córdoba": {
+    "lat": -31.300212,
+    "lon": -63.7586562
+  },
+  "piquillín__Córdoba": {
+    "lat": -31.300212,
+    "lon": -63.7586562
+  },
+  "pirovano__Buenos Aires": {
+    "lat": -36.5126379,
+    "lon": -61.5559247
+  },
+  "piñeyro__Buenos Aires": {
+    "lat": -34.6697461,
+    "lon": -58.3883434
+  },
+  "pozo de bedert__Santiago Del Estero": null,
+  "pozo del toba__Santiago Del Estero": {
+    "lat": -27.9510875,
+    "lon": -61.997122
+  },
+  "pozo hondo__Santiago Del Estero": {
+    "lat": -27.1670114,
+    "lon": -64.4908677
+  },
+  "pozodel toba__Santiago Del Estero": null,
+  "progreso__Santa Fe": {
+    "lat": -33.0362082,
+    "lon": -60.6113577
+  },
+  "puan__Buenos Aires": {
+    "lat": -34.623559,
+    "lon": -58.448639
+  },
+  "pueblo uranga__Santa Fe": {
+    "lat": -33.2637886,
+    "lon": -60.7059966
+  },
+  "pujato__Santa Fe": {
+    "lat": -33.0176021,
+    "lon": -61.0430978
+  },
+  "puna__Santiago Del Estero": {
+    "lat": -27.7980544,
+    "lon": -62.5224391
+  },
+  "punta del agua__Córdoba": {
+    "lat": -32.5757687,
+    "lon": -63.8102121
+  },
+  "pálpala__Jujuy": {
+    "lat": -24.2554935,
+    "lon": -65.2093985
+  },
+  "quemu quemu__La Pampa": {
+    "lat": -36.0548131,
+    "lon": -63.5659467
+  },
+  "quemú quemú__La Pampa": {
+    "lat": -36.0548131,
+    "lon": -63.5659467
+  },
+  "quimili__Santiago Del Estero": {
+    "lat": -27.6446881,
+    "lon": -62.4174351
+  },
+  "quimilí__Santiago Del Estero": {
+    "lat": -27.6446881,
+    "lon": -62.4174351
+  },
+  "quines__San Luís": {
+    "lat": -32.2328371,
+    "lon": -65.8050739
+  },
+  "quitilipi__Chaco": {
+    "lat": -26.870771,
+    "lon": -60.2150144
+  },
+  "rafaela__Santa Fe": {
+    "lat": -31.2526923,
+    "lon": -61.4916758
+  },
+  "ramallo__Buenos Aires": {
+    "lat": -33.4849394,
+    "lon": -60.0044551
+  },
+  "ramayon__Santa Fe": {
+    "lat": -30.6742315,
+    "lon": -60.4986423
+  },
+  "ramayón__Santa Fe": {
+    "lat": -30.6742315,
+    "lon": -60.4986423
+  },
+  "rapelli__Tucumán": {
+    "lat": -26.3946871,
+    "lon": -64.5034556
+  },
+  "rayo cortado__Córdoba": {
+    "lat": -30.0762926,
+    "lon": -63.8251324
+  },
+  "reconquista__Santa Fe": {
+    "lat": -29.1443478,
+    "lon": -59.6437728
+  },
+  "reduccion__Córdoba": {
+    "lat": -33.2031613,
+    "lon": -63.8625063
+  },
+  "reducción__Córdoba": {
+    "lat": -33.2031613,
+    "lon": -63.8625063
+  },
+  "rincón de ávila__Santa Fe": {
+    "lat": -31.3238541,
+    "lon": -60.8673227
+  },
+  "rio dulce__Santiago Del Estero": {
+    "lat": -27.7615606,
+    "lon": -64.2640886
+  },
+  "rio piedras__Salta": {
+    "lat": -25.3142011,
+    "lon": -64.9103052
+  },
+  "rio seco__Córdoba": {
+    "lat": -30.802268,
+    "lon": -64.5354592
+  },
+  "rio segundo__Córdoba": {
+    "lat": -31.4534384,
+    "lon": -63.1656553
+  },
+  "rivadavia__Salta": {
+    "lat": -23.6194993,
+    "lon": -62.8101767
+  },
+  "roberts__Buenos Aires": {
+    "lat": -35.1429018,
+    "lon": -61.970349
+  },
+  "rocha__nan": {
+    "lat": -23.3091193,
+    "lon": -46.7254499
+  },
+  "rocha__Uruguay": {
+    "lat": -41.076218,
+    "lon": -71.1722657
+  },
+  "rolón__nan": {
+    "lat": -37.1666159,
+    "lon": -63.4149531
+  },
+  "rolón__Uruguay": {
+    "lat": -34.462218,
+    "lon": -58.5472057
+  },
+  "rosario__nan": {
+    "lat": -30.2565911,
+    "lon": -54.9262684
+  },
+  "rosario__Uruguay": {
+    "lat": -32.4227274,
+    "lon": -63.2047947
+  },
+  "rosario de la frontera__Salta": {
+    "lat": -25.7985752,
+    "lon": -64.9739247
+  },
+  "rosello__Santiago Del Estero": {
+    "lat": -37.3422766,
+    "lon": -59.149123
+  },
+  "roversi__Santiago Del Estero": {
+    "lat": -27.5911418,
+    "lon": -61.945006
+  },
+  "rumi punco__Tucumán": {
+    "lat": -27.9848359,
+    "lon": -65.5739654
+  },
+  "río ceballos__Córdoba": {
+    "lat": -31.1709088,
+    "lon": -64.3160951
+  },
+  "río colorado__Tucumán": {
+    "lat": -27.1503766,
+    "lon": -65.3557946
+  },
+  "río segundo-__Córdoba": {
+    "lat": -31.4534319,
+    "lon": -63.1656483
+  },
+  "río segundo-t1__Córdoba": {
+    "lat": -31.6501467,
+    "lon": -63.9116179
+  },
+  "sacanta__Córdoba": {
+    "lat": -31.6634501,
+    "lon": -63.0479142
+  },
+  "sachayoj__Santiago Del Estero": {
+    "lat": -26.6749136,
+    "lon": -61.8153369
+  },
+  "saladero mariano cabal__Santa Fe": {
+    "lat": -30.8795361,
+    "lon": -60.037479
+  },
+  "salto__Buenos Aires": {
+    "lat": -34.2917828,
+    "lon": -60.2544888
+  },
+  "san agustín__Tucumán": {
+    "lat": -26.8369326,
+    "lon": -64.8504348
+  },
+  "san andrés de giles__Buenos Aires": {
+    "lat": -34.4423682,
+    "lon": -59.4475148
+  },
+  "san antonio de areco__Buenos Aires": {
+    "lat": -34.2437294,
+    "lon": -59.4734187
+  },
+  "san carlos norte__Santa Fe": {
+    "lat": -31.6228596,
+    "lon": -61.0707849
+  },
+  "san fabián__Santa Fe": {
+    "lat": -32.1382161,
+    "lon": -60.9844823
+  },
+  "san fernando__Entre Ríos": {
+    "lat": -34.4593091,
+    "lon": -58.5544926
+  },
+  "san francisco__Córdoba": {
+    "lat": -31.4249815,
+    "lon": -62.0840299
+  },
+  "san guillermo__Santa Fe": {
+    "lat": -32.8999251,
+    "lon": -60.710782
+  },
+  "san javier__Santa Fe": {
+    "lat": -30.5815988,
+    "lon": -59.9280841
+  },
+  "san jerónimo norte__Santa Fe": {
+    "lat": -31.6198414,
+    "lon": -61.092894
+  },
+  "san jerónimo sur__Santa Fe": {
+    "lat": -32.8758681,
+    "lon": -61.0347379
+  },
+  "san jorge__Santa Fe": {
+    "lat": -31.8962813,
+    "lon": -61.8597235
+  },
+  "san justo__Santa Fe": {
+    "lat": -32.0001305,
+    "lon": -60.9254825
+  },
+  "san luis__San Luís": {
+    "lat": -33.3020736,
+    "lon": -66.3369577
+  },
+  "san martin__Buenos Aires": {
+    "lat": -34.5771577,
+    "lon": -58.5377237
+  },
+  "san martin de las escobas__Santa Fe": {
+    "lat": -31.857828,
+    "lon": -61.5697407
+  },
+  "san martín__San Luís": {
+    "lat": -32.4106063,
+    "lon": -65.6756429
+  },
+  "san miguel de arcángel__Buenos Aires": {
+    "lat": -34.5434585,
+    "lon": -58.7110316
+  },
+  "san pedro__Buenos Aires": {
+    "lat": -33.6760716,
+    "lon": -59.6629342
+  },
+  "san pedro de guasayán__Santiago Del Estero": {
+    "lat": -27.9546106,
+    "lon": -65.1665606
+  },
+  "san vicente__Santa Fe": {
+    "lat": -31.6981627,
+    "lon": -61.5716039
+  },
+  "sanchez__nan": {
+    "lat": -34.6939477,
+    "lon": -58.6528938
+  },
+  "sanchez__Uruguay": {
+    "lat": -33.0452115,
+    "lon": -58.6525545
+  },
+  "santa catalina__Córdoba": {
+    "lat": -33.2053017,
+    "lon": -64.437917
+  },
+  "santa clara__Jujuy": {
+    "lat": -24.3100735,
+    "lon": -64.6619555
+  },
+  "santa clara de saguier__Santa Fe": {
+    "lat": -31.3348439,
+    "lon": -61.8266395
+  },
+  "santa elena__Entre Ríos": {
+    "lat": -30.9478684,
+    "lon": -59.7844127
+  },
+  "santa rosa__La Pampa": {
+    "lat": -36.6203503,
+    "lon": -64.2905765
+  },
+  "santa teresa capdevilla__Chaco": null,
+  "santo domingo__Salta": {
+    "lat": -24.7678118,
+    "lon": -63.7013762
+  },
+  "saravia__Salta": {
+    "lat": -24.5444364,
+    "lon": -64.3121457
+  },
+  "sastre__Santa Fe": {
+    "lat": -31.7675113,
+    "lon": -61.8288888
+  },
+  "sauce__Corrientes": {
+    "lat": -30.0832901,
+    "lon": -58.7884026
+  },
+  "sauce pinto__Entre Ríos": {
+    "lat": -31.8423583,
+    "lon": -60.373615
+  },
+  "sebastián el cano__Córdoba": {
+    "lat": -33.9210365,
+    "lon": -60.5936912
+  },
+  "sebastián elcano__Córdoba": {
+    "lat": -30.1603346,
+    "lon": -63.5927172
+  },
+  "sinsacate__Córdoba": {
+    "lat": -30.942822,
+    "lon": -64.0939374
+  },
+  "soledad__Santa Fe": {
+    "lat": 20.0216092,
+    "lon": -100.7194059
+  },
+  "soledad12__Santa Fe": null,
+  "sotos cueva__Santiago Del Estero": null,
+  "sotoscueva__Santiago Del Estero": null,
+  "sur bordenave__Buenos Aires": null,
+  "susana__Santa Fe": {
+    "lat": -32.3765536,
+    "lon": -61.0836514
+  },
+  "sylvina__Chaco": {
+    "lat": -27.8315753,
+    "lon": -61.1360183
+  },
+  "tacanas__Tucumán": {
+    "lat": -27.1383027,
+    "lon": -64.8100112
+  },
+  "tacañitas__Santiago Del Estero": {
+    "lat": -28.6233155,
+    "lon": -62.6050617
+  },
+  "taco ralo__Tucumán": {
+    "lat": -27.8357346,
+    "lon": -65.1959141
+  },
+  "tala norte__Córdoba": {
+    "lat": -31.1166205,
+    "lon": -63.6001301
+  },
+  "tancacha__Córdoba": {
+    "lat": -32.2374827,
+    "lon": -63.9798348
+  },
+  "tandil__Buenos Aires": {
+    "lat": -37.3282887,
+    "lon": -59.1356957
+  },
+  "temas de rio hondo__Santiago Del Estero": null,
+  "temas de río hondo__Santiago Del Estero": null,
+  "teodelina__Santa Fe": {
+    "lat": -34.1895388,
+    "lon": -61.5265613
+  },
+  "teodolina__Santa Fe": null,
+  "termas de río hondo__Santiago Del Estero": {
+    "lat": -27.4959255,
+    "lon": -64.8640783
+  },
+  "tierras del oeste__Santiago Del Estero": null,
+  "tierrasdeloeste__Santiago Del Estero": null,
+  "timbo viejo__Tucumán": {
+    "lat": -26.6640852,
+    "lon": -65.1309335
+  },
+  "timbúes__Santa Fe": {
+    "lat": -32.6674546,
+    "lon": -60.7957434
+  },
+  "tolloche__Salta": {
+    "lat": -25.5264141,
+    "lon": -63.5225949
+  },
+  "tomás young__Santiago Del Estero": {
+    "lat": -28.6,
+    "lon": -62.183333
+  },
+  "tosquita__Córdoba": {
+    "lat": -33.8197314,
+    "lon": -64.457836
+  },
+  "trancas__Tucumán": {
+    "lat": -26.230956,
+    "lon": -65.2835347
+  },
+  "treinta de agosto__Buenos Aires": {
+    "lat": -36.2787547,
+    "lon": -62.5451145
+  },
+  "trenque lauquen__Buenos Aires": {
+    "lat": -35.9731074,
+    "lon": -62.7328794
+  },
+  "tres arroyos__Buenos Aires": {
+    "lat": -38.3770014,
+    "lon": -60.2755685
+  },
+  "tres isletas__Chaco": {
+    "lat": -26.3403492,
+    "lon": -60.4313372
+  },
+  "urdinarrain__Entre Ríos": {
+    "lat": -32.6910946,
+    "lon": -58.8885673
+  },
+  "urundel__Salta": {
+    "lat": -23.5582035,
+    "lon": -64.3978211
+  },
+  "vedia__Buenos Aires": {
+    "lat": -34.4888613,
+    "lon": -61.5384391
+  },
+  "venado tuerto__Santa Fe": {
+    "lat": -33.7456906,
+    "lon": -61.9690915
+  },
+  "vera y pintado__Santa Fe": {
+    "lat": -32.9231469,
+    "lon": -60.691351
+  },
+  "vergara__nan": {
+    "lat": -35.3828153,
+    "lon": -57.8041006
+  },
+  "vergara__Uruguay": {
+    "lat": -35.3828153,
+    "lon": -57.8041006
+  },
+  "vg otumpa__Santiago Del Estero": null,
+  "viale__Entre Ríos": {
+    "lat": -31.8720895,
+    "lon": -60.0129648
+  },
+  "viboras__Buenos Aires": {
+    "lat": -37.6943991,
+    "lon": -62.8060699
+  },
+  "viclos__Tucumán": {
+    "lat": -27.1922739,
+    "lon": -64.9137221
+  },
+  "victoria__Entre Ríos": {
+    "lat": -32.874961,
+    "lon": -60.3386655
+  },
+  "vicuña mackenna__Córdoba": {
+    "lat": -33.9156871,
+    "lon": -64.3898493
+  },
+  "vila__Santa Fe": {
+    "lat": -31.1903062,
+    "lon": -61.8325798
+  },
+  "villa angela__Chaco": {
+    "lat": -27.5768225,
+    "lon": -60.7112067
+  },
+  "villa cañas__Santa Fe": {
+    "lat": -34.005494,
+    "lon": -61.6059937
+  },
+  "villa de maria__Córdoba": {
+    "lat": -29.9065473,
+    "lon": -63.7226242
+  },
+  "villa de maría__Córdoba": {
+    "lat": -29.9065473,
+    "lon": -63.7226242
+  },
+  "villa general savio__Buenos Aires": {
+    "lat": -33.4350116,
+    "lon": -60.1459721
+  },
+  "villa hernandarias__Entre Ríos": {
+    "lat": -31.228855,
+    "lon": -59.9876093
+  },
+  "villa lila__Entre Ríos": {
+    "lat": -33.116667,
+    "lon": -58.766667
+  },
+  "villa maría__Córdoba": {
+    "lat": -32.4106245,
+    "lon": -63.2435809
+  },
+  "villa minetti__Santa Fe": {
+    "lat": -28.6021389,
+    "lon": -61.6650062
+  },
+  "villa mugueta__Santa Fe": {
+    "lat": -33.3119003,
+    "lon": -61.0563641
+  },
+  "villa saralegui__Santa Fe": {
+    "lat": -30.5412066,
+    "lon": -60.7483797
+  },
+  "villa sarlegui__Santa Fe": null,
+  "villa sta. rosa__Córdoba": {
+    "lat": -31.1534891,
+    "lon": -63.3993819
+  },
+  "villa trinidad__Santa Fe": {
+    "lat": -30.2155492,
+    "lon": -61.8780747
+  },
+  "villa valeria__Córdoba": {
+    "lat": -34.3416235,
+    "lon": -64.9206789
+  },
+  "villada__Santa Fe": {
+    "lat": -33.3501978,
+    "lon": -61.4468301
+  },
+  "vinará__Santiago Del Estero": {
+    "lat": -27.3762449,
+    "lon": -64.7961142
+  },
+  "virasoro__Corrientes": {
+    "lat": -27.456452,
+    "lon": -58.6585875
+  },
+  "vsaralegui__Santa Fe": null,
+  "weisburd__Santiago Del Estero": {
+    "lat": -27.3219324,
+    "lon": -62.5882757
+  },
+  "wheelright__Santa Fe": {
+    "lat": -33.7129778,
+    "lon": -61.0480619
+  },
+  "young__nan": {
+    "lat": -34.8502609,
+    "lon": -58.3072474
+  },
+  "young__Uruguay": {
+    "lat": -34.8502609,
+    "lon": -58.3072474
+  },
+  "zavalla__Santa Fe": {
+    "lat": -33.0185383,
+    "lon": -60.8788584
+  },
+  "zavalía__Buenos Aires": {
+    "lat": -34.8942943,
+    "lon": -61.0060382
+  },
+  "álvarez__Santa Fe": {
+    "lat": -33.1305513,
+    "lon": -60.8021185
+  },
+  "árbol blanco__Santiago Del Estero": {
+    "lat": -26.8372055,
+    "lon": -61.9629214
+  }
+}

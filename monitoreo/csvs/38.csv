@@ -1,0 +1,394 @@
+Zona,Provincia/Pais,Localidad,Lectura_01_02_26_al_16_02_26,Lectura_17_02_26_al_01_03_26,Lectura_02_03_26_al_16_03_26
+Uruguay,Uruguay,Mercedes,2,6,15
+Uruguay,Uruguay,Peñarol,Sin datos,Sin datos,Sin datos
+Uruguay,Uruguay,Los Arenales,Sin datos,Sin datos,Sin datos
+Uruguay,Uruguay,Nueva Helvecia,0,18,9
+Uruguay,Uruguay,Colonia,0,3,Sin datos
+Uruguay,Uruguay,Palmitas,0,4,8
+Uruguay,Uruguay,Durazno,1,6,58
+Uruguay,Uruguay,Young,12,237,446
+Uruguay,Uruguay,Young,13,Sin datos,Sin datos
+NOA,Jujuy,EL Carmen,4,8,6
+NOA,Jujuy,Fraile Pintado,2,6,Trampa perdida
+NOA,Jujuy,Santa Clara,4,9,4
+NOA,Jujuy,El Bananal,124,60,41
+NOA,Salta,Agua Sucia,16,0,5
+NOA,Salta,Rio Piedras,12,4,8
+NOA,Salta,Rivadavia,11,0,6
+NOA,Salta,Piquete Cabado 1,Sin datos,43,6
+NOA,Salta,Antilla,3,17,Trampa perdida
+NOA,Salta,Ballivián,Sin datos,0,Trampa perdida
+NOA,Salta,Ceibalito,Sin datos,Trampa perdida,Trampa perdida
+NOA,Salta,Copo Quiles,Sin datos,Sin datos,104
+NOA,Salta,El Bordo,Sin datos,Sin datos,284
+NOA,Salta,El Galpón,9,146,133
+NOA,Salta,El Tunal,Sin datos,Sin datos,Trampa perdida
+NOA,Salta,Embarcación,Sin datos,0,Trampa perdida
+NOA,Salta,Gral Pizarro,Sin datos,5,Trampa perdida
+NOA,Salta,Horcones,0,0,3
+NOA,Salta,J V Gonzales,31,83,Trampa perdida
+NOA,Salta,Las Lajitas T3,Sin datos,3,0
+NOA,Salta,Metan 1,1,1,0
+NOA,Salta,Metan 2,0,2,6
+NOA,Salta,Mollinedo,38,Trampa perdida,Trampa perdida
+NOA,Salta,Mosconi,5,12,Trampa perdida
+NOA,Salta,Nstra Sra de Talavera,121,Trampa perdida,Trampa perdida
+NOA,Salta,Pichanal,Sin datos,0,Trampa perdida
+NOA,Salta,Piquete Cabado 2,Trampa perdida,240,Trampa perdida
+NOA,Salta,Santo Domingo,44,159,Trampa perdida
+NOA,Salta,Saravia,1,16,0
+NOA,Salta,Tolloche,10,0,Trampa perdida
+NOA,Salta,Urundel,4,5,Trampa perdida
+NOA,Salta,Metán,20,119,89
+NOA,Tucumán,Tusquita,110,21,54
+NOA,Tucumán,Alto Verde,177,81,Trampa perdida
+NOA,Tucumán,Burruyacu,6,52,40
+NOA,Tucumán,Chilca,Sin datos,Sin datos,Trampa perdida
+NOA,Tucumán,Garmendia,0,0,0
+NOA,Tucumán,Huasa Pampa,18,85,48
+NOA,Tucumán,La Bajada,6,11,15
+NOA,Tucumán,La Cocha 1,7,Trampa perdida,40
+NOA,Tucumán,La Cruz,12,231,0
+NOA,Tucumán,La Invernada,40,97,84
+NOA,Tucumán,La Virginia,39,560,610
+NOA,Tucumán,Laguna de Robles,28,158,140
+NOA,Tucumán,Las Cejas,14,26,23
+NOA,Tucumán,Los Pereyra,1,10,126
+NOA,Tucumán,Los Puestos,0,15,520
+NOA,Tucumán,Piedrabuena,12,124,320
+NOA,Tucumán,Rapelli,Sin datos,92,370
+NOA,Tucumán,Río Colorado,2,4,Trampa perdida
+NOA,Tucumán,Rumi Punco,4,31,41
+NOA,Tucumán,San Agustín,93,86,98
+NOA,Tucumán,Tacanas,11,60,76
+NOA,Tucumán,Taco Ralo,13,69,18
+NOA,Tucumán,Timbo Viejo,152,245,171
+NOA,Tucumán,Trancas,0,0,Trampa perdida
+NOA,Tucumán,Viclos,19,Sin datos,92
+NOA,Tucumán,Leales,105,273,Trampa perdida
+NOA,Tucumán,Tala Pozo,15,15,20
+NOA,Santiago del Estero,Bobadal,4,7,40
+NOA,Santiago del Estero,El Charco,22,16,Trampa perdida
+NOA,Santiago del Estero,El Palomar,Trampa perdida,Trampa perdida,672
+NOA,Santiago del Estero,Frias,7,17,237
+NOA,Santiago del Estero,Isca Yacu 2,Sin datos,144,101
+NOA,Santiago del Estero,Pampa Pozo,Sin datos,Sin datos,Trampa perdida
+NOA,Santiago del Estero,Pozo Hondo,Sin datos,88,135
+NOA,Santiago del Estero,San Pedro de Guasayán,Sin datos,Sin datos,Trampa perdida
+NOA,Santiago del Estero,Termas R. Hondo,59,1200,240
+NOA,Santiago del Estero,Vinará,6,Sin datos,109
+NOA,Santiago del Estero,Termas de Río Hondo,7,33,250
+NOA,Catamarca,El Abra,399,377,154
+NOA,Catamarca,Los Altos,1043,890,648
+NOA,Catamarca,Frias,6,58,119
+NEA,Chaco,Tres Isletas,10,13,Sin datos
+NEA,Chaco,Pampa del Infierno,4,42,98
+NEA,Chaco,Concepcion del Bermejo,Sin datos,17,Sin datos
+NEA,Chaco,Villa Angela,0,1,8
+NEA,Chaco,Las Piedritas,32,13,Sin datos
+NEA,Chaco,Gral. Pinedo,0,4,27
+NEA,Chaco,Tres Isletas,10,21,6
+NEA,Chaco,Pampa del Infierno,10,7,16
+NEA,Chaco,Las Breñas,19,72,410
+NEA,Chaco,Juan José Castelli,65,6,24
+NEA,Chaco,Sylvina,3,1,33
+NEA,Chaco,Basail,8,5,27
+NEA,Santa Fe,La María,799,277,341
+NEA,Santa Fe,Margarita,103,53,121
+NEA,Santa Fe,Ramayón,49,26,35
+NEA,Santa Fe,Soledad,Trampa perdida,12,37
+NEA,Santa Fe,Hersilia,14,6,37
+NEA,Santa Fe,La Penca y Caraguatá,2,31,108
+NEA,Santiago del Estero,Tomás Young,89,3,Sin datos
+NEA,Santiago del Estero,Isla Baja,15,22,Sin datos
+NEA,Santiago del Estero,Tierras del Oeste,124,10,Sin datos
+NEA,Santa Fe,Vera y Pintado,17,35,154
+NEA,Santa Fe,La Osca,5,25,85
+NEA,Santa Fe,Malabrigo,52,23,105
+NEA,Formosa,El colorado,0,3,1
+NEA,Formosa,Comandante Fontana,134,55,70
+NEA,Santiago del Estero,Pozo de toba,Sin datos,87,24
+NEA,Santa Fe,Arroyo Ceibal,87,6,307
+NEA,Santa Fe,Villa Minetti,118,3,51
+NEA,Santa Fe,El Guanagan,0,0,2
+NEA,Santa Fe,Santa Margarita,8,128,Trampa perdida
+NEA,Santa Fe,Villa Minetti,42,45,49
+NEA,Santiago del Estero,Weisburd,Sin datos,29,Sin datos
+NEA,Santa Fe,Reconquista,30,218,271
+NEA,Santa Fe,Calchaquí,264,318,151
+NEA,Santa Fe,Logroño,28,117,98
+NEA,Santa Fe,San javier,168,79,399
+NEA,Santa Fe,La sarita,0,14,25
+NEA,Santa Fe,Emilia,12,Sin datos,54
+NEA,Santa Fe,Ambrosetti,32,21,175
+NEA,Santa Fe,La Pelada,42,6,Sin datos
+NEA,Chaco,San Bernardo,Sin datos,Trampa perdida,26
+NEA,Santa Fe,Colonia Esther,157,199,574
+NEA,Santiago del Estero,Colonia Alpina,36,59,Sin datos
+NEA,Chaco,La Montenegrina,0,0,0
+NEA,Santiago del Estero,Puna,37,350,1100
+NEA,Formosa,Perin,Sin datos,2,2
+NEA,Santiago del Estero,Campo del Cielo,75,62,Sin datos
+NEA,Santiago del Estero,Lilo Viejo,105,98,Sin datos
+NEA,Santiago del Estero,Weisburd,15,68,156
+NEA,Santiago del Estero,Bandera,44,144,375
+NEA,Santiago del Estero,Col. Mackinlay,Sin datos,148,219
+NEA,Santiago del Estero,Bandera,Sin datos,72,32
+NEA,Santiago del Estero,Arbol Blanco,Sin datos,Sin datos,Trampa perdida
+NEA,Santiago del Estero,Los Juries,201,593,957
+NEA,Santiago del Estero,Roversi,255,606,1154
+NEA,Santiago del Estero,Tacañitas,14,276,380
+NEA,Santiago del Estero,Sachayoj,16,20,Sin datos
+NEA,Santiago del Estero,Campo Gallo,7,Sin datos,Sin datos
+NEA,Chaco,Charata,0,0,90
+NEA,Santiago del Estero,Quimilí,107,132,262
+NEA,Santiago del Estero,Añatuya,140,261,758
+NEA,Santiago del Estero,Malbran,Sin datos,62,570
+NEA,Santiago del Estero,Pampa de los Guanacos,48,302,158
+NEA,Santiago del Estero,La Rosita,2,Trampa perdida,130
+NEA,Chaco,Gancedo,2,Trampa perdida,970
+NEA,Chaco,Las Breñas,0,Trampa perdida,580
+NEA,Santiago del Estero,Girardet,4,7,640
+NEA,Santiago del Estero,Cejolao,5,Sin datos,580
+NEA,Formosa,Las Lomitas,11,37,233
+Litoral,Corrientes,Mercedes,15,5,3
+Litoral,Corrientes,Ambrosio,Sin datos,5,13
+Litoral,Corrientes,Corrientes,55,18,48
+Litoral,Corrientes,Bella Vista,2,0,0
+Litoral,Corrientes,Sauce,27,0,4
+Litoral,Corrientes,Estancia el Rocio Copra,28,3,0
+Litoral,Corrientes,Mercedes,16,7,0
+Litoral,Corrientes,Virasoro,5,2,2
+Litoral,Corrientes,Goya,8,2,26
+Litoral,Corrientes,Curuzú,265,88,7
+Litoral,Corrientes,Esquina,12,0,0
+Litoral,Corrientes,Monte Caseros,4,1,10
+Litoral,Entre Ríos,Don Cristobal,11,21,77
+Litoral,Entre Ríos,Isletas,14,53,64
+Litoral,Entre Ríos,San Salvador,208,211,263
+Litoral,Entre Ríos,Hinojal,3,0,55
+Litoral,Entre Ríos,Viale,2,1,2
+Litoral,Entre Ríos,Colonia Celina,312,892,929
+Litoral,Entre Ríos,Gualeguay,0,0,0
+Litoral,Entre Ríos,Paso de las Piedras,15,204,434
+Litoral,Entre Ríos,Villa Hernandarias,484,191,297
+Litoral,Entre Ríos,Don Cristobal,6,5,6
+Litoral,Entre Ríos,Crespo,0,3,4
+Litoral,Entre Ríos,Las Garzas,6,0,40
+Litoral,Entre Ríos,Santa Elena,Sin datos,313,307
+Litoral,Entre Ríos,La Paz,59,27,8
+Litoral,Entre Ríos,Feliciano,9,1,0
+Litoral,Entre Ríos,Molino Doll,1,0,1
+Litoral,Entre Ríos,Gualeguay,0,0,0
+Litoral,Entre Ríos,Gualeguaychu,Sin datos,0,0
+Litoral,Entre Ríos,Victoria,6,7,3
+Litoral,Entre Ríos,Arroyo Barú,22,2,3
+Litoral,Entre Ríos,La Paz,41,10,Sin datos
+Litoral,Entre Ríos,Nogoya,3,0,10
+Litoral,Entre Ríos,Urdinarrain,0,0,2
+Litoral,Entre Ríos,Concepción del Uruguay,338,Trampa perdida,62
+Litoral,Entre Ríos,Diamante,10,56,29
+Litoral,Entre Ríos,Gualeguay,Sin datos,8,2
+Litoral,Entre Ríos,Parana,244,597,1023
+Litoral,Entre Ríos,Villa Mantero,140,1530,2530
+Centro Norte,Córdoba,Corralito,0,3,6
+Centro Norte,Córdoba,El Fortín,4,21,Trampa perdida
+Centro Norte,Córdoba,Freyre,69,191,260
+Centro Norte,Córdoba,Morteros,166,252,210
+Centro Norte,Córdoba,Rayo Cortado,7,170,112
+Centro Norte,Córdoba,Jesus María,5,5,0
+Centro Norte,Córdoba,Cañada de Luque,3,118,162
+Centro Norte,Córdoba,Río Ceballos,3,1,1
+Centro Norte,Córdoba,Villa María,0,0,Sin datos
+Centro Norte,Córdoba,Carrilobo,11,34,108
+Centro Norte,Córdoba,Capilla de Sitón,2,6,49
+Centro Norte,Córdoba,Devoto,6,0,0
+Centro Norte,Córdoba,San Francisco,Sin datos,0,Sin datos
+Centro Norte,Córdoba,Eufrasio Loza,65,470,387
+Centro Norte,Córdoba,Laguna Larga,0,0,1
+Centro Norte,Córdoba,Las Bajadas,2,1,0
+Centro Norte,Córdoba,Monte del Rosario,26,85,328
+Centro Norte,Córdoba,Montecristo,2,6,10
+Centro Norte,Córdoba,Río Segundo- T1,Sin datos,0,0
+Centro Norte,Córdoba,Arroyito,26,75,298
+Centro Norte,Córdoba,Santa Catalina,0,0,0
+Centro Norte,Córdoba,Tancacha,1,1,3
+Centro Norte,Córdoba,Villa de Maria,Sin datos,70,Sin datos
+Centro Norte,Córdoba,Villa Sta. Rosa,91,194,5
+Centro Norte,Córdoba,Colonia Tirolesa,11,40,67
+Centro Norte,Córdoba,Hernando,Sin datos,3,Sin datos
+Centro Norte,Córdoba,Piquillín,14,9,22
+Centro Norte,Córdoba,Las Chilcas,10,30,67
+Centro Norte,Córdoba,Sebastián Elcano,950,1387,618
+Centro Norte,Córdoba,El Tío,148,385,629
+Centro Norte,Córdoba,Las Astillas,21,34,85
+Centro Norte,Córdoba,Tala Norte,27,83,102
+Centro Norte,Córdoba,Mi Granja,Sin datos,9,2
+Centro Norte,Córdoba,Sacanta,7,Sin datos,Sin datos
+Centro Norte,Córdoba,Sinsacate,18,Sin datos,17
+Centro Norte,Córdoba,Manfredi,12,3,22
+Centro Norte,Córdoba,Brinkmann,Sin datos,34,124
+Centro Norte,Córdoba,Luxardo,0,12,141
+Centro Norte,Córdoba,Colonia Marina,3,4,122
+Centro Norte,Córdoba,Villa Fontana,5,46,480
+Centro Norte,Córdoba,Loma Del Trozo,10,Trampa perdida,320
+Centro Norte,San Luis,La Toma,0,0,0
+Centro Norte,Santa Fe,Ceres,63,183,357
+Centro Norte,Santa Fe,Gálvez,11,12,6
+Centro Norte,Santa Fe,Humboldt,4,3,0
+Centro Norte,Santa Fe,Landeta,1,37,48
+Centro Norte,Santa Fe,Piamonte,6,11,19
+Centro Norte,Santa Fe,San Vicente,91,46,191
+Centro Norte,Santa Fe,Susana,Sin datos,Sin datos,Trampa perdida
+Centro Norte,Santa Fe,San Guillermo,276,75,127
+Centro Norte,Santa Fe,San Jorge,0,0,0
+Centro Norte,Santa Fe,Santa Clara de Saguier,Trampa perdida,0,0
+Centro Norte,Santa Fe,Vila,66,385,365
+Centro Norte,Santa Fe,El Trébol,Sin datos,5,Sin datos
+Centro Norte,Santa Fe,López,19,14,28
+Centro Norte,Santa Fe,Campo Piaggio,18,22,21
+Centro Norte,Santa Fe,San Carlos Norte,48,28,315
+Centro Norte,Santa Fe,Emilia,324,153,572
+Centro Norte,Santa Fe,Gálvez,70,330,330
+Centro Norte,Santa Fe,Aldao,Sin datos,Sin datos,5
+Centro Norte,Santa Fe,Maria Juana,4,45,28
+Centro Norte,Santa Fe,Progreso,192,78,237
+Centro Norte,Santa Fe,Sastre,Sin datos,4,Sin datos
+Centro Norte,Santa Fe,San Jerónimo Norte,2,903,1104
+Centro Norte,Santa Fe,Ataliva,14,13,54
+Centro Norte,Santa Fe,Bernardo de Irigoyen,2,63,48
+Centro Norte,Santa Fe,Crispi,25,Sin datos,198
+Centro Norte,Santa Fe,Esperanza,9,502,1032
+Centro Norte,Santa Fe,Moisés Ville,14,28,0
+Centro Norte,Santa Fe,Cañada Rosquín,33,24,51
+Centro Norte,Santa Fe,El Trébol 4,Sin datos,Sin datos,Sin datos
+Centro Norte,Santa Fe,Rincón de Ávila,7,19,Trampa perdida
+Centro Norte,Santa Fe,San Fabián,6,17,51
+Centro Norte,Santa Fe,San Martin de las Escobas,Sin datos,8,12
+Centro Norte,Santa Fe,Centeno,0,16,31
+Centro Norte,Santa Fe,Cayasto,Sin datos,20,150
+Centro Norte,Santa Fe,Rafaela,248,Trampa perdida,377
+Centro Norte,Santa Fe,Ceres,442,739,408
+Centro Norte,Santa Fe,San Justo,196,167,314
+Centro Norte,Santa Fe,Angelica,2,10,16
+Centro Norte,Santa Fe,Fraga,9,5,38
+Centro Norte,Santa Fe,San Bernardo,35,72,21
+Centro Sur,Buenos Aires,La Violeta,0,0,3
+Centro Sur,Buenos Aires,América,0,0,0
+Centro Sur,Buenos Aires,Chacabuco,0,0,0
+Centro Sur,Buenos Aires,Cnel. Dorrego,0,0,0
+Centro Sur,Buenos Aires,Coronel Suarez,0,0,0
+Centro Sur,Buenos Aires,Cura Malal,0,0,0
+Centro Sur,Buenos Aires,Germania,0,0,0
+Centro Sur,Buenos Aires,Gral. Arenales T1,1,0,0
+Centro Sur,Buenos Aires,Gobernador Castro,0,0,2
+Centro Sur,Buenos Aires,González Moreno,0,0,0
+Centro Sur,Buenos Aires,Guaminí,0,0,Sin datos
+Centro Sur,Buenos Aires,Leandro N. Alem,0,0,0
+Centro Sur,Buenos Aires,Los Toldos,0,0,0
+Centro Sur,Buenos Aires,Morse,0,0,0
+Centro Sur,Buenos Aires,Pasman,0,0,0
+Centro Sur,Buenos Aires,Rafael Obligado,0,0,0
+Centro Sur,Buenos Aires,Florentino Ameghino,0,0,0
+Centro Sur,Buenos Aires,Roberts,0,0,0
+Centro Sur,Buenos Aires,Tres Arroyos,0,0,0
+Centro Sur,Buenos Aires,Villa Gral. Savio,0,0,0
+Centro Sur,Buenos Aires,Inés Indart,0,0,Sin datos
+Centro Sur,Buenos Aires,Pirovano,0,0,0
+Centro Sur,Buenos Aires,Pedro Gamen,0,0,0
+Centro Sur,Buenos Aires,Pigüé,0,0,Trampa perdida
+Centro Sur,Buenos Aires,25 de Mayo Salesiana,0,0,0
+Centro Sur,Buenos Aires,Berraondo,0,0,0
+Centro Sur,Buenos Aires,Carhue,0,0,0
+Centro Sur,Buenos Aires,Chascomús,0,0,0
+Centro Sur,Buenos Aires,Necochea,0,0,0
+Centro Sur,Buenos Aires,Paraje Fra Pal,0,0,0
+Centro Sur,Buenos Aires,Salto,2,0,0
+Centro Sur,Buenos Aires,Trenque Lauquen,0,0,0
+Centro Sur,Buenos Aires,Chillar,0,Sin datos,Sin datos
+Centro Sur,Buenos Aires,Puan,0,0,Sin datos
+Centro Sur,Buenos Aires,Viboras,0,0,0
+Centro Sur,Buenos Aires,12 de Octubre,0,0,Trampa perdida
+Centro Sur,Buenos Aires,Ferré,0,0,0
+Centro Sur,Buenos Aires,San Miguel de Arcángel,0,0,0
+Centro Sur,Buenos Aires,América,0,0,0
+Centro Sur,Buenos Aires,Guanaco,0,0,0
+Centro Sur,Buenos Aires,Henderson,0,0,0
+Centro Sur,Buenos Aires,Ayacucho,0,0,Sin datos
+Centro Sur,Buenos Aires,Gral. Madariaga,0,0,Sin datos
+Centro Sur,Buenos Aires,Orense,Sin datos,0,0
+Centro Sur,Buenos Aires,Bragado,0,0,0
+Centro Sur,Buenos Aires,San Pedro,2,0,0
+Centro Sur,Buenos Aires,Alberdi,0,0,1
+Centro Sur,Buenos Aires,Junín,0,0,0
+Centro Sur,Buenos Aires,Pergamino,1,0,0
+Centro Sur,Buenos Aires,Catriló,0,0,0
+Centro Sur,Buenos Aires,Chivilcoy,0,0,0
+Centro Sur,Buenos Aires,Pergamino,0,21,Trampa perdida
+Centro Sur,Buenos Aires,Conesa,0,Trampa perdida,3
+Centro Sur,Buenos Aires,San antonio de Areco,0,2,3
+Centro Sur,Buenos Aires,Bordenave,0,0,0
+Centro Sur,Buenos Aires,Gral. Villegas,0,1,2
+Centro Sur,Buenos Aires,Ascasubi,0,0,0
+Centro Sur,Buenos Aires,Bolivar,0,0,0
+Centro Sur,Buenos Aires,Pehuajó,0,0,4
+Centro Sur,Buenos Aires,Balcarce,0,0,0
+Centro Sur,Córdoba,Cnel. Baigorria,0,1,6
+Centro Sur,Córdoba,General Roca,6,9,16
+Centro Sur,Córdoba,Gral. Cabrera,0,6,10
+Centro Sur,Córdoba,La playosa,3,0,3
+Centro Sur,Córdoba,Ordoñez,0,0,0
+Centro Sur,Córdoba,Arroyo Cabral,0,0,0
+Centro Sur,Córdoba,Villa María,0,0,1
+Centro Sur,Córdoba,Benjamín Gould,0,0,2
+Centro Sur,Córdoba,Buchardo,0,0,Sin datos
+Centro Sur,Córdoba,Coronel Moldes,0,0,0
+Centro Sur,Córdoba,Guatimozin,0,0,0
+Centro Sur,Córdoba,Villa Valeria,0,0,0
+Centro Sur,Córdoba,Jovita,0,0,0
+Centro Sur,Córdoba,Adelia María,Trampa perdida,Sin datos,0
+Centro Sur,Córdoba,Cuatro Vientos,0,0,4
+Centro Sur,Córdoba,General Levalle,0,0,0
+Centro Sur,Córdoba,La Carlota,0,1,4
+Centro Sur,Córdoba,Melo,0,0,1
+Centro Sur,Córdoba,Vicuña Mackenna,0,0,Sin datos
+Centro Sur,Córdoba,Villa valeria,0,0,0
+Centro Sur,Córdoba,Monte Buey,Sin datos,8,Sin datos
+Centro Sur,Córdoba,Marcos Juarez 2,29,58,33
+Centro Sur,Córdoba,Ballesteros,2,0,1
+Centro Sur,Córdoba,La Brianza,0,2,0
+Centro Sur,Córdoba,Achiras,0,0,2
+Centro Sur,La Pampa,Macachín,0,0,Sin datos
+Centro Sur,La Pampa,General Pico,0,0,0
+Centro Sur,La Pampa,Quemú Quemú,0,0,0
+Centro Sur,La Pampa,Santa Rosa,Trampa perdida,0,0
+Centro Sur,La Pampa,Anguil 1,0,0,3
+Centro Sur,La Pampa,Winifreda,0,0,0
+Centro Sur,La Pampa,Ing. Luiggi,0,0,0
+Centro Sur,San Luís,La Angelina,0,0,0
+Centro Sur,San Luís,Nueva Galia,Trampa perdida,0,0
+Centro Sur,San Luís,Buena Esperanza,0,0,0
+Centro Sur,San Luís,Juan Jorba,Sin datos,1,5
+Centro Sur,San Luís,San Luis 1,Trampa perdida,0,0
+Centro Sur,San Luís,Quines,1,2,0
+Centro Sur,San Luís,Naschel,Sin datos,1,4
+Centro Sur,Santa Fe,Álvarez,3,5,Sin datos
+Centro Sur,Santa Fe,Hughes,0,0,0
+Centro Sur,Santa Fe,Iriarte,0,0,0
+Centro Sur,Santa Fe,Máximo Paz,4,5,18
+Centro Sur,Santa Fe,San Jerónimo Sur,Sin datos,7,4
+Centro Sur,Santa Fe,Teodelina,0,1,3
+Centro Sur,Santa Fe,Timbúes,0,5,114
+Centro Sur,Santa Fe,Venado tuerto,0,0,Trampa perdida
+Centro Sur,Santa Fe,Villa Mugueta,0,0,Sin datos
+Centro Sur,Santa Fe,Villada,0,0,0
+Centro Sur,Santa Fe,Wheelright,0,0,0
+Centro Sur,Santa Fe,J. B. Molina,0,5,25
+Centro Sur,Santa Fe,Armstrong,7,Trampa perdida,60
+Centro Sur,Santa Fe,Chañar Ladeado,0,0,0
+Centro Sur,Santa Fe,Monte de Oca,Sin datos,0,0
+Centro Sur,Santa Fe,Zavalla,34,12,117
+Centro Sur,Santa Fe,Pueblo Uranga,Sin datos,0,Sin datos
+Centro Sur,Santa Fe,Clucellas,9,5,0
+Centro Sur,Santa Fe,Pujato,0,0,4
+Centro Sur,Santa Fe,Cañada de Gómez,2,1,11
