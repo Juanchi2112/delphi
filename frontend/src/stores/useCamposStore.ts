@@ -22,12 +22,15 @@ interface CamposState {
   campos: Campo[];
   selectedCampoId: string | null;
   pendingCampo: PendingCampo | null;
+  drawerOpen: boolean;
   loading: boolean;
   setCampos: (campos: Campo[]) => void;
   addCampo: (campo: Campo) => void;
   removeCampo: (id: string) => void;
   selectCampo: (id: string | null) => void;
   setPendingCampo: (p: PendingCampo | null) => void;
+  toggleDrawer: () => void;
+  openDrawer: () => void;
   setLoading: (loading: boolean) => void;
 }
 
@@ -35,6 +38,7 @@ export const useCamposStore = create<CamposState>((set) => ({
   campos: [],
   selectedCampoId: null,
   pendingCampo: null,
+  drawerOpen: false,
   loading: true,
   setCampos: (campos) => set({ campos, loading: false }),
   addCampo: (campo) =>
@@ -44,7 +48,11 @@ export const useCamposStore = create<CamposState>((set) => ({
       campos: s.campos.filter((c) => c.id !== id),
       selectedCampoId: s.selectedCampoId === id ? null : s.selectedCampoId,
     })),
-  selectCampo: (id) => set({ selectedCampoId: id }),
-  setPendingCampo: (pendingCampo) => set({ pendingCampo }),
+  selectCampo: (id) =>
+    set({ selectedCampoId: id, pendingCampo: null, drawerOpen: id !== null }),
+  setPendingCampo: (pendingCampo) =>
+    set({ pendingCampo, selectedCampoId: null, drawerOpen: pendingCampo !== null }),
+  toggleDrawer: () => set((s) => ({ drawerOpen: !s.drawerOpen })),
+  openDrawer: () => set({ drawerOpen: true }),
   setLoading: (loading) => set({ loading }),
 }));

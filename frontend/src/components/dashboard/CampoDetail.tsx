@@ -58,7 +58,7 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
   };
 
   return (
-    <aside className="w-[320px] bg-stone-900/95 backdrop-blur-xl border-r border-stone-700/50 flex flex-col h-[calc(100vh-4rem)] overflow-hidden">
+    <>
       {/* Header */}
       <div className="p-4 border-b border-stone-700/50">
         <div className="flex items-center gap-2">
@@ -180,6 +180,6 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
           <InformeView report={report} onClose={() => setReport(null)} />
         )}
       </div>
-    </aside>
+    </>
   );
 }

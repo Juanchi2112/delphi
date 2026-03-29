@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useAuthStore } from "@/stores/useAuthStore";
+import { useCamposStore } from "@/stores/useCamposStore";
+import { supabase } from "@/lib/supabase";
 
 const NAV_LINKS = [
   { label: "Mapa", href: "#mapa" },
@@ -10,6 +13,8 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { user, loading: authLoading } = useAuthStore();
+  const openDrawer = useCamposStore((s) => s.openDrawer);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -50,11 +55,39 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Invisible spacer — same width as logo to balance centering */}
-        <div className="hidden md:flex items-center gap-2 invisible" aria-hidden="true">
-          <svg width="32" height="32" className="shrink-0" />
-          <span className="text-lg tracking-[0.35em] uppercase">Delphi</span>
-        </div>
+        {/* Auth — right */}
+        {!authLoading && (
+          <div className="flex items-center gap-3">
+            {user ? (
+              <>
+                <a
+                  href="#mapa"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("mapa")?.scrollIntoView({ behavior: "smooth" });
+                    openDrawer();
+                  }}
+                  className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  Mis Campos
+                </a>
+                <button
+                  onClick={() => supabase.auth.signOut()}
+                  className="text-sm text-stone-500 hover:text-stone-300 transition-colors cursor-pointer"
+                >
+                  Salir
+                </button>
+              </>
+            ) : (
+              <a
+                href="/login"
+                className="text-sm font-medium px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-colors border border-emerald-500/20"
+              >
+                Iniciar sesion
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );

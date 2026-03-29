@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -9,18 +9,31 @@ import {
   GeoJSON,
   useMap,
 } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "leaflet-draw/dist/leaflet.draw.css";
+import "leaflet-draw";
+import * as turf from "@turf/turf";
+
 import { useMapStore } from "@/stores/useMapStore";
+import { useCamposStore } from "@/stores/useCamposStore";
 import { RISK_CONFIG, ALERT_CONFIG, TREND_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from "@/lib/constants";
-import { riskScoreToPercent } from "@/lib/utils";
+import { riskScoreToPercent, findNearest, extractLocalidadKey } from "@/lib/utils";
 import type { ScoreItem, MonitoringScoreItem } from "@/lib/types";
 
 function MapController({ items }: { items: ScoreItem[] }) {
   const map = useMap();
   const { region, selectedId } = useMapStore();
+  const { selectedCampoId, campos } = useCamposStore();
 
   useEffect(() => {
-    if (selectedId) {
+    if (selectedCampoId) {
+      const campo = campos.find((c) => c.id === selectedCampoId);
+      if (campo) {
+        const layer = L.geoJSON(campo.geojson);
+        map.fitBounds(layer.getBounds(), { padding: [50, 50], maxZoom: 13 });
+      }
+    } else if (selectedId) {
       const item = items.find((i) => i.id === selectedId);
       if (item) {
         map.flyTo([item.lat, item.lon + 1.5], 9, { duration: 1.2 });
@@ -31,7 +44,76 @@ function MapController({ items }: { items: ScoreItem[] }) {
     } else {
       map.flyTo(ARGENTINA_CENTER, ARGENTINA_ZOOM, { duration: 1.2 });
     }
-  }, [region, selectedId, items, map]);
+  }, [region, selectedId, selectedCampoId, campos, items, map]);
+
+  return null;
+}
+
+function DrawControl({
+  items,
+  filtered,
+}: {
+  items: ScoreItem[];
+  filtered: ScoreItem[];
+}) {
+  const map = useMap();
+  const { setPendingCampo } = useCamposStore();
+  const drawControlRef = useRef<L.Control.Draw | null>(null);
+  const itemsForSearch = filtered.length > 0 ? filtered : items;
+
+  useEffect(() => {
+    if (drawControlRef.current) return;
+
+    const drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+
+    const control = new L.Control.Draw({
+      position: "topright",
+      draw: {
+        polygon: {
+          allowIntersection: false,
+          shapeOptions: {
+            color: "#10B981",
+            fillColor: "#10B981",
+            fillOpacity: 0.2,
+            weight: 2,
+          },
+        },
+        polyline: false,
+        rectangle: false,
+        circle: false,
+        marker: false,
+        circlemarker: false,
+      },
+      edit: {
+        featureGroup: drawnItems,
+        remove: false,
+        edit: false,
+      },
+    });
+    map.addControl(control);
+    drawControlRef.current = control;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    map.on(L.Draw.Event.CREATED, (e: any) => {
+      const layer = e.layer as L.Polygon;
+      const geojson = (layer.toGeoJSON() as GeoJSON.Feature<GeoJSON.Polygon>)
+        .geometry;
+      const areaM2 = turf.area(geojson);
+      const hectareas = Math.round((areaM2 / 10000) * 100) / 100;
+      const centroid = turf.centroid(geojson);
+      const [cLon, cLat] = centroid.geometry.coordinates;
+      const nearest = findNearest(itemsForSearch, cLat, cLon);
+      setPendingCampo({ geojson, hectareas, nearest });
+    });
+
+    return () => {
+      map.removeControl(control);
+      map.removeLayer(drawnItems);
+      drawControlRef.current = null;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [map]);
 
   return null;
 }
@@ -164,11 +246,14 @@ function ArgentinaBorder() {
 export default function ArgentinaMap({
   items,
   monitoringItems = [],
+  enableDrawing = false,
 }: {
   items: ScoreItem[];
   monitoringItems?: MonitoringScoreItem[];
+  enableDrawing?: boolean;
 }) {
   const { mode, temporada, region, riskLevel, alertCategory } = useMapStore();
+  const { campos, selectedCampoId } = useCamposStore();
 
   const filteredPreSeason = useMemo(() => {
     return items.filter((item) => {
@@ -187,6 +272,14 @@ export default function ArgentinaMap({
     });
   }, [monitoringItems, region, alertCategory]);
 
+  const monitoringLookup = useMemo(() => {
+    const map = new Map<string, MonitoringScoreItem>();
+    for (const item of monitoringItems) {
+      map.set(item.localidad_key, item);
+    }
+    return map;
+  }, [monitoringItems]);
+
   return (
     <MapContainer
       center={ARGENTINA_CENTER}
@@ -203,6 +296,36 @@ export default function ArgentinaMap({
       />
       <ArgentinaBorder />
       <MapController items={items} />
+
+      {/* Drawing controls — only when authenticated */}
+      {enableDrawing && (
+        <DrawControl items={items} filtered={filteredPreSeason} />
+      )}
+
+      {/* User's saved campos as polygons */}
+      {enableDrawing &&
+        campos.map((campo) => {
+          const monItem = campo.localidad_id
+            ? monitoringLookup.get(extractLocalidadKey(campo.localidad_id))
+            : undefined;
+          const borderColor = monItem
+            ? ALERT_CONFIG[monItem.alert_category].color
+            : "#10B981";
+          return (
+            <GeoJSON
+              key={campo.id}
+              data={campo.geojson}
+              style={{
+                color: borderColor,
+                fillColor: borderColor,
+                fillOpacity: selectedCampoId === campo.id ? 0.3 : 0.1,
+                weight: selectedCampoId === campo.id ? 3 : 1.5,
+              }}
+            />
+          );
+        })}
+
+      {/* Risk markers */}
       {mode === "precampana"
         ? filteredPreSeason.map((item) => <RiskMarker key={item.id} item={item} />)
         : filteredMonitoring.map((item) => <MonitoringMarker key={item.id} item={item} />)}
