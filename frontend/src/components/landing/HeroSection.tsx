@@ -35,7 +35,7 @@ export default function HeroSection({
             Delphi
           </h1>
           <p className="text-xl md:text-2xl text-emerald-400 font-medium mb-8">
-            Sabé el riesgo antes de sembrar.
+            Conocé el riesgo antes de sembrar.
           </p>
 
           {/* Subtitle */}

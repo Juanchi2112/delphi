@@ -106,7 +106,7 @@ export const ALERT_CONFIG: Record<
 > = {
   brote_riesgo_alto: {
     color: "#DC2626",
-    label: "Brote + Riesgo Alto",
+    label: "Indice Riesgo Alto",
     description: "Brote activo, modelo predice continuidad",
   },
   brote_activo: {
@@ -116,7 +116,7 @@ export const ALERT_CONFIG: Record<
   },
   alerta_vecinos: {
     color: "#F59E0B",
-    label: "Alerta Vecinos",
+    label: "Brotes Vecinos",
     description: "Vecinos con capturas, riesgo de propagación",
   },
   bajo_riesgo: {
