@@ -6,3 +6,6 @@ shap
 requests
 pyarrow
 matplotlib
+fastapi
+uvicorn[standard]
+pydantic-settings
