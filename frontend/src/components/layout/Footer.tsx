@@ -11,7 +11,7 @@ export default function Footer() {
           </span>
         </div>
         <p className="text-stone-600 text-xs">
-          HackITBA 2026 · Equipo Delphi · UdeSA
+          Equipo Delphi
         </p>
       </div>
     </footer>

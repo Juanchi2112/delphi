@@ -5,11 +5,38 @@
   --foreground: #FAFAF9;
   --emerald: #10B981;
   --emerald-dim: rgba(16, 185, 129, 0.15);
+  /* shadcn compat — dark theme */
+  --card: #1C1917;
+  --card-foreground: #FAFAF9;
+  --muted: #292524;
+  --muted-foreground: #A8A29E;
+  --border: #44403C;
+  --input: #292524;
+  --ring: #10B981;
+  --primary: #10B981;
+  --primary-foreground: #0C0A09;
+  --secondary: #292524;
+  --secondary-foreground: #E7E5E4;
+  --accent: #1C1917;
+  --accent-foreground: #FAFAF9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -44,14 +71,66 @@ body {
   ), var(--background);
 }
 
-/* Risk dot pulse */
-@keyframes pulse-risk {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.15; transform: scale(1.8); }
+/* Bento grid */
+.bento-item {
+  background: rgba(28, 25, 23, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 162, 158, 0.15);
+  border-radius: 1rem;
+  padding: 2rem;
+  min-height: 8rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
 }
 
-.pulse-high {
-  animation: pulse-risk 2s ease-in-out infinite;
+.bento-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(168, 162, 158, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.bento-item:hover {
+  border-color: rgba(168, 162, 158, 0.3);
+}
+
+.bento-item:hover::before {
+  opacity: 1;
+}
+
+/* Shimmer button animation */
+@keyframes shimmer2 {
+  0% { background-position: 0% 0%; }
+  100% { background-position: -200% 0%; }
+}
+
+/* SVG map — glow ring pulse (CSS-driven, no JS animation overhead) */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0; }
+}
+
+.glow-ring {
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* SVG map — selection ring pulse */
+@keyframes selection-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.selection-ring {
+  animation: selection-pulse 1.5s ease-in-out infinite;
 }
 
 /* Leaflet overrides for dark theme */

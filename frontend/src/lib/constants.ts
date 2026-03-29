@@ -8,19 +8,19 @@ export const RISK_CONFIG: Record<
     color: "#10B981",
     label: "BAJO",
     glowColor: "rgba(16,185,129,0.3)",
-    radius: 4,
+    radius: 2.5,
   },
   medium: {
     color: "#F59E0B",
     label: "MODERADO",
     glowColor: "rgba(245,158,11,0.3)",
-    radius: 5,
+    radius: 3,
   },
   high: {
     color: "#DC2626",
     label: "CRÍTICO",
     glowColor: "rgba(220,38,38,0.4)",
-    radius: 6,
+    radius: 3.5,
   },
 };
 
@@ -98,3 +98,17 @@ export const REGION_CENTERS: Record<string, { lat: number; lon: number; zoom: nu
 
 export const ARGENTINA_CENTER: [number, number] = [-34.5, -63.0];
 export const ARGENTINA_ZOOM = 5;
+
+// SVG map viewBox dimensions
+export const MAP_VIEWBOX_WIDTH = 800;
+export const MAP_VIEWBOX_HEIGHT = 1000;
+
+// Region zoom scales for SVG map (replaces Leaflet zoom levels)
+export const REGION_ZOOM_SCALE: Record<string, number> = {
+  NOA: 2.8,
+  NEA: 2.8,
+  "CENTRO NORTE": 3.0,
+  LITORAL: 3.2,
+  "CENTRO SUR": 2.8,
+  URUGUAY: 3.0,
+};

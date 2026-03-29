@@ -26,7 +26,7 @@ export default function RiskDistribution({
   const total = low + medium + high;
 
   return (
-    <div className="glass rounded-xl p-4">
+    <div>
       <h4 className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-3">
         Distribución de riesgo
       </h4>

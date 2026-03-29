@@ -20,37 +20,32 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[2000] transition-all duration-300 ${
-        scrolled ? "glass-subtle py-3" : "py-5"
+        scrolled ? "glass-subtle py-4" : "py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-4 flex items-center">
+        {/* Logo - left */}
         <a href="#" className="flex items-center gap-2 group">
-          <span className="w-7 h-7 rounded-lg bg-emerald-500 flex items-center justify-center text-stone-950 font-bold text-sm">
+          <span className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-stone-950 font-bold text-base">
             D
           </span>
-          <span className="text-stone-50 font-semibold text-lg tracking-tight">
+          <span className="text-stone-50 font-semibold text-xl tracking-tight">
             Delphi
           </span>
         </a>
 
-        {/* Links */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Links - centered */}
+        <div className="hidden md:flex items-center gap-12 flex-1 justify-center">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-stone-400 hover:text-stone-200 transition-colors"
+              className="relative text-base text-stone-400 hover:text-stone-200 transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-emerald-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
             >
               {link.label}
             </a>
           ))}
         </div>
-
-        {/* Demo badge */}
-        <span className="text-xs px-2.5 py-1 rounded-full bg-stone-800 text-stone-500 border border-stone-700">
-          HackITBA 2026
-        </span>
       </div>
     </nav>
   );

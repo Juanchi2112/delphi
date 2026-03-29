@@ -1,5 +1,12 @@
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
 import { RISK_CONFIG } from "./constants";
 import type { RiskLevel, ScoreItem } from "./types";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 export function riskColor(level: RiskLevel): string {
   return RISK_CONFIG[level].color;
