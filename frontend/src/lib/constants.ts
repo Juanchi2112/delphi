@@ -8,19 +8,19 @@ export const RISK_CONFIG: Record<
     color: "#10B981",
     label: "BAJO",
     glowColor: "rgba(16,185,129,0.3)",
-    radius: 2,
+    radius: 3.5,
   },
   medium: {
     color: "#F59E0B",
     label: "MODERADO",
     glowColor: "rgba(245,158,11,0.3)",
-    radius: 2,
+    radius: 4,
   },
   high: {
     color: "#DC2626",
     label: "CRÍTICO",
     glowColor: "rgba(220,38,38,0.4)",
-    radius: 2.5,
+    radius: 4.5,
   },
 };
 

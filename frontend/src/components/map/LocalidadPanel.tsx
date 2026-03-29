@@ -3,23 +3,29 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useMapStore } from "@/stores/useMapStore";
-import { getLocalidad } from "@/lib/api";
-import type { LocalidadDetail } from "@/lib/types";
+import { useAuthStore } from "@/stores/useAuthStore";
+import { getLocalidad, generateReport } from "@/lib/api";
+import type { LocalidadDetail, ReportResponse } from "@/lib/types";
 import RiskGauge from "@/components/detail/RiskGauge";
 import RiskBadge from "@/components/detail/RiskBadge";
 import ShapBars from "@/components/detail/ShapBars";
 import ShapWaterfall from "@/components/detail/ShapWaterfall";
 import CaptureStats from "@/components/detail/CaptureStats";
+import InformeView from "@/components/dashboard/InformeView";
 
 export default function LocalidadPanel() {
   const { selectedId, selectLocalidad } = useMapStore();
   const [data, setData] = useState<LocalidadDetail | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const user = useAuthStore((s) => s.user);
+  const [report, setReport] = useState<ReportResponse | null>(null);
+  const [reportLoading, setReportLoading] = useState(false);
 
   useEffect(() => {
     if (!selectedId) {
       setData(null);
+      setReport(null);
       return;
     }
     let cancelled = false;
@@ -125,6 +131,41 @@ export default function LocalidadPanel() {
                     )}
                   </p>
                 </div>
+              )}
+
+              {/* AI Report */}
+              {user && !report && (
+                <button
+                  onClick={async () => {
+                    setReportLoading(true);
+                    try {
+                      const r = await generateReport(data.id);
+                      setReport(r);
+                    } catch {
+                      /* ignore */
+                    } finally {
+                      setReportLoading(false);
+                    }
+                  }}
+                  disabled={reportLoading}
+                  className="w-full py-2.5 bg-emerald-500 text-stone-950 font-semibold rounded-lg hover:bg-emerald-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm"
+                >
+                  {reportLoading ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <span className="w-4 h-4 border-2 border-stone-900 border-t-transparent rounded-full animate-spin" />
+                      Generando informe...
+                    </span>
+                  ) : (
+                    "Generar Informe IA"
+                  )}
+                </button>
+              )}
+
+              {report && (
+                <InformeView
+                  report={report}
+                  onClose={() => setReport(null)}
+                />
               )}
             </div>
           )}

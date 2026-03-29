@@ -60,6 +60,33 @@ export interface MetadataResponse {
   regions_available: string[];
 }
 
+export interface ReportFactor {
+  factor: string;
+  impacto: string;
+  explicacion: string;
+}
+
+export interface ReportRecommendation {
+  categoria: string;
+  accion: string;
+  justificacion: string;
+  prioridad: string;
+}
+
+export interface ReportResponse {
+  localidad: string;
+  provincia: string;
+  region: string;
+  temporada: string;
+  risk_score: number;
+  risk_level: string;
+  resumen: string;
+  factores: ReportFactor[];
+  recomendaciones: ReportRecommendation[];
+  contexto_regional: string;
+  generated_at: string;
+}
+
 export interface HealthResponse {
   status: "ok";
   api_version: string;

@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-03-29T07:16:02Z",
+  "artifact_version": "2026-03-29",
+  "records_total": 14402,
+  "records_valid": 14347,
+  "records_discarded": 55,
+  "discard_reasons": {
+    "invalid_bbox": 2,
+    "invalid_localidad": 53,
+    "missing_coordinates": 0
+  },
+  "localities_count": 521,
+  "readings_per_locality_avg": 27.5,
+  "seasons_available": [
+    "2024-2025",
+    "2025-2026"
+  ],
+  "regions_available": [
+    "CENTRO NORTE",
+    "CENTRO SUR",
+    "LITORAL",
+    "NEA",
+    "NOA",
+    "URUGUAY"
+  ],
+  "date_range_start": "2024-07-15",
+  "date_range_end": "2026-03-16"
+}

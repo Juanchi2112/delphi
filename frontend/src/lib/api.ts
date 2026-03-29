@@ -2,6 +2,7 @@ import type {
   ScoresResponse,
   LocalidadDetail,
   MetadataResponse,
+  ReportResponse,
 } from "./types";
 
 const API_BASE =
@@ -31,6 +32,22 @@ export async function getScores(params?: {
 
 export async function getLocalidad(id: string): Promise<LocalidadDetail> {
   const res = await fetch(`${API_BASE}/localidades/${encodeURIComponent(id)}`);
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  return res.json();
+}
+
+export async function generateReport(
+  localidadId: string,
+  body?: { campo_nombre?: string; hectareas?: number }
+): Promise<ReportResponse> {
+  const res = await fetch(
+    `${API_BASE}/informes/${encodeURIComponent(localidadId)}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: body ? JSON.stringify(body) : JSON.stringify({}),
+    }
+  );
   if (!res.ok) throw new Error(`API error: ${res.status}`);
   return res.json();
 }

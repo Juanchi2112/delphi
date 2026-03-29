@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useAuthStore } from "@/stores/useAuthStore";
+import { supabase } from "@/lib/supabase";
 
 const NAV_LINKS = [
   { label: "Mapa", href: "#mapa" },
@@ -10,6 +12,7 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { user, loading } = useAuthStore();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -25,7 +28,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center">
         {/* Logo - left */}
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="/" className="flex items-center gap-2 group">
           <span className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-stone-950 font-bold text-base">
             D
           </span>
@@ -46,6 +49,35 @@ export default function Navbar() {
             </a>
           ))}
         </div>
+
+        {/* Auth - right */}
+        {!loading && (
+          <div className="flex items-center gap-3">
+            {user ? (
+              <>
+                <a
+                  href="/dashboard"
+                  className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  Dashboard
+                </a>
+                <button
+                  onClick={() => supabase.auth.signOut()}
+                  className="text-sm text-stone-500 hover:text-stone-300 transition-colors cursor-pointer"
+                >
+                  Salir
+                </button>
+              </>
+            ) : (
+              <a
+                href="/login"
+                className="text-sm font-medium px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-colors border border-emerald-500/20"
+              >
+                Iniciar sesion
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );
