@@ -9264,3 +9264,984 @@ Import trace:
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3560727ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3560729ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3566503ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3566503ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3566773ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3566773ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[ 3566812ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 3567003ms] Error: ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/components/map/ArgentinaMap.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1189:59)
+    at DevBundlerService.getCompilationError (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[ 3567006ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3567006ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3567074ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3567074ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3567171ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3567171ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3584516ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3585519ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3586521ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3587524ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3588527ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3593528ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3598532ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3603538ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3608543ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3613546ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3618552ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3623561ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3660253ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 3660448ms] Error: ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/components/map/ArgentinaMap.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1189:59)
+    at DevBundlerService.getCompilationError (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[ 3660456ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3660456ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3660615ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:11:1
+Module not found: Can't resolve 'leaflet/dist/leaflet.css'
+   9 |   useMap,
+  10 | } from "react-leaflet";
+> 11 | import "leaflet/dist/leaflet.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+  14 | import { riskScoreToPercent } from "@/lib/utils";
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3660615ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3676513ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3692267ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3692516ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3693299ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3700071ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3701075ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3702077ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3703079ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3704083ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3709089ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2342
+[ 3714495ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 3714599ms] Error: ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/components/map/ArgentinaMap.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1189:59)
+    at DevBundlerService.getCompilationError (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/ignacio/delphi/frontend/node_modules/next/dist/server/base-server.js:1745:26)
+[ 3714606ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3714688ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3717274ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3717758ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3718351ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3729164ms] [ERROR] ./src/components/map/ArgentinaMap.tsx:4:1
+Module not found: Can't resolve 'react-leaflet'
+   2 |
+   3 | import { useEffect, useMemo, useRef } from "react";
+>  4 | import {
+     | ^^^^^^^
+>  5 |   MapContainer,
+     | ^^^^^^^^^^^^^^^
+>  6 |   TileLayer,
+     | ^^^^^^^^^^^^
+>  7 |   CircleMarker,
+     | ^^^^^^^^^^^^^^^
+>  8 |   Tooltip,
+     | ^^^^^^^^^^
+>  9 |   useMap,
+     | ^^^^^^^^^
+> 10 | } from "react-leaflet";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import "leaflet/dist/leaflet.css";
+  12 | import { useMapStore } from "@/stores/useMapStore";
+  13 | import { RISK_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from...
+
+Import trace:
+  Client Component Browser:
+    ./src/components/map/ArgentinaMap.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Client Component Browser]
+    ./src/components/map/MapSection.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[ 3732114ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3732114ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3753577ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3754581ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3755583ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3756585ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3757588ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3762591ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3767594ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=5RHMzuMr1ZJz6nMEOq-2C' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[ 3773709ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 3773709ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4192387ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/argentina.geojson:0
+[ 4192426ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/argentina.geojson:0
+[ 4222983ms] ReferenceError: useState is not defined
+    at ArgentinaBorder (http://localhost:3000/_next/static/chunks/src_components_map_ArgentinaMap_tsx_01h-j1p._.js?id=%255Bproject%255D%252Fsrc%252Fcomponents%252Fmap%252FArgentinaMap.tsx+%255Bapp-client%255D+%2528ecmascript%2529:164:35)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at flushSyncWork$1 (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9230:86)
+    at Object.scheduleRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:299:13)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:391:33
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:384:38)
+    at applyUpdate (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:878:31)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:886:13
+[ 4227130ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4227164ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4227165ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4227605ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4227605ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4367958ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4367959ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4480168ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4480169ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4549550ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4549551ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4550004ms] TypeError: Cannot read properties of null (reading 'geometries')
+    at NewClass.addData (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:7390:33)
+    at NewClass.initialize (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:7379:22)
+    at new NewClass (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:299:33)
+    at createGeoJSON (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12567:21)
+    at useMutableLeafletElement (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12050:55)
+    at usePath (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12345:28)
+    at ContainerComponent (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12086:39)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:5908:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6766:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64)
+[ 4557844ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4558207ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4558207ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4558494ms] TypeError: Cannot read properties of null (reading 'geometries')
+    at NewClass.addData (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:7390:33)
+    at NewClass.initialize (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:7379:22)
+    at new NewClass (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:299:33)
+    at createGeoJSON (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12567:21)
+    at useMutableLeafletElement (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12050:55)
+    at usePath (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12345:28)
+    at ContainerComponent (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12086:39)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:5908:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6766:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64)
+[ 4569920ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4570773ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4570774ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4571267ms] TypeError: Cannot read properties of null (reading 'geometries')
+    at NewClass.addData (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:7390:33)
+    at NewClass.initialize (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:7379:22)
+    at new NewClass (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:299:33)
+    at createGeoJSON (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12567:21)
+    at useMutableLeafletElement (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12050:55)
+    at usePath (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12345:28)
+    at ContainerComponent (http://localhost:3000/_next/static/chunks/node_modules_0gkgub7._.js:12086:39)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:5908:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6766:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64)
+[ 4644186ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 4644187ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5861753ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[ 5861754ms] [WARNING] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

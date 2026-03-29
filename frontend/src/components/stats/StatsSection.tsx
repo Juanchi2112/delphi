@@ -8,8 +8,9 @@ import type { ScoreItem } from "@/lib/types";
 import { computeRegionStats } from "@/lib/utils";
 import { useMapStore } from "@/stores/useMapStore";
 import { useMemo } from "react";
+import { RISK_CONFIG } from "@/lib/constants";
 
-const REGION_ORDER = ["NOA", "NEA", "CENTRO NORTE", "LITORAL", "CENTRO SUR", "URUGUAY"];
+const REGION_ORDER = ["NOA", "NEA", "CENTRO NORTE", "LITORAL", "CENTRO SUR"];
 
 export default function StatsSection({ items }: { items: ScoreItem[] }) {
   const temporada = useMapStore((s) => s.temporada);
@@ -33,6 +34,13 @@ export default function StatsSection({ items }: { items: ScoreItem[] }) {
 
   const activeRegions = REGION_ORDER.filter((r) => regionStats[r]);
 
+  const statItems = [
+    { label: "Localidades", value: seasonItems.length },
+    { label: "Crítico", value: totals.high, dot: RISK_CONFIG.high.color },
+    { label: "Moderado", value: totals.medium, dot: RISK_CONFIG.medium.color },
+    { label: "Bajo", value: totals.low, dot: RISK_CONFIG.low.color },
+  ];
+
   return (
     <section id="datos" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
@@ -45,36 +53,30 @@ export default function StatsSection({ items }: { items: ScoreItem[] }) {
           </p>
         </ScrollReveal>
 
-        {/* Row 1: Summary stats + Risk distribution */}
+        {/* Row 1: Summary + Distribution */}
         <ScrollReveal delay={0.1}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <BentoItem className="md:col-span-2">
-              <h3 className="text-lg font-bold text-stone-50 mb-4">Resumen de riesgo</h3>
+              <h3 className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-6">
+                Resumen de riesgo
+              </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-stone-50 font-[family-name:var(--font-geist-mono)]">
-                    {seasonItems.length}
-                  </p>
-                  <p className="text-xs text-stone-400 mt-1">Localidades</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-red-400 font-[family-name:var(--font-geist-mono)]">
-                    {totals.high}
-                  </p>
-                  <p className="text-xs text-stone-400 mt-1">Riesgo crítico</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-amber-400 font-[family-name:var(--font-geist-mono)]">
-                    {totals.medium}
-                  </p>
-                  <p className="text-xs text-stone-400 mt-1">Riesgo moderado</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-emerald-400 font-[family-name:var(--font-geist-mono)]">
-                    {totals.low}
-                  </p>
-                  <p className="text-xs text-stone-400 mt-1">Riesgo bajo</p>
-                </div>
+                {statItems.map((s) => (
+                  <div key={s.label} className="text-center">
+                    <p className="text-3xl font-bold text-stone-50 font-[family-name:var(--font-geist-mono)]">
+                      {s.value}
+                    </p>
+                    <p className="text-xs text-stone-500 mt-1.5 flex items-center justify-center gap-1.5">
+                      {s.dot && (
+                        <span
+                          className="w-1.5 h-1.5 rounded-full inline-block"
+                          style={{ backgroundColor: s.dot }}
+                        />
+                      )}
+                      {s.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </BentoItem>
 
@@ -88,53 +90,21 @@ export default function StatsSection({ items }: { items: ScoreItem[] }) {
           </div>
         </ScrollReveal>
 
-        {/* Row 2: Region cards + Model info */}
+        {/* Row 2: Region cards — full width */}
         <ScrollReveal delay={0.15}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Region cards */}
-            <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {activeRegions.map((r) => (
-                <BentoItem key={r}>
-                  <RegionCard
-                    name={r}
-                    total={regionStats[r].total}
-                    low={regionStats[r].low}
-                    medium={regionStats[r].medium}
-                    high={regionStats[r].high}
-                    avgRisk={regionStats[r].avgRisk}
-                  />
-                </BentoItem>
-              ))}
-            </div>
-
-            {/* Model info */}
-            <BentoItem>
-              <h4 className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-3">
-                Sobre el modelo
-              </h4>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between text-stone-300">
-                  <span>Algoritmo</span>
-                  <span className="font-[family-name:var(--font-geist-mono)] text-emerald-400">XGBoost</span>
-                </div>
-                <div className="flex justify-between text-stone-300">
-                  <span>Features</span>
-                  <span className="font-[family-name:var(--font-geist-mono)]">28</span>
-                </div>
-                <div className="flex justify-between text-stone-300">
-                  <span>Validación</span>
-                  <span className="font-[family-name:var(--font-geist-mono)]">Temporal</span>
-                </div>
-                <div className="flex justify-between text-stone-300">
-                  <span>Datos</span>
-                  <span className="font-[family-name:var(--font-geist-mono)]">INTA + Open-Meteo</span>
-                </div>
-                <div className="flex justify-between text-stone-300">
-                  <span>Explicabilidad</span>
-                  <span className="font-[family-name:var(--font-geist-mono)] text-emerald-400">SHAP</span>
-                </div>
-              </div>
-            </BentoItem>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {activeRegions.map((r) => (
+              <BentoItem key={r}>
+                <RegionCard
+                  name={r}
+                  total={regionStats[r].total}
+                  low={regionStats[r].low}
+                  medium={regionStats[r].medium}
+                  high={regionStats[r].high}
+                  avgRisk={regionStats[r].avgRisk}
+                />
+              </BentoItem>
+            ))}
           </div>
         </ScrollReveal>
       </div>

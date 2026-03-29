@@ -21,7 +21,7 @@ const HighlightCard: FC<HighlightCardProps> = ({ title, description, icon }) => 
             </div>
           </div>
 
-          <h3 className="mb-3 text-2xl md:text-3xl font-bold whitespace-nowrap text-stone-100 transform group-hover:scale-105 transition-transform duration-300">
+          <h3 className="mb-3 text-2xl md:text-3xl font-bold text-stone-100 transform group-hover:scale-105 transition-transform duration-300">
             {title}
           </h3>
 

@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useAuthStore } from "@/stores/useAuthStore";
-import { supabase } from "@/lib/supabase";
 
 const NAV_LINKS = [
   { label: "Mapa", href: "#mapa" },
@@ -12,7 +10,6 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const { user, loading } = useAuthStore();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -28,16 +25,19 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center">
         {/* Logo - left */}
-        <a href="/" className="flex items-center gap-2 group">
-          <span className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-stone-950 font-bold text-base">
-            D
-          </span>
-          <span className="text-stone-50 font-semibold text-xl tracking-tight">
+        <a href="#" className="flex items-center gap-2 group">
+          <svg width="32" height="32" viewBox="0 0 56 56" className="shrink-0">
+            <path d="M28,6 A22,22 0 1,1 8,34" fill="none" stroke="#fff" strokeWidth="1" opacity=".15"/>
+            <path d="M28,12 A16,16 0 1,1 14,32" fill="none" stroke="#fff" strokeWidth="1" opacity=".25"/>
+            <path d="M28,18 A10,10 0 1,1 20,30" fill="none" stroke="#fff" strokeWidth="1.2" opacity=".45"/>
+            <circle cx="28" cy="28" r="4" fill="#fff"/>
+          </svg>
+          <span className="text-stone-50 font-semibold text-lg tracking-[0.35em] uppercase">
             Delphi
           </span>
         </a>
 
-        {/* Links - centered */}
+        {/* Links - truly centered via equal spacers */}
         <div className="hidden md:flex items-center gap-12 flex-1 justify-center">
           {NAV_LINKS.map((link) => (
             <a
@@ -50,34 +50,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Auth - right */}
-        {!loading && (
-          <div className="flex items-center gap-3">
-            {user ? (
-              <>
-                <a
-                  href="/dashboard"
-                  className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
-                >
-                  Dashboard
-                </a>
-                <button
-                  onClick={() => supabase.auth.signOut()}
-                  className="text-sm text-stone-500 hover:text-stone-300 transition-colors cursor-pointer"
-                >
-                  Salir
-                </button>
-              </>
-            ) : (
-              <a
-                href="/login"
-                className="text-sm font-medium px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-colors border border-emerald-500/20"
-              >
-                Iniciar sesion
-              </a>
-            )}
-          </div>
-        )}
+        {/* Invisible spacer — same width as logo to balance centering */}
+        <div className="hidden md:flex items-center gap-2 invisible" aria-hidden="true">
+          <svg width="32" height="32" className="shrink-0" />
+          <span className="text-lg tracking-[0.35em] uppercase">Delphi</span>
+        </div>
       </div>
     </nav>
   );

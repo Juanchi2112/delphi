@@ -1,5 +1,6 @@
 import { getScores, getMetadata } from "@/lib/api";
 import HeroSection from "@/components/landing/HeroSection";
+import ProblemSection from "@/components/landing/ProblemSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import MapSection from "@/components/map/MapSection";
 import StatsSection from "@/components/stats/StatsSection";
@@ -32,6 +33,7 @@ export default async function Home() {
 
       <main className="flex-1">
         <HeroSection>
+          <ProblemSection />
           <FeaturesSection />
         </HeroSection>
 

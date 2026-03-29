@@ -27,34 +27,41 @@ export default function RegionCard({
       </div>
 
       {/* Risk distribution bar */}
-      <div className="h-2 rounded-full overflow-hidden flex bg-stone-800">
+      <div className="h-1.5 rounded-full overflow-hidden flex bg-stone-800">
         {total > 0 && (
           <>
             <div
               style={{
                 width: `${(low / total) * 100}%`,
                 backgroundColor: RISK_CONFIG.low.color,
+                opacity: 0.7,
               }}
             />
             <div
               style={{
                 width: `${(medium / total) * 100}%`,
                 backgroundColor: RISK_CONFIG.medium.color,
+                opacity: 0.7,
               }}
             />
             <div
               style={{
                 width: `${(high / total) * 100}%`,
                 backgroundColor: RISK_CONFIG.high.color,
+                opacity: 0.7,
               }}
             />
           </>
         )}
       </div>
 
-      <div className="flex justify-between text-xs text-stone-400">
-        <span>Riesgo prom: {(avgRisk * 100).toFixed(0)}%</span>
-        <span className="text-red-400">{pctHigh}% crítico</span>
+      <div className="flex justify-between text-xs">
+        <span className="text-stone-500">
+          Riesgo prom: <span className="text-stone-300 font-[family-name:var(--font-geist-mono)]">{(avgRisk * 100).toFixed(0)}%</span>
+        </span>
+        <span className="text-stone-500">
+          Crítico: <span className="text-stone-300 font-[family-name:var(--font-geist-mono)]">{pctHigh}%</span>
+        </span>
       </div>
     </div>
   );

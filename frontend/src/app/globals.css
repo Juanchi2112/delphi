@@ -107,6 +107,19 @@ body {
   opacity: 1;
 }
 
+/* Hero logo — ping radar animation */
+@keyframes hero-ping {
+  0% { r: 4; opacity: .8; stroke-width: 2; }
+  100% { r: 40; opacity: 0; stroke-width: .5; }
+}
+@keyframes hero-flash {
+  0% { r: 5; opacity: 1; }
+  5% { r: 4; opacity: .8; }
+  100% { r: 4; opacity: .8; }
+}
+.hero-ping { animation: hero-ping 3s ease-out infinite 1s; }
+.hero-core { animation: hero-flash 3s ease-out infinite 1s; }
+
 /* Shimmer button animation */
 @keyframes shimmer2 {
   0% { background-position: 0% 0%; }
@@ -140,19 +153,37 @@ body {
 }
 
 .leaflet-control-attribution {
-  background: rgba(12, 10, 9, 0.8) !important;
-  color: #78716C !important;
-  font-size: 10px !important;
+  display: none !important;
 }
 
-.leaflet-control-attribution a {
-  color: #A8A29E !important;
+.leaflet-top.leaflet-left {
+  top: auto !important;
+  bottom: 16px !important;
+  left: auto !important;
+  right: 16px !important;
+}
+
+.leaflet-control-zoom {
+  border: 1px solid rgba(168, 162, 158, 0.2) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 .leaflet-control-zoom a {
-  background: rgba(28, 25, 23, 0.8) !important;
+  background: rgba(28, 25, 23, 0.85) !important;
+  color: #E7E5E4 !important;
+  border-color: rgba(168, 162, 158, 0.15) !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  font-size: 16px !important;
+  transition: background 0.2s ease !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: rgba(41, 37, 36, 0.95) !important;
   color: #FAFAF9 !important;
-  border-color: #44403C !important;
 }
 
 .leaflet-popup-content-wrapper {

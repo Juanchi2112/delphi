@@ -62,8 +62,8 @@ export default function InfiniteGrid({ children, className }: InfiniteGridProps)
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute right-[-15%] top-[-15%] w-[35%] h-[35%] rounded-full bg-emerald-500/25 blur-[120px]" />
         <div className="absolute right-[5%] top-[-5%] w-[20%] h-[20%] rounded-full bg-emerald-400/15 blur-[100px]" />
-        <div className="absolute left-[-10%] top-[42%] w-[35%] h-[35%] rounded-full bg-stone-400/20 blur-[120px]" />
-        <div className="absolute left-[5%] top-[42%] w-[15%] h-[15%] rounded-full bg-stone-300/15 blur-[80px]" />
+        <div className="absolute left-[-10%] top-[30%] w-[35%] h-[35%] rounded-full bg-stone-400/20 blur-[120px]" />
+        <div className="absolute left-[5%] top-[30%] w-[15%] h-[15%] rounded-full bg-stone-300/15 blur-[80px]" />
       </div>
 
       {/* Content */}
