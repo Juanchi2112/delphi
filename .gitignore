@@ -44,6 +44,12 @@ frontend/.next/
 frontend/.vercel/
 frontend/tsconfig.tsbuildinfo
 
+# === Internal docs (not for repo) ===
+CLAUDE.md
+CONTEXT.md
+CONTEXTO-HACKATHON.md
+chicharritai_project_description.md
+
 # === IDE / tools ===
 .vscode/
 .idea/
