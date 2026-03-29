@@ -1,30 +1,30 @@
 "use client";
 
-import { DollarSign, TrendingUp, Timer } from "lucide-react";
+import { DollarSign, MapPin, Target } from "lucide-react";
 import { BentoItem } from "@/components/ui/cybernetic-bento-grid";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const STATS = [
   {
-    number: "USD 680K",
-    subtitle: "en riesgo por campaña",
+    number: "USD 3.679M",
+    subtitle: "en perdidas documentadas",
     detail:
-      "Pérdida potencial para un productor de 1.000 ha si la chicharrita ataca sin aviso previo.",
+      "Impacto total de la chicharrita en la campana 2023/24. Fuente: Bolsa de Comercio de Rosario.",
     icon: DollarSign,
   },
   {
-    number: "14x",
-    subtitle: "retorno de inversión",
+    number: "913",
+    subtitle: "localidades analizadas",
     detail:
-      "El costo de Delphi es menos del 0.1% del valor de una campaña maicera de 1.000 ha.",
-    icon: TrendingUp,
+      "Datos reales de la Red Nacional de Monitoreo del INTA, con 38 reportes quincenales en 2 temporadas.",
+    icon: MapPin,
   },
   {
-    number: "15 días",
-    subtitle: "de ventaja",
+    number: "0.88",
+    subtitle: "AUC-ROC del modelo",
     detail:
-      "Cada quincena de anticipación puede salvar entre 20% y 40% del rendimiento.",
-    icon: Timer,
+      "Precision del modelo predictivo entrenado con 36 variables climaticas, geograficas y de monitoreo.",
+    icon: Target,
   },
 ];
 
@@ -34,10 +34,10 @@ export default function ImpactSection() {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-100 mb-4 font-[family-name:var(--font-space-grotesk)]">
-            El costo de no anticipar
+            Delphi en numeros
           </h2>
           <p className="text-stone-400 text-lg max-w-2xl mx-auto">
-            Sin predicción, el productor reacciona cuando el daño ya empezó.
+            Datos reales, modelo validado, cobertura nacional.
           </p>
         </ScrollReveal>
 
