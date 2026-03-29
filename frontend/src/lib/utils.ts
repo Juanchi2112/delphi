@@ -27,6 +27,19 @@ export function riskScoreToPercent(score: number): number {
   return Math.round(score * 100);
 }
 
+export function findNearest(items: ScoreItem[], lat: number, lon: number): ScoreItem {
+  let best = items[0];
+  let bestDist = Infinity;
+  for (const item of items) {
+    const d = (item.lat - lat) ** 2 + (item.lon - lon) ** 2;
+    if (d < bestDist) {
+      bestDist = d;
+      best = item;
+    }
+  }
+  return best;
+}
+
 export function computeRegionStats(items: ScoreItem[]) {
   const byRegion: Record<string, { total: number; low: number; medium: number; high: number; avgRisk: number }> = {};
   for (const item of items) {

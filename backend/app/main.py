@@ -2,8 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.app.routers.health import router as health_router
+from backend.app.routers.informes import router as informes_router
 from backend.app.routers.localidades import router as localidades_router
 from backend.app.routers.metadata import router as metadata_router
+from backend.app.routers.monitoring import router as monitoring_router
 from backend.app.routers.scores import router as scores_router
 from backend.app.settings import get_settings
 
@@ -27,6 +29,8 @@ app.include_router(health_router)
 app.include_router(scores_router)
 app.include_router(localidades_router)
 app.include_router(metadata_router)
+app.include_router(informes_router)
+app.include_router(monitoring_router)
 
 
 @app.get("/", tags=["root"])

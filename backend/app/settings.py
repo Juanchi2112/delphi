@@ -14,10 +14,21 @@ class Settings(BaseSettings):
     scores_path: Path = Field(default=Path("output/scores_map.json"), alias="SCORES_PATH")
     metadata_path: Path = Field(default=Path("output/metadata.json"), alias="METADATA_PATH")
 
+    monitoring_scores_path: Path = Field(
+        default=Path("output/monitoring_map.json"), alias="MONITORING_SCORES_PATH"
+    )
+    monitoring_metadata_path: Path = Field(
+        default=Path("output/monitoring_metadata.json"), alias="MONITORING_METADATA_PATH"
+    )
+
     default_limit: int = Field(default=5000, alias="DEFAULT_LIMIT")
     max_limit: int = Field(default=20000, alias="MAX_LIMIT")
 
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+    openai_api_key: str = Field(default="", alias="OPENAI_API_KEY")
+
+    model_config = SettingsConfigDict(
+        env_file=(".env", "backend/.env"), env_file_encoding="utf-8", extra="ignore"
+    )
 
 
 @lru_cache
