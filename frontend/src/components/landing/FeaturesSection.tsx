@@ -8,6 +8,7 @@ import {
   Map,
   ShieldAlert,
   Radio,
+  Crosshair,
 } from "lucide-react";
 
 export default function FeaturesSection() {
@@ -75,8 +76,53 @@ export default function FeaturesSection() {
             </BentoItem>
           </ScrollReveal>
 
+          {/* Card: 14-Day Tactical Model (full width) */}
+          <ScrollReveal className="md:col-span-6" delay={0.12}>
+            <BentoItem className="h-full">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="flex-1">
+                  <div className="p-2.5 rounded-lg bg-white/5 border border-stone-700/50 w-fit mb-4">
+                    <Crosshair className="w-6 h-6 text-stone-300" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-stone-100 mb-2">
+                    Predicción Táctica a 14 Días
+                  </h3>
+                  <p className="text-sm text-stone-400 leading-relaxed max-w-lg">
+                    Nuestro segundo motor predictivo. Usando 44 variables —
+                    capturas recientes, propagación espacial de vecinos, clima
+                    actual y pronóstico — el modelo anticipa brotes antes de que
+                    se manifiesten en tu zona.
+                  </p>
+                  <p className="text-xs text-stone-500 mt-3">
+                    Base del sistema de alertas y créditos.
+                  </p>
+                </div>
+                <div className="flex gap-8 md:gap-12">
+                  <div className="text-center">
+                    <span className="text-3xl font-bold text-emerald-400 font-[family-name:var(--font-geist-mono)]">
+                      0.95
+                    </span>
+                    <p className="text-xs text-stone-500 mt-1">AUC-ROC</p>
+                  </div>
+                  <div className="text-center">
+                    <span className="text-3xl font-bold text-stone-100 font-[family-name:var(--font-geist-mono)]">
+                      44
+                    </span>
+                    <p className="text-xs text-stone-500 mt-1">variables</p>
+                  </div>
+                  <div className="text-center">
+                    <span className="text-3xl font-bold text-stone-100 font-[family-name:var(--font-geist-mono)]">
+                      14d
+                    </span>
+                    <p className="text-xs text-stone-500 mt-1">horizonte</p>
+                  </div>
+                </div>
+              </div>
+            </BentoItem>
+          </ScrollReveal>
+
           {/* Card 4: Interactive Map */}
-          <ScrollReveal className="md:col-span-3" delay={0.15}>
+          <ScrollReveal className="md:col-span-3" delay={0.2}>
             <BentoItem className="h-full">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
@@ -110,7 +156,7 @@ export default function FeaturesSection() {
           </ScrollReveal>
 
           {/* Card 5: Risk Alerts */}
-          <ScrollReveal className="md:col-span-3" delay={0.2}>
+          <ScrollReveal className="md:col-span-3" delay={0.25}>
             <BentoItem className="h-full">
               <div className="p-2.5 rounded-lg bg-white/5 border border-stone-700/50 w-fit mb-4">
                 <ShieldAlert className="w-6 h-6 text-stone-300" />
@@ -149,7 +195,7 @@ export default function FeaturesSection() {
           </ScrollReveal>
 
           {/* Card 6: INTA Network (full width) */}
-          <ScrollReveal className="md:col-span-6" delay={0.2}>
+          <ScrollReveal className="md:col-span-6" delay={0.3}>
             <BentoItem className="h-full">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="flex-1">

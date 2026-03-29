@@ -11,14 +11,14 @@ const teamMembers = [
   {
     name: "Ignacio Vargas",
     year: "4to Año",
-    image: "/assets/Ignacio_Vargas.JPG",
+    image: "/assets/Ignacio_Vargas.png",
     location: "UdeSA",
     linkedin: "https://www.linkedin.com/in/ignacio-vargas-fernández-9273a3367/",
   },
   {
     name: "Juan Quiroga",
     year: "4to Año",
-    image: "/assets/Juan_Quiroga.JPG",
+    image: "/assets/Juan_Quiroga.png",
     location: "UdeSA",
     linkedin: "https://www.linkedin.com/in/juan-andres-quiroga/",
   },
@@ -32,7 +32,7 @@ const teamMembers = [
   {
     name: "Ana Paula Tissera",
     year: "4to Año",
-    image: "/assets/Ana_paula_Tissera.jpg",
+    image: "/assets/Ana_paula_Tissera.png",
     location: "UdeSA",
     linkedin: "https://www.linkedin.com/in/ana-paula-tissera/",
   },
