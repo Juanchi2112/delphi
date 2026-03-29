@@ -88,6 +88,7 @@ export default function ArgentinaMap({ items }: { items: ScoreItem[] }) {
       ref={mapRef}
       className="h-full w-full"
       zoomControl={true}
+      scrollWheelZoom={false}
       attributionControl={true}
       minZoom={4}
       maxZoom={13}

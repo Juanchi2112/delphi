@@ -1,5 +1,6 @@
 import { getScores, getMetadata } from "@/lib/api";
 import HeroSection from "@/components/landing/HeroSection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
 import MapSection from "@/components/map/MapSection";
 import StatsSection from "@/components/stats/StatsSection";
 import PricingSection from "@/components/pricing/PricingSection";
@@ -30,11 +31,9 @@ export default async function Home() {
       <Navbar />
 
       <main className="flex-1">
-        <HeroSection
-          recordsValid={recordsValid}
-          regionsCount={regionsCount}
-          seasonsCount={seasons.length}
-        />
+        <HeroSection>
+          <FeaturesSection />
+        </HeroSection>
 
         <MapSection items={items} seasons={seasons} />
 

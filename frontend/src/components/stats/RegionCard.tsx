@@ -18,7 +18,7 @@ export default function RegionCard({
   const pctHigh = total > 0 ? ((high / total) * 100).toFixed(0) : "0";
 
   return (
-    <div className="glass rounded-xl p-4 space-y-3">
+    <div className="space-y-3">
       <div className="flex items-center justify-between">
         <h4 className="text-sm font-semibold text-stone-200">{name}</h4>
         <span className="text-xs text-stone-500 font-[family-name:var(--font-geist-mono)]">

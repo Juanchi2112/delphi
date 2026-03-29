@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { BentoItem } from "@/components/ui/cybernetic-bento-grid";
 import RegionCard from "./RegionCard";
 import RiskDistribution from "./RiskDistribution";
 import type { ScoreItem } from "@/lib/types";
@@ -30,78 +31,88 @@ export default function StatsSection({ items }: { items: ScoreItem[] }) {
     return { low, medium, high };
   }, [seasonItems]);
 
+  const activeRegions = REGION_ORDER.filter((r) => regionStats[r]);
+
   return (
-    <section id="datos" className="py-16 px-4">
+    <section id="datos" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-stone-50 mb-2">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-stone-50 mb-2 text-center font-[family-name:var(--font-space-grotesk)]">
             Panorama Nacional
           </h2>
-          <p className="text-stone-400 mb-8">
+          <p className="text-stone-400 mb-8 text-center">
             Análisis de riesgo por región — Temporada {temporada}
           </p>
         </ScrollReveal>
 
-        {/* Summary cards */}
+        {/* Row 1: Summary stats + Risk distribution */}
         <ScrollReveal delay={0.1}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="glass rounded-xl p-4 text-center">
-              <p className="text-3xl font-bold text-stone-50 font-[family-name:var(--font-geist-mono)]">
-                {seasonItems.length}
-              </p>
-              <p className="text-xs text-stone-400 mt-1">Localidades</p>
-            </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <p className="text-3xl font-bold text-red-400 font-[family-name:var(--font-geist-mono)]">
-                {totals.high}
-              </p>
-              <p className="text-xs text-stone-400 mt-1">Riesgo crítico</p>
-            </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <p className="text-3xl font-bold text-amber-400 font-[family-name:var(--font-geist-mono)]">
-                {totals.medium}
-              </p>
-              <p className="text-xs text-stone-400 mt-1">Riesgo moderado</p>
-            </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <p className="text-3xl font-bold text-emerald-400 font-[family-name:var(--font-geist-mono)]">
-                {totals.low}
-              </p>
-              <p className="text-xs text-stone-400 mt-1">Riesgo bajo</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <BentoItem className="md:col-span-2">
+              <h3 className="text-lg font-bold text-stone-50 mb-4">Resumen de riesgo</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-stone-50 font-[family-name:var(--font-geist-mono)]">
+                    {seasonItems.length}
+                  </p>
+                  <p className="text-xs text-stone-400 mt-1">Localidades</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-red-400 font-[family-name:var(--font-geist-mono)]">
+                    {totals.high}
+                  </p>
+                  <p className="text-xs text-stone-400 mt-1">Riesgo crítico</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-amber-400 font-[family-name:var(--font-geist-mono)]">
+                    {totals.medium}
+                  </p>
+                  <p className="text-xs text-stone-400 mt-1">Riesgo moderado</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-emerald-400 font-[family-name:var(--font-geist-mono)]">
+                    {totals.low}
+                  </p>
+                  <p className="text-xs text-stone-400 mt-1">Riesgo bajo</p>
+                </div>
+              </div>
+            </BentoItem>
+
+            <BentoItem>
+              <RiskDistribution
+                low={totals.low}
+                medium={totals.medium}
+                high={totals.high}
+              />
+            </BentoItem>
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Region cards */}
-          <ScrollReveal delay={0.2} className="md:col-span-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {REGION_ORDER.filter((r) => regionStats[r]).map((r) => (
-                <RegionCard
-                  key={r}
-                  name={r}
-                  total={regionStats[r].total}
-                  low={regionStats[r].low}
-                  medium={regionStats[r].medium}
-                  high={regionStats[r].high}
-                  avgRisk={regionStats[r].avgRisk}
-                />
+        {/* Row 2: Region cards + Model info */}
+        <ScrollReveal delay={0.15}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Region cards */}
+            <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {activeRegions.map((r) => (
+                <BentoItem key={r}>
+                  <RegionCard
+                    name={r}
+                    total={regionStats[r].total}
+                    low={regionStats[r].low}
+                    medium={regionStats[r].medium}
+                    high={regionStats[r].high}
+                    avgRisk={regionStats[r].avgRisk}
+                  />
+                </BentoItem>
               ))}
             </div>
-          </ScrollReveal>
 
-          {/* Distribution chart + model info */}
-          <ScrollReveal delay={0.3} className="space-y-4">
-            <RiskDistribution
-              low={totals.low}
-              medium={totals.medium}
-              high={totals.high}
-            />
-            <div className="glass rounded-xl p-4 space-y-2">
-              <h4 className="text-xs font-semibold text-stone-400 uppercase tracking-wider">
+            {/* Model info */}
+            <BentoItem>
+              <h4 className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-3">
                 Sobre el modelo
               </h4>
-              <div className="space-y-1.5 text-xs">
+              <div className="space-y-2 text-xs">
                 <div className="flex justify-between text-stone-300">
                   <span>Algoritmo</span>
                   <span className="font-[family-name:var(--font-geist-mono)] text-emerald-400">XGBoost</span>
@@ -123,9 +134,9 @@ export default function StatsSection({ items }: { items: ScoreItem[] }) {
                   <span className="font-[family-name:var(--font-geist-mono)] text-emerald-400">SHAP</span>
                 </div>
               </div>
-            </div>
-          </ScrollReveal>
-        </div>
+            </BentoItem>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
