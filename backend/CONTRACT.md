@@ -92,6 +92,13 @@ This document freezes the response contract consumed by the frontend map demo.
     {"name": "dist_zona_endemica_km", "value": 709.09},
     {"name": "temp_media_invierno", "value": 8.97},
     {"name": "gdd_base10_primavera", "value": 317.0}
+  ],
+  "shap_base_value": 0.4739,
+  "shap_features": [
+    {"name": "dist_zona_endemica_km", "value": 709.09, "shap_value": 0.068},
+    {"name": "lat", "value": -33.17, "shap_value": 0.11},
+    {"name": "lon", "value": -64.99, "shap_value": -0.05},
+    {"name": "temp_media_invierno", "value": 8.97, "shap_value": -0.02}
   ]
 }
 ```

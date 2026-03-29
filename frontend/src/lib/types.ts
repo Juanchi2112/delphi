@@ -18,12 +18,20 @@ export interface FeatureValue {
   value: number | null;
 }
 
+export interface ShapFeature {
+  name: string;
+  value: number | null;
+  shap_value: number;
+}
+
 export interface LocalidadDetail extends ScoreItem {
   max_capturas: number | null;
   mean_capturas: number | null;
   n_lecturas: number | null;
   n_detecciones: number | null;
   top_features: FeatureValue[];
+  shap_features?: ShapFeature[];
+  shap_base_value?: number | null;
 }
 
 export interface ScoresFilters {

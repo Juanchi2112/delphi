@@ -8,6 +8,7 @@ import type { LocalidadDetail } from "@/lib/types";
 import RiskGauge from "@/components/detail/RiskGauge";
 import RiskBadge from "@/components/detail/RiskBadge";
 import ShapBars from "@/components/detail/ShapBars";
+import ShapWaterfall from "@/components/detail/ShapWaterfall";
 import CaptureStats from "@/components/detail/CaptureStats";
 
 export default function LocalidadPanel() {
@@ -98,7 +99,16 @@ export default function LocalidadPanel() {
               <RiskGauge score={data.risk_score} level={data.risk_level} />
 
               {/* SHAP features */}
-              <ShapBars features={data.top_features} />
+              {data.shap_features?.length && data.shap_base_value != null ? (
+                <ShapWaterfall
+                  features={data.shap_features}
+                  baseValue={data.shap_base_value}
+                  riskScore={data.risk_score}
+                  riskLevel={data.risk_level}
+                />
+              ) : (
+                <ShapBars features={data.top_features} />
+              )}
 
               {/* Capture stats */}
               <CaptureStats data={data} />
