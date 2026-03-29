@@ -1,4 +1,4 @@
-import type { RiskLevel } from "./types";
+import type { RiskLevel, AlertCategory, TrendDirection } from "./types";
 
 export const RISK_CONFIG: Record<
   RiskLevel,
@@ -94,6 +94,92 @@ export const REGION_CENTERS: Record<string, { lat: number; lon: number; zoom: nu
   LITORAL: { lat: -32.0, lon: -60.5, zoom: 7 },
   "CENTRO SUR": { lat: -35.5, lon: -62.0, zoom: 7 },
   URUGUAY: { lat: -33.0, lon: -56.0, zoom: 7 },
+};
+
+// ---------------------------------------------------------------------------
+// Monitoring
+// ---------------------------------------------------------------------------
+
+export const ALERT_CONFIG: Record<
+  AlertCategory,
+  { color: string; label: string; description: string }
+> = {
+  brote_riesgo_alto: {
+    color: "#DC2626",
+    label: "Brote + Riesgo Alto",
+    description: "Brote activo, modelo predice continuidad",
+  },
+  brote_activo: {
+    color: "#F97316",
+    label: "Brote Activo",
+    description: "Capturas altas, modelo no predice escalada",
+  },
+  alerta_vecinos: {
+    color: "#F59E0B",
+    label: "Alerta Vecinos",
+    description: "Vecinos con capturas, riesgo de propagación",
+  },
+  bajo_riesgo: {
+    color: "#10B981",
+    label: "Bajo Riesgo",
+    description: "Sin indicadores de alerta",
+  },
+};
+
+export const TREND_CONFIG: Record<
+  TrendDirection,
+  { arrow: string; color: string; label: string }
+> = {
+  rising: { arrow: "↑", color: "#DC2626", label: "Subiendo" },
+  stable: { arrow: "→", color: "#A8A29E", label: "Estable" },
+  falling: { arrow: "↓", color: "#10B981", label: "Bajando" },
+};
+
+export const MONITORING_FEATURE_LABELS: Record<string, string> = {
+  capturas_actual: "Capturas actuales",
+  capturas_mean_actual: "Capturas promedio",
+  capturas_prev: "Capturas previas",
+  capturas_max_acum: "Capturas máx. acumuladas",
+  capturas_mean_acum: "Capturas prom. acumuladas",
+  capturas_trend: "Tendencia de capturas",
+  capturas_log1p: "Capturas (log)",
+  n_readings_season: "Lecturas en temporada",
+  n_detecciones_acum: "Detecciones acumuladas",
+  ratio_detecciones: "Ratio de detecciones",
+  is_currently_outbreak: "Brote actual",
+  n_trampas: "Nro. de trampas",
+  max_capturas_50km: "Máx. capturas 50km",
+  max_capturas_100km: "Máx. capturas 100km",
+  max_capturas_200km: "Máx. capturas 200km",
+  mean_capturas_100km: "Prom. capturas 100km",
+  mean_capturas_200km: "Prom. capturas 200km",
+  n_outbreak_50km: "Brotes en 50km",
+  n_outbreak_100km: "Brotes en 100km",
+  n_outbreak_200km: "Brotes en 200km",
+  n_neighbors_100km: "Vecinos en 100km",
+  n_neighbors_200km: "Vecinos en 200km",
+  weighted_capturas_100km: "Capturas ponderadas 100km",
+  propagation_pressure: "Presión de propagación",
+  temp_mean_period: "Temp. media del período",
+  temp_max_period: "Temp. máxima del período",
+  temp_min_period: "Temp. mínima del período",
+  temp_range_period: "Amplitud térmica",
+  gdd_base10_period: "Grados-día del período",
+  dias_tmin_gt_15: "Días con mín. >15°C",
+  dias_tmin_gt_18: "Días con mín. >18°C",
+  rh_mean_period: "Humedad relativa media",
+  precip_total_period: "Precipitación del período",
+  dias_lluvia_period: "Días con lluvia",
+  wind_mean_period: "Viento medio",
+  wind_max_period: "Viento máximo",
+  wind_norte_ratio_period: "Ratio viento norte",
+  day_of_year_sin: "Posición estacional (sin)",
+  day_of_year_cos: "Posición estacional (cos)",
+  month: "Mes",
+  week_of_year: "Semana del año",
+  dist_zona_endemica_km: "Distancia zona endémica",
+  lat: "Latitud",
+  lon: "Longitud",
 };
 
 export const ARGENTINA_CENTER: [number, number] = [-34.5, -63.0];

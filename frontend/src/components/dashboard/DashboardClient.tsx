@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { useAuthStore } from "@/stores/useAuthStore";
 import { useCamposStore } from "@/stores/useCamposStore";
 import { supabase } from "@/lib/supabase";
-import type { ScoreItem } from "@/lib/types";
+import type { ScoreItem, MonitoringScoreItem, AlertsResponse } from "@/lib/types";
 import CamposSidebar from "./CamposSidebar";
-import LocalidadPanel from "@/components/map/LocalidadPanel";
 import Navbar from "@/components/layout/Navbar";
 
 const DashboardMap = dynamic(() => import("./DashboardMap"), { ssr: false });
@@ -16,12 +15,23 @@ const DashboardMap = dynamic(() => import("./DashboardMap"), { ssr: false });
 interface Props {
   items: ScoreItem[];
   seasons: string[];
+  monitoringItems?: MonitoringScoreItem[];
+  alerts?: AlertsResponse | null;
 }
 
-export default function DashboardClient({ items, seasons }: Props) {
+export default function DashboardClient({ items, seasons, monitoringItems = [], alerts = null }: Props) {
   const router = useRouter();
   const { user, loading: authLoading } = useAuthStore();
   const { setCampos, setLoading } = useCamposStore();
+
+  // Build a lookup map: localidad_key → MonitoringScoreItem
+  const monitoringMap = useMemo(() => {
+    const map = new Map<string, MonitoringScoreItem>();
+    for (const item of monitoringItems) {
+      map.set(item.localidad_key, item);
+    }
+    return map;
+  }, [monitoringItems]);
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -53,10 +63,9 @@ export default function DashboardClient({ items, seasons }: Props) {
     <div className="min-h-screen bg-[#0C0A09] flex flex-col">
       <Navbar />
       <div className="flex flex-1 pt-16">
-        <CamposSidebar />
+        <CamposSidebar monitoringMap={monitoringMap} />
         <div className="flex-1 relative">
-          <DashboardMap items={items} seasons={seasons} />
-          <LocalidadPanel />
+          <DashboardMap items={items} seasons={seasons} monitoringItems={monitoringItems} />
         </div>
       </div>
     </div>

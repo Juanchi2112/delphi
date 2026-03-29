@@ -16,17 +16,17 @@ import "leaflet-draw/dist/leaflet.draw.css";
 import "leaflet-draw";
 
 import { useMapStore } from "@/stores/useMapStore";
-import { useCamposStore, type Campo } from "@/stores/useCamposStore";
-import { useAuthStore } from "@/stores/useAuthStore";
-import { supabase } from "@/lib/supabase";
+import { useCamposStore } from "@/stores/useCamposStore";
 import {
   RISK_CONFIG,
+  ALERT_CONFIG,
+  TREND_CONFIG,
   REGION_CENTERS,
   ARGENTINA_CENTER,
   ARGENTINA_ZOOM,
 } from "@/lib/constants";
-import { riskScoreToPercent, findNearest } from "@/lib/utils";
-import type { ScoreItem } from "@/lib/types";
+import { riskScoreToPercent, findNearest, extractLocalidadKey } from "@/lib/utils";
+import type { ScoreItem, MonitoringScoreItem } from "@/lib/types";
 
 function MapController() {
   const map = useMap();
@@ -59,11 +59,8 @@ function DrawControl({
   filtered: ScoreItem[];
 }) {
   const map = useMap();
-  const { campos, addCampo } = useCamposStore();
-  const user = useAuthStore((s) => s.user);
+  const { setPendingCampo } = useCamposStore();
   const drawControlRef = useRef<L.Control.Draw | null>(null);
-  const camposLenRef = useRef(campos.length);
-  camposLenRef.current = campos.length;
 
   const itemsForSearch = filtered.length > 0 ? filtered : items;
 
@@ -101,7 +98,7 @@ function DrawControl({
     drawControlRef.current = control;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    map.on(L.Draw.Event.CREATED, async (e: any) => {
+    map.on(L.Draw.Event.CREATED, (e: any) => {
       const layer = e.layer as L.Polygon;
       const geojson = (layer.toGeoJSON() as GeoJSON.Feature<GeoJSON.Polygon>)
         .geometry;
@@ -112,31 +109,7 @@ function DrawControl({
       const [cLon, cLat] = centroid.geometry.coordinates;
       const nearest = findNearest(itemsForSearch, cLat, cLon);
 
-      const nombre =
-        window.prompt("Nombre del campo:") ||
-        `Campo ${camposLenRef.current + 1}`;
-
-      if (!user) return;
-
-      const campoData = {
-        user_id: user.id,
-        nombre,
-        geojson,
-        hectareas,
-        localidad_id: nearest.id,
-        risk_score: nearest.risk_score,
-        risk_level: nearest.risk_level,
-      };
-
-      const { data, error } = await supabase
-        .from("campos")
-        .insert(campoData)
-        .select()
-        .single();
-
-      if (data && !error) {
-        addCampo(data as Campo);
-      }
+      setPendingCampo({ geojson, hectareas, nearest });
     });
 
     return () => {
@@ -192,11 +165,21 @@ function RiskMarker({ item }: { item: ScoreItem }) {
 interface Props {
   items: ScoreItem[];
   seasons: string[];
+  monitoringItems?: MonitoringScoreItem[];
 }
 
-export default function DashboardMap({ items }: Props) {
+export default function DashboardMap({ items, monitoringItems = [] }: Props) {
   const { temporada, region, riskLevel } = useMapStore();
   const { campos, selectedCampoId } = useCamposStore();
+
+  // Build monitoring lookup for campo polygon coloring
+  const monitoringLookup = useMemo(() => {
+    const map = new Map<string, MonitoringScoreItem>();
+    for (const item of monitoringItems) {
+      map.set(item.localidad_key, item);
+    }
+    return map;
+  }, [monitoringItems]);
 
   const filtered = useMemo(() => {
     return items.filter((item) => {
@@ -225,19 +208,27 @@ export default function DashboardMap({ items }: Props) {
       <MapController />
       <DrawControl items={items} filtered={filtered} />
 
-      {/* Saved campos */}
-      {campos.map((campo) => (
-        <GeoJSON
-          key={campo.id}
-          data={campo.geojson}
-          style={{
-            color: "#10B981",
-            fillColor: "#10B981",
-            fillOpacity: selectedCampoId === campo.id ? 0.3 : 0.1,
-            weight: selectedCampoId === campo.id ? 3 : 1.5,
-          }}
-        />
-      ))}
+      {/* Saved campos — colored by monitoring alert if available */}
+      {campos.map((campo) => {
+        const monItem = campo.localidad_id
+          ? monitoringLookup.get(extractLocalidadKey(campo.localidad_id))
+          : undefined;
+        const borderColor = monItem
+          ? ALERT_CONFIG[monItem.alert_category].color
+          : "#10B981";
+        return (
+          <GeoJSON
+            key={campo.id}
+            data={campo.geojson}
+            style={{
+              color: borderColor,
+              fillColor: borderColor,
+              fillOpacity: selectedCampoId === campo.id ? 0.3 : 0.1,
+              weight: selectedCampoId === campo.id ? 3 : 1.5,
+            }}
+          />
+        );
+      })}
 
       {/* Risk markers */}
       {filtered.map((item) => (

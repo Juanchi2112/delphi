@@ -4,9 +4,17 @@ import { Trash2 } from "lucide-react";
 import { useCamposStore, type Campo } from "@/stores/useCamposStore";
 import { supabase } from "@/lib/supabase";
 import RiskBadge from "@/components/detail/RiskBadge";
-import type { RiskLevel } from "@/lib/types";
+import TrendIndicator from "@/components/detail/TrendIndicator";
+import { ALERT_CONFIG } from "@/lib/constants";
+import type { RiskLevel, MonitoringScoreItem } from "@/lib/types";
 
-export default function CampoCard({ campo }: { campo: Campo }) {
+export default function CampoCard({
+  campo,
+  monitoring,
+}: {
+  campo: Campo;
+  monitoring?: MonitoringScoreItem | null;
+}) {
   const { selectedCampoId, selectCampo, removeCampo } = useCamposStore();
   const isSelected = selectedCampoId === campo.id;
 
@@ -66,6 +74,21 @@ export default function CampoCard({ campo }: { campo: Campo }) {
           <span className="text-[10px] text-stone-500 font-[family-name:var(--font-geist-mono)]">
             {Math.round(campo.risk_score * 100)}%
           </span>
+        </div>
+      )}
+      {/* Monitoring indicator */}
+      {monitoring && (
+        <div className="mt-2 flex items-center gap-2 text-xs">
+          <span
+            className={`w-2 h-2 rounded-full shrink-0 ${monitoring.alert_category === "brote_riesgo_alto" ? "animate-pulse" : ""}`}
+            style={{ backgroundColor: ALERT_CONFIG[monitoring.alert_category].color }}
+          />
+          <TrendIndicator trend={monitoring.trend} delta={monitoring.trend_delta} />
+          {monitoring.capturas_actual != null && monitoring.capturas_actual > 0 && (
+            <span className="text-stone-500 font-[family-name:var(--font-geist-mono)]">
+              {monitoring.capturas_actual} cap.
+            </span>
+          )}
         </div>
       )}
     </div>

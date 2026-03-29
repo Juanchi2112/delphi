@@ -40,6 +40,20 @@ export function findNearest(items: ScoreItem[], lat: number, lon: number): Score
   return best;
 }
 
+/** Extract localidad_key from a pre-season localidad_id by stripping temporada + index. */
+export function extractLocalidadKey(localidadId: string): string {
+  // Pre-season ID: "achiras-c-rdoba-2025-2026-0063"
+  // Monitoring key: "achiras-c-rdoba"
+  // Strip last two dash-segments (temporada like "2025-2026" and 4-digit index)
+  const parts = localidadId.split("-");
+  // Find temporada pattern: YYYY-YYYY at positions [-3,-2] (e.g. "2025" "-" "2026")
+  // The last segment is the index, the two before that are the temporada year halves
+  if (parts.length >= 4) {
+    return parts.slice(0, -3).join("-");
+  }
+  return localidadId;
+}
+
 export function computeRegionStats(items: ScoreItem[]) {
   const byRegion: Record<string, { total: number; low: number; medium: number; high: number; avgRisk: number }> = {};
   for (const item of items) {

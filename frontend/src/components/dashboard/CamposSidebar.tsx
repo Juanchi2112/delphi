@@ -1,24 +1,152 @@
 "use client";
 
+import { useState } from "react";
 import { useCamposStore } from "@/stores/useCamposStore";
+import { useAuthStore } from "@/stores/useAuthStore";
+import { supabase } from "@/lib/supabase";
+import type { Campo } from "@/stores/useCamposStore";
 import CampoCard from "./CampoCard";
+import CampoDetail from "./CampoDetail";
+import RiskBadge from "@/components/detail/RiskBadge";
+import { extractLocalidadKey } from "@/lib/utils";
+import type { RiskLevel, MonitoringScoreItem } from "@/lib/types";
 
-const PRICE_PER_TIER = [
+const PRICE_TIERS = [
   { max: 500, label: "Productor", price: 39 },
   { max: 5000, label: "Asesor", price: 99 },
   { max: Infinity, label: "Corporativo", price: null },
 ];
 
 function getTier(hectareas: number) {
-  return PRICE_PER_TIER.find((t) => hectareas <= t.max) ?? PRICE_PER_TIER[2];
+  return PRICE_TIERS.find((t) => hectareas <= t.max) ?? PRICE_TIERS[2];
 }
 
-export default function CamposSidebar() {
-  const { campos, loading } = useCamposStore();
+function NewCampoForm() {
+  const { pendingCampo, setPendingCampo, addCampo } = useCamposStore();
+  const user = useAuthStore((s) => s.user);
+  const [nombre, setNombre] = useState("");
+  const [saving, setSaving] = useState(false);
+
+  if (!pendingCampo) return null;
+
+  const handleSave = async () => {
+    if (!user || !nombre.trim()) return;
+    setSaving(true);
+
+    const campoData = {
+      user_id: user.id,
+      nombre: nombre.trim(),
+      geojson: pendingCampo.geojson,
+      hectareas: pendingCampo.hectareas,
+      localidad_id: pendingCampo.nearest.id,
+      risk_score: pendingCampo.nearest.risk_score,
+      risk_level: pendingCampo.nearest.risk_level,
+    };
+
+    const { data, error } = await supabase
+      .from("campos")
+      .insert(campoData)
+      .select()
+      .single();
+
+    setSaving(false);
+
+    if (data && !error) {
+      addCampo(data as Campo);
+      setNombre("");
+    }
+  };
+
+  return (
+    <div className="p-4 space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-sm font-semibold text-stone-200">Nuevo Campo</h3>
+        <button
+          onClick={() => setPendingCampo(null)}
+          className="text-xs text-stone-500 hover:text-stone-300 cursor-pointer"
+        >
+          Cancelar
+        </button>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-2 gap-2">
+        <div className="bg-stone-800/50 rounded-lg p-3">
+          <p className="text-[10px] text-stone-500 uppercase">Hectareas</p>
+          <p className="text-lg font-semibold text-stone-200 font-[family-name:var(--font-geist-mono)]">
+            {pendingCampo.hectareas.toFixed(0)}
+          </p>
+        </div>
+        <div className="bg-stone-800/50 rounded-lg p-3">
+          <p className="text-[10px] text-stone-500 uppercase">Riesgo</p>
+          <div className="flex items-center gap-2 mt-1">
+            <RiskBadge
+              level={pendingCampo.nearest.risk_level as RiskLevel}
+            />
+          </div>
+        </div>
+      </div>
+
+      <p className="text-xs text-stone-500">
+        Localidad ref: {pendingCampo.nearest.localidad},{" "}
+        {pendingCampo.nearest.provincia}
+      </p>
+
+      {/* Name input */}
+      <div>
+        <label className="block text-xs font-medium text-stone-400 mb-1.5">
+          Nombre del campo
+        </label>
+        <input
+          type="text"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          placeholder="Ej: Lote 5 Norte"
+          autoFocus
+          className="w-full px-3 py-2.5 bg-stone-800/50 border border-stone-700 rounded-lg text-sm text-stone-50 placeholder-stone-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition-colors"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && nombre.trim()) handleSave();
+          }}
+        />
+      </div>
+
+      <button
+        onClick={handleSave}
+        disabled={!nombre.trim() || saving}
+        className="w-full py-2.5 bg-emerald-500 text-stone-950 font-semibold rounded-lg hover:bg-emerald-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm"
+      >
+        {saving ? "Guardando..." : "Guardar campo"}
+      </button>
+    </div>
+  );
+}
+
+export default function CamposSidebar({
+  monitoringMap,
+}: {
+  monitoringMap?: Map<string, MonitoringScoreItem>;
+}) {
+  const { campos, loading, pendingCampo, selectedCampoId } = useCamposStore();
 
   const totalHa = campos.reduce((sum, c) => sum + c.hectareas, 0);
   const tier = getTier(totalHa);
 
+  // Show campo detail
+  if (selectedCampoId) {
+    const campo = campos.find((c) => c.id === selectedCampoId);
+    if (campo) return <CampoDetail campo={campo} />;
+  }
+
+  // Show new campo form
+  if (pendingCampo) {
+    return (
+      <aside className="w-[320px] bg-stone-900/95 backdrop-blur-xl border-r border-stone-700/50 flex flex-col h-[calc(100vh-4rem)]">
+        <NewCampoForm />
+      </aside>
+    );
+  }
+
+  // Show campos list
   return (
     <aside className="w-[320px] bg-stone-900/95 backdrop-blur-xl border-r border-stone-700/50 flex flex-col h-[calc(100vh-4rem)] overflow-hidden">
       {/* Header */}
@@ -50,7 +178,18 @@ export default function CamposSidebar() {
             ))}
           </div>
         ) : (
-          campos.map((campo) => <CampoCard key={campo.id} campo={campo} />)
+          campos.map((campo) => {
+            const monData = campo.localidad_id && monitoringMap
+              ? monitoringMap.get(extractLocalidadKey(campo.localidad_id))
+              : undefined;
+            return (
+              <CampoCard
+                key={campo.id}
+                campo={campo}
+                monitoring={monData}
+              />
+            );
+          })
         )}
       </div>
 

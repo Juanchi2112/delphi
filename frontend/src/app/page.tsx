@@ -1,4 +1,5 @@
-import { getScores, getMetadata } from "@/lib/api";
+import { getScores, getMetadata, getMonitoringScores, getMonitoringAlerts } from "@/lib/api";
+import type { MonitoringScoreItem, AlertsResponse } from "@/lib/types";
 import HeroSection from "@/components/landing/HeroSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import MapSection from "@/components/map/MapSection";
@@ -10,14 +11,20 @@ import Footer from "@/components/layout/Footer";
 export default async function Home() {
   let items: Awaited<ReturnType<typeof getScores>>["items"] = [];
   let metadata: Awaited<ReturnType<typeof getMetadata>> | null = null;
+  let monitoringItems: MonitoringScoreItem[] = [];
+  let alerts: AlertsResponse | null = null;
 
   try {
-    const [scoresRes, metaRes] = await Promise.all([
+    const [scoresRes, metaRes, monRes, alertsRes] = await Promise.all([
       getScores({ limit: 5000 }),
       getMetadata(),
+      getMonitoringScores({ limit: 5000 }).catch(() => ({ items: [] as MonitoringScoreItem[], count: 0, filters: {} })),
+      getMonitoringAlerts().catch(() => null),
     ]);
     items = scoresRes.items;
     metadata = metaRes;
+    monitoringItems = monRes.items;
+    alerts = alertsRes;
   } catch (e) {
     console.error("Failed to fetch data from API:", e);
   }
@@ -35,7 +42,7 @@ export default async function Home() {
           <FeaturesSection />
         </HeroSection>
 
-        <MapSection items={items} seasons={seasons} />
+        <MapSection items={items} monitoringItems={monitoringItems} alerts={alerts} seasons={seasons} />
 
         <StatsSection items={items} />
 
