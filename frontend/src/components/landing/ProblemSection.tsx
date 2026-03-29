@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Wheat, Clock, HelpCircle } from "lucide-react";
 import HighlightCard from "@/components/ui/highlight-card";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -53,6 +54,17 @@ export default function ProblemSection() {
           </ScrollReveal>
         ))}
       </div>
+
+      <ScrollReveal delay={0.4}>
+        <div className="text-center mt-10">
+          <Link
+            href="/saber-mas"
+            className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+          >
+            Saber más →
+          </Link>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }

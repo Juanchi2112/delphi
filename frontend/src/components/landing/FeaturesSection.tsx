@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { BentoItem } from "@/components/ui/cybernetic-bento-grid";
 import {
@@ -52,10 +53,16 @@ export default function FeaturesSection() {
               <h3 className="text-lg font-semibold text-stone-100 mb-2">
                 Predicción con Machine Learning
               </h3>
-              <p className="text-sm text-stone-400 leading-relaxed">
+              <p className="text-sm text-stone-400 leading-relaxed mb-3">
                 Modelo entrenado con 28 características climáticas y 2
                 temporadas de datos reales de captura.
               </p>
+              <Link
+                href="/saber-mas"
+                className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+              >
+                Saber más →
+              </Link>
             </BentoItem>
           </ScrollReveal>
 
