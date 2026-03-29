@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useAuthStore } from "@/stores/useAuthStore";
 import { useCamposStore } from "@/stores/useCamposStore";
 import { supabase } from "@/lib/supabase";
@@ -8,6 +9,7 @@ import { supabase } from "@/lib/supabase";
 const NAV_LINKS = [
   { label: "Mapa", href: "#mapa" },
   { label: "Datos", href: "#datos" },
+  { label: "Saber más", href: "/saber-mas" },
   { label: "Planes", href: "#planes" },
 ];
 
@@ -45,13 +47,13 @@ export default function Navbar() {
         {/* Links - truly centered via equal spacers */}
         <div className="hidden md:flex items-center gap-12 flex-1 justify-center">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="relative text-base text-stone-400 hover:text-stone-200 transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-emerald-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 

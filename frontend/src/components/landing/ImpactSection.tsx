@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { DollarSign, MapPin, Target } from "lucide-react";
 import { BentoItem } from "@/components/ui/cybernetic-bento-grid";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -61,6 +62,17 @@ export default function ImpactSection() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.4}>
+          <div className="text-center mt-10">
+            <Link
+              href="/saber-mas"
+              className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+            >
+              Saber más →
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
