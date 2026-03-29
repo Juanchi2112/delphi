@@ -50,7 +50,7 @@ export default function OnboardingTourProvider({ items }: { items: ScoreItem[] }
   const selectLocalidad = useMapStore((s) => s.selectLocalidad);
   const { setPendingCampo, openDrawer } = useCamposStore();
   const [rect, setRect] = useState<Rect | null>(null);
-  const retryRef = useRef<ReturnType<typeof setTimeout>>();
+  const retryRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const [mounted, setMounted] = useState(false);
 
   // One-time mount flag (survives strict mode double-run)
