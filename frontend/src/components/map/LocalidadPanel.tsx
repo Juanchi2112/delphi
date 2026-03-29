@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useMapStore } from "@/stores/useMapStore";
 import { useAuthStore } from "@/stores/useAuthStore";
-import { useIsMobile } from "@/hooks/useIsMobile";
 import { getLocalidad, getMonitoringLocalidad, generateReport } from "@/lib/api";
 import type { LocalidadDetail, MonitoringLocalidadDetail, ReportResponse } from "@/lib/types";
 import RiskGauge from "@/components/detail/RiskGauge";
@@ -19,7 +18,6 @@ import MonitoringTimeline from "@/components/detail/MonitoringTimeline";
 import InformeView from "@/components/dashboard/InformeView";
 
 export default function LocalidadPanel() {
-  const isMobile = useIsMobile();
   const { selectedId, selectLocalidad, mode } = useMapStore();
   const [data, setData] = useState<LocalidadDetail | null>(null);
   const [monitoringData, setMonitoringData] = useState<MonitoringLocalidadDetail | null>(null);
@@ -59,18 +57,13 @@ export default function LocalidadPanel() {
     <AnimatePresence>
       {selectedId && (
         <motion.aside
-          initial={isMobile ? { y: "100%", opacity: 0 } : { x: "100%", opacity: 0 }}
-          animate={isMobile ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
-          exit={isMobile ? { y: "100%", opacity: 0 } : { x: "100%", opacity: 0 }}
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: "100%", opacity: 0 }}
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
           data-onboarding="localidad-panel"
-          className={
-            isMobile
-              ? "absolute inset-x-0 bottom-0 h-[70vh] w-full bg-stone-900/95 backdrop-blur-xl border-t border-stone-700 z-[1001] overflow-y-auto rounded-t-2xl"
-              : "absolute right-0 top-0 bottom-0 w-[360px] bg-stone-900/95 backdrop-blur-xl border-l border-stone-700 z-[1001] overflow-y-auto"
-          }
+          className="absolute right-0 top-0 bottom-0 w-[360px] bg-stone-900/95 backdrop-blur-xl border-l border-stone-700 z-[1001] overflow-y-auto"
         >
-          {isMobile && <div className="w-10 h-1 bg-stone-600 rounded-full mx-auto mt-3 mb-1 shrink-0" />}
           {/* Close button */}
           <button
             onClick={() => selectLocalidad(null)}
