@@ -75,10 +75,13 @@ export default function LoginPage() {
           transition={{ duration: 0.5 }}
           className="flex items-center justify-center gap-3 mb-8"
         >
-          <span className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-stone-950 font-bold text-lg">
-            D
-          </span>
-          <span className="text-stone-50 font-semibold text-2xl tracking-tight">
+          <svg width="40" height="40" viewBox="0 0 56 56" className="shrink-0">
+            <path d="M28,6 A22,22 0 1,1 8,34" fill="none" stroke="#fff" strokeWidth="1" opacity=".15"/>
+            <path d="M28,12 A16,16 0 1,1 14,32" fill="none" stroke="#fff" strokeWidth="1" opacity=".25"/>
+            <path d="M28,18 A10,10 0 1,1 20,30" fill="none" stroke="#fff" strokeWidth="1.2" opacity=".45"/>
+            <circle cx="28" cy="28" r="4" fill="#fff"/>
+          </svg>
+          <span className="text-stone-50 font-semibold text-2xl tracking-[0.35em] uppercase">
             Delphi
           </span>
         </motion.div>
