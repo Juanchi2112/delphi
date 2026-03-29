@@ -1,4 +1,5 @@
 .env
+.DS_Store
 __pycache__/
 *.pyc
 *.pyo
@@ -7,3 +8,7 @@ node_modules/
 .next/
 frontend/.env.local
 .claude/
+# NDVI bundle (ndvi_array.npy ~256MB + parquet); regenerate from notebook
+output/hybrid_14d_ready/
+# Per-tile Sentinel NDVI cache (local only)
+cache/ndvi/
