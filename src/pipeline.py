@@ -74,7 +74,7 @@ STAGES = {
 
 
 def main():
-    parser = argparse.ArgumentParser(description="ChicharritAI Pipeline")
+    parser = argparse.ArgumentParser(description="Delphi Pipeline")
     parser.add_argument(
         "--stage",
         choices=list(STAGES.keys()),

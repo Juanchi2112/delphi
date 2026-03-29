@@ -1,8 +1,8 @@
-# ChicharritAI — Descripción Completa del Proyecto
+# Delphi — Descripción Completa del Proyecto
 
 ## Qué es
 
-ChicharritAI es una plataforma de inteligencia fitosanitaria predictiva que anticipa brotes de chicharrita del maíz (Dalbulus maidis) en Argentina usando machine learning sobre datos climáticos y de monitoreo público. Es, en esencia, **el pronóstico del tiempo para plagas agrícolas**.
+Delphi es una plataforma de inteligencia fitosanitaria predictiva que anticipa brotes de chicharrita del maíz (Dalbulus maidis) en Argentina usando machine learning sobre datos climáticos y de monitoreo público. Es, en esencia, **el pronóstico del tiempo para plagas agrícolas**.
 
 ## El problema
 
@@ -12,7 +12,7 @@ Hoy la detección es completamente reactiva: una red de 330+ trampas amarillas p
 
 ## La solución
 
-ChicharritAI tiene dos capas:
+Delphi tiene dos capas:
 
 **Capa 1 — Predicción pre-campaña (agosto-septiembre).** Antes de que el productor siembre, el modelo genera un score de riesgo (0-100) para cada localidad de la zona maicera argentina. El modelo está entrenado con datos reales de la Red Nacional de Trampas de Monitoreo (330+ localidades, 37 informes quincenales, 2 campañas) cruzados con datos climáticos históricos de Open-Meteo. El productor ve un mapa de riesgo, entiende los factores que lo explican (vía SHAP), y toma decisiones informadas.
 
@@ -94,7 +94,7 @@ Istchuk et al. (2025), "Forewarning the seasonal dynamics of corn leafhopper and
 
 ## Diferenciación competitiva
 
-Las soluciones existentes son **reactivas** (Plantix: foto de planta enferma → diagnóstico post-hoc) o requieren **hardware caro** (Trapview, FarmSense: trampas IoT en cada campo). ChicharritAI es **predictivo** (anticipa antes de que llegue) y **software puro** (sin hardware, datos públicos, escala sin costo marginal por usuario).
+Las soluciones existentes son **reactivas** (Plantix: foto de planta enferma → diagnóstico post-hoc) o requieren **hardware caro** (Trapview, FarmSense: trampas IoT en cada campo). Delphi es **predictivo** (anticipa antes de que llegue) y **software puro** (sin hardware, datos públicos, escala sin costo marginal por usuario).
 
 Nadie en el mundo hace predicción pre-campaña de riesgo de chicharrita basada en ML. El paper brasileño más cercano (Istchuk et al. 2025) usa 4 localidades — nosotros usamos 330+. Plantix declaró que pest forecasting es su "próxima frontera" pero aún no lo implementaron. Nosotros lo estamos construyendo.
 

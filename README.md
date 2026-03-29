@@ -1,4 +1,4 @@
-# ChicharritAI
+# Delphi
 
 Predictive intelligence platform for corn leafhopper (`Dalbulus maidis`) outbreak risk in Argentina.
 
@@ -123,4 +123,4 @@ uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
 
 ## Team
 
-HackITBA 2026 - ChicharritAI team.
+HackITBA 2026 - Delphi team.
