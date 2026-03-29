@@ -1,10 +1,12 @@
 import { getScores, getMetadata, getMonitoringScores, getMonitoringAlerts } from "@/lib/api";
 import type { MonitoringScoreItem, AlertsResponse } from "@/lib/types";
 import HeroSection from "@/components/landing/HeroSection";
+import ProblemSection from "@/components/landing/ProblemSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import MapSection from "@/components/map/MapSection";
 import StatsSection from "@/components/stats/StatsSection";
 import PricingSection from "@/components/pricing/PricingSection";
+import TeamSection from "@/components/landing/TeamSection";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -39,12 +41,15 @@ export default async function Home() {
 
       <main className="flex-1">
         <HeroSection>
+          <ProblemSection />
           <FeaturesSection />
         </HeroSection>
 
         <MapSection items={items} monitoringItems={monitoringItems} alerts={alerts} seasons={seasons} />
 
         <StatsSection items={items} />
+
+        <TeamSection />
 
         <PricingSection />
       </main>

@@ -31,15 +31,15 @@ export default function MapSection({
   const mode = useMapStore((s) => s.mode);
 
   return (
-    <section id="mapa" className="relative h-[85vh] bg-stone-950">
+    <section id="mapa" className="relative h-[85vh] bg-stone-950 flex flex-col rounded-2xl mx-4 md:mx-8 shadow-[0_0_160px_rgba(0,0,0,0.9),0_0_400px_rgba(0,0,0,0.6),0_0_600px_rgba(0,0,0,0.4)] border border-stone-800/40 overflow-hidden">
       {/* Filters bar */}
-      <div className="absolute top-0 left-0 right-0 z-[1000] glass-subtle">
+      <div className="shrink-0 z-[1000] bg-stone-950 border-b border-stone-800/50">
         <MapFilters seasons={seasons} />
         {mode === "monitoreo" && <AlertsBanner alerts={alerts} />}
       </div>
 
       {/* Map */}
-      <div className="h-full w-full pt-0">
+      <div className="flex-1 min-h-0 relative">
         <ArgentinaMap items={items} monitoringItems={monitoringItems} />
       </div>
 
