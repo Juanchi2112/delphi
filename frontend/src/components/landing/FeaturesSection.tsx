@@ -5,7 +5,6 @@ import { BentoItem } from "@/components/ui/cybernetic-bento-grid";
 import {
   MapPin,
   Brain,
-  CloudSun,
   Map,
   ShieldAlert,
   Radio,
@@ -59,31 +58,20 @@ export default function FeaturesSection() {
             </BentoItem>
           </ScrollReveal>
 
-          {/* Card 3: Climate Data */}
+          {/* Card 3: Explainability */}
           <ScrollReveal className="md:col-span-2" delay={0.2}>
             <BentoItem className="h-full">
               <div className="p-2.5 rounded-lg bg-white/5 border border-stone-700/50 w-fit mb-4">
-                <CloudSun className="w-6 h-6 text-stone-300" />
+                <Brain className="w-6 h-6 text-stone-300" />
               </div>
               <h3 className="text-lg font-semibold text-stone-100 mb-2">
-                Datos Climáticos en Tiempo Real
+                Un agente que te explica el porqué
               </h3>
               <p className="text-sm text-stone-400 leading-relaxed">
-                Integración con Open-Meteo e índices ENSO de la NOAA para
-                capturar señales climáticas clave.
+                No te damos solo un número. Delphi te explica qué factores están
+                empujando el riesgo en tu zona — para que entiendas la predicción
+                y tomes mejores decisiones.
               </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["Temperatura", "Precipitación", "Humedad", "ENSO"].map(
-                  (tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2 py-1 rounded bg-white/5 border border-stone-700/50 text-stone-400"
-                    >
-                      {tag}
-                    </span>
-                  )
-                )}
-              </div>
             </BentoItem>
           </ScrollReveal>
 
