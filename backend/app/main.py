@@ -10,7 +10,7 @@ from backend.app.settings import get_settings
 settings = get_settings()
 
 app = FastAPI(
-    title="ChicharritAI Backend API",
+    title="Delphi Backend API",
     version=settings.api_version,
     description="Serving API for precomputed pest outbreak risk scores.",
 )
@@ -32,7 +32,7 @@ app.include_router(metadata_router)
 @app.get("/", tags=["root"])
 def root() -> dict[str, str]:
     return {
-        "name": "ChicharritAI Backend API",
+        "name": "Delphi Backend API",
         "version": settings.api_version,
         "status": "ok",
     }

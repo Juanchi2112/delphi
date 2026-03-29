@@ -8,7 +8,9 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
+import shap
 import xgboost as xgb
 
 from backend.app.services.scoring import to_risk_level
@@ -113,6 +115,75 @@ def build_top_features(row: pd.Series) -> list[dict[str, float | None]]:
     return result
 
 
+def sigmoid(x: float) -> float:
+    if x >= 0:
+        return 1.0 / (1.0 + math.exp(-x))
+    ex = math.exp(x)
+    return ex / (1.0 + ex)
+
+
+def compute_shap_values(
+    model_path: Path, df: pd.DataFrame, feature_cols: list[str]
+) -> tuple[np.ndarray, float]:
+    """Compute SHAP values using TreeExplainer on the XGBoost Booster."""
+    booster = xgb.Booster()
+    booster.load_model(str(model_path))
+    explainer = shap.TreeExplainer(booster)
+    dmatrix = xgb.DMatrix(df[feature_cols], feature_names=feature_cols)
+    shap_values = explainer.shap_values(dmatrix)
+    base_value = float(explainer.expected_value)
+    return shap_values, base_value
+
+
+def build_shap_features(
+    row: pd.Series,
+    shap_row: np.ndarray,
+    feature_cols: list[str],
+    base_logodds: float,
+    top_k: int = 8,
+) -> tuple[list[dict[str, object]], float]:
+    """Build top-k SHAP features with contributions in probability space.
+
+    Returns (features_list, base_probability).
+    The shap_value of each feature is the delta in probability, so
+    base_probability + sum(shap_values) ≈ risk_score.
+    """
+    base_prob = sigmoid(base_logodds)
+
+    indices = np.argsort(np.abs(shap_row))[::-1]
+    top_indices = indices[:top_k]
+    rest_indices = indices[top_k:]
+
+    cumulative_logodds = base_logodds
+    result: list[dict[str, object]] = []
+
+    for idx in top_indices:
+        prev_prob = sigmoid(cumulative_logodds)
+        cumulative_logodds += float(shap_row[idx])
+        curr_prob = sigmoid(cumulative_logodds)
+        delta_prob = curr_prob - prev_prob
+        result.append({
+            "name": feature_cols[idx],
+            "value": safe_float(row[feature_cols[idx]]),
+            "shap_value": round(delta_prob, 6),
+        })
+
+    if len(rest_indices) > 0:
+        prev_prob = sigmoid(cumulative_logodds)
+        rest_sum = float(shap_row[rest_indices].sum())
+        cumulative_logodds += rest_sum
+        curr_prob = sigmoid(cumulative_logodds)
+        delta_rest = curr_prob - prev_prob
+        if abs(delta_rest) > 0.001:
+            result.append({
+                "name": "_otros",
+                "value": None,
+                "shap_value": round(delta_rest, 6),
+            })
+
+    return result, round(base_prob, 6)
+
+
 def load_model_scores(model_path: Path, df: pd.DataFrame, feature_cols: list[str]) -> list[float]:
     booster = xgb.Booster()
     booster.load_model(str(model_path))
@@ -133,6 +204,7 @@ def main() -> None:
     df = pd.read_csv(args.dataset)
     feature_cols = [c for c in df.columns if c not in META_COLS]
     risk_scores = load_model_scores(args.model, df, feature_cols)
+    shap_matrix, base_logodds = compute_shap_values(args.model, df, feature_cols)
     df = df.copy()
     df["risk_score"] = risk_scores
     df["risk_level"] = df["risk_score"].apply(to_risk_level)
@@ -167,6 +239,10 @@ def main() -> None:
             f"{idx:04d}"
         )
 
+        shap_feats, base_prob = build_shap_features(
+            row, shap_matrix[idx], feature_cols, base_logodds
+        )
+
         item = {
             "id": loc_id,
             "localidad": localidad.title(),
@@ -183,6 +259,8 @@ def main() -> None:
             "n_lecturas": safe_int(row.get("n_lecturas")),
             "n_detecciones": safe_int(row.get("n_detecciones")),
             "top_features": build_top_features(row),
+            "shap_features": shap_feats,
+            "shap_base_value": base_prob,
         }
         items.append(item)
 

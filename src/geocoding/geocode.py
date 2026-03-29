@@ -9,7 +9,7 @@ from src.config import CACHE_DIR, GEOCODING_CACHE
 
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
-HEADERS = {"User-Agent": "ChicharritAI/1.0"}
+HEADERS = {"User-Agent": "Delphi/1.0"}
 
 # Bounding boxes aproximados (lat_min, lat_max, lon_min, lon_max)
 PROVINCE_BOUNDS: Dict[str, Tuple[float, float, float, float]] = {

@@ -1,4 +1,4 @@
-# ChicharritAI — Pipeline de Datos y APIs
+# Delphi — Pipeline de Datos y APIs
 
 ## Arquitectura general
 
@@ -422,7 +422,7 @@ def geocode_localidad(localidad, provincia, country="Argentina"):
         "format": "json",
         "limit": 1,
     }
-    headers = {"User-Agent": "ChicharritAI-Hackathon/1.0"}
+    headers = {"User-Agent": "Delphi-Hackathon/1.0"}
     
     response = requests.get(url, params=params, headers=headers)
     results = response.json()

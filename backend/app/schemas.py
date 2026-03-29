@@ -38,12 +38,20 @@ class ScoresResponse(BaseModel):
     filters: ScoresFilters
 
 
+class ShapFeature(BaseModel):
+    name: str
+    value: float | None = None
+    shap_value: float = 0.0
+
+
 class LocalidadDetail(ScoreItem):
     max_capturas: float | None = None
     mean_capturas: float | None = None
     n_lecturas: int | None = None
     n_detecciones: int | None = None
     top_features: list[FeatureValue] = []
+    shap_features: list[ShapFeature] = []
+    shap_base_value: float | None = None
 
 
 class HealthResponse(BaseModel):
