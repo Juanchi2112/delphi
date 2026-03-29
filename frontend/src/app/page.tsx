@@ -5,6 +5,7 @@ import FeaturesSection from "@/components/landing/FeaturesSection";
 import MapSection from "@/components/map/MapSection";
 import StatsSection from "@/components/stats/StatsSection";
 import PricingSection from "@/components/pricing/PricingSection";
+import TeamSection from "@/components/landing/TeamSection";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -40,6 +41,8 @@ export default async function Home() {
         <MapSection items={items} seasons={seasons} />
 
         <StatsSection items={items} />
+
+        <TeamSection />
 
         <PricingSection />
       </main>

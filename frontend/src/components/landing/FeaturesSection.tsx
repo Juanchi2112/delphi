@@ -53,19 +53,9 @@ export default function FeaturesSection() {
                 Predicción con Machine Learning
               </h3>
               <p className="text-sm text-stone-400 leading-relaxed">
-                Modelo XGBoost entrenado con 28 features climáticas y 2
+                Modelo entrenado con 28 características climáticas y 2
                 temporadas de datos reales de captura.
               </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["XGBoost", "28 features", "SHAP"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-1 rounded bg-white/5 border border-stone-700/50 text-stone-400"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </BentoItem>
           </ScrollReveal>
 
@@ -141,7 +131,7 @@ export default function FeaturesSection() {
                 Alertas por Región
               </h3>
               <p className="text-sm text-stone-400 leading-relaxed">
-                Clasificación automática de riesgo en 6 regiones agrícolas.
+                Clasificación automática de riesgo en regiones agrícolas.
                 Detectá zonas críticas antes de que escale el brote.
               </p>
               <div className="flex flex-col gap-3 mt-6">
