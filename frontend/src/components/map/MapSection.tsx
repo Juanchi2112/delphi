@@ -23,14 +23,14 @@ export default function MapSection({
   seasons: string[];
 }) {
   return (
-    <section id="mapa" className="relative h-[85vh] bg-stone-950 mb-16">
+    <section id="mapa" className="relative h-[85vh] bg-stone-950">
       {/* Filters bar */}
       <div className="absolute top-0 left-0 right-0 z-[1000] glass-subtle">
         <MapFilters seasons={seasons} />
       </div>
 
       {/* Map */}
-      <div className="h-full w-full pt-16">
+      <div className="h-full w-full pt-0">
         <ArgentinaMap items={items} />
       </div>
 
