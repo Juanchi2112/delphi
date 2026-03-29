@@ -64,26 +64,33 @@ export default function MapSection({
 
       {/* Map */}
       <div data-onboarding="map-markers" className="flex-1 min-h-0 relative">
-        <ArgentinaMap
-          items={items}
-          monitoringItems={monitoringItems}
-          enableDrawing={!!user}
-        />
+        <div className={!user && !authLoading ? "pointer-events-none select-none h-full" : "h-full"}>
+          <ArgentinaMap
+            items={items}
+            monitoringItems={monitoringItems}
+            enableDrawing={!!user}
+          />
+        </div>
 
-        {/* Demo banner — invite to login for full features */}
+        {/* Login overlay */}
         {!user && !authLoading && (
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[1000]">
+          <div className="absolute inset-0 z-[1000] flex items-center justify-center bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent">
             <Link
               href="/login"
-              className="flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-stone-950/90 backdrop-blur-md px-5 py-3 shadow-lg shadow-emerald-500/5 hover:border-emerald-500/50 transition-all group"
+              className="flex flex-col items-center gap-4 rounded-2xl border border-stone-700/60 bg-stone-950/85 backdrop-blur-xl px-10 py-8 shadow-2xl hover:border-emerald-500/40 transition-all group"
             >
-              <span className="relative flex h-2.5 w-2.5">
+              <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
               </span>
-              <span className="text-sm text-stone-300 group-hover:text-stone-100 transition-colors">
-                <span className="text-emerald-400 font-medium">Acceso gratuito por tiempo limitado</span>
-                {" — "}Crea tu cuenta para probar todas las funcionalidades del MVP
+              <span className="text-lg font-semibold text-stone-100 group-hover:text-emerald-400 transition-colors">
+                Acceso gratuito por tiempo limitado
+              </span>
+              <span className="text-sm text-stone-400 text-center max-w-xs">
+                Crea tu cuenta para explorar el mapa, analizar el riesgo de tus campos y generar informes con IA.
+              </span>
+              <span className="mt-2 px-6 py-2.5 bg-emerald-500 text-stone-950 font-semibold text-sm rounded-lg group-hover:bg-emerald-400 transition-colors">
+                Crear cuenta gratis
               </span>
             </Link>
           </div>
