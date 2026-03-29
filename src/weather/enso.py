@@ -1,3 +1,5 @@
+from typing import Optional
+
 import requests
 import pandas as pd
 
@@ -23,7 +25,7 @@ def get_oni_data() -> pd.DataFrame:
     return pd.DataFrame(records)
 
 
-def get_oni_for_winter(year: int) -> float | None:
+def get_oni_for_winter(year: int) -> Optional[float]:
     """Retorna el ONI promedio del invierno argentino (JJA) para un año dado."""
     oni_df = get_oni_data()
     jja = oni_df[(oni_df["year"] == year) & (oni_df["season"] == "JJA")]

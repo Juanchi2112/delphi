@@ -65,8 +65,11 @@ def build_dataset(trap_df: pd.DataFrame) -> pd.DataFrame:
 
     rows = []
     skipped = 0
+    total = len(trap_df)
 
-    for _, row in trap_df.iterrows():
+    for i, (_, row) in enumerate(trap_df.iterrows()):
+        if (i + 1) % 50 == 0 or i == 0:
+            print(f"  Procesando {i + 1}/{total} ...", flush=True)
         key = f"{row['localidad']}__{row['provincia']}"
         coords = coords_cache.get(key)
         if coords is None:

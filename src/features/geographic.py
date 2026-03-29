@@ -21,24 +21,25 @@ def compute_geographic_features(lat: float, lon: float) -> dict:
     }
 
 
-def compute_nearest_outbreak(lat: float, lon: float, prev_outbreaks: list[dict]) -> dict:
+def compute_nearest_outbreak(lat: float, lon: float, prev_outbreaks: list) -> dict:
     """
     Calcula features de proximidad a outbreaks de la temporada anterior.
 
     Args:
         prev_outbreaks: lista de dicts con {lat, lon, max_capturas}
     """
+    NO_DATA_DIST = 9999.0  # Sin datos de temporada anterior
     if not prev_outbreaks:
         return {
-            "dist_nearest_outbreak_km": float("nan"),
-            "dist_nearest_high_outbreak_km": float("nan"),
+            "dist_nearest_outbreak_km": NO_DATA_DIST,
+            "dist_nearest_high_outbreak_km": NO_DATA_DIST,
             "n_outbreaks_within_100km": 0,
             "n_outbreaks_within_200km": 0,
         }
 
     distances = [_haversine(lat, lon, o["lat"], o["lon"]) for o in prev_outbreaks]
     high_outbreaks = [i for i, o in enumerate(prev_outbreaks) if o["max_capturas"] >= 100]
-    high_distances = [distances[i] for i in high_outbreaks] if high_outbreaks else [float("nan")]
+    high_distances = [distances[i] for i in high_outbreaks] if high_outbreaks else [9999.0]
 
     return {
         "dist_nearest_outbreak_km": float(min(distances)),
