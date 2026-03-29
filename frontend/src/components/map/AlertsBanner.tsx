@@ -19,8 +19,8 @@ export default function AlertsBanner({ alerts }: { alerts: AlertsResponse | null
   const countMap = new Map(alerts.alerts.map((a) => [a.category, a.count]));
 
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-stone-900/80 border-b border-stone-800">
-      <span className="text-xs text-stone-500 mr-1">Alertas:</span>
+    <div className="flex items-center gap-2 px-4 py-2 bg-stone-900/80 border-b border-stone-800 overflow-x-auto scrollbar-hide">
+      <span className="text-xs text-stone-500 mr-1 shrink-0">Alertas:</span>
       {CATEGORY_ORDER.map((cat) => {
         const count = countMap.get(cat) ?? 0;
         if (count === 0) return null;
@@ -30,7 +30,7 @@ export default function AlertsBanner({ alerts }: { alerts: AlertsResponse | null
           <button
             key={cat}
             onClick={() => setAlertCategory(active ? null : cat)}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer shrink-0"
             style={{
               backgroundColor: active ? `${cfg.color}20` : "#1C1917",
               color: active ? cfg.color : "#A8A29E",
@@ -45,7 +45,7 @@ export default function AlertsBanner({ alerts }: { alerts: AlertsResponse | null
           </button>
         );
       })}
-      <span className="text-xs text-stone-600 ml-auto">
+      <span className="text-xs text-stone-600 ml-auto hidden sm:block shrink-0">
         {alerts.total_localities} localidades
       </span>
     </div>

@@ -54,7 +54,7 @@ export default function MapSection({
   }, [user, setCampos, setLoading]);
 
   return (
-    <section id="mapa" className="relative h-[85vh] bg-stone-950 flex flex-col rounded-2xl mx-4 md:mx-8 shadow-[0_0_160px_rgba(0,0,0,0.9),0_0_400px_rgba(0,0,0,0.6),0_0_600px_rgba(0,0,0,0.4)] border border-stone-800/40 overflow-hidden">
+    <section id="mapa" className="relative h-[100dvh] sm:h-[85vh] bg-stone-950 flex flex-col sm:rounded-2xl mx-0 sm:mx-4 md:mx-8 shadow-[0_0_160px_rgba(0,0,0,0.9),0_0_400px_rgba(0,0,0,0.6),0_0_600px_rgba(0,0,0,0.4)] border-0 sm:border border-stone-800/40 overflow-hidden">
       {/* Filters bar */}
       <div data-onboarding="map-filters" className="shrink-0 z-[1000] bg-stone-950 border-b border-stone-800/50">
         <MapFilters seasons={seasons} />

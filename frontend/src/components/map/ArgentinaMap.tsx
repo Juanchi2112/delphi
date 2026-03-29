@@ -17,12 +17,14 @@ import * as turf from "@turf/turf";
 
 import { useMapStore } from "@/stores/useMapStore";
 import { useCamposStore } from "@/stores/useCamposStore";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { RISK_CONFIG, ALERT_CONFIG, TREND_CONFIG, REGION_CENTERS, ARGENTINA_CENTER, ARGENTINA_ZOOM } from "@/lib/constants";
 import { riskScoreToPercent, findNearest, extractLocalidadKey } from "@/lib/utils";
 import type { ScoreItem, MonitoringScoreItem } from "@/lib/types";
 
 function MapController({ items }: { items: ScoreItem[] }) {
   const map = useMap();
+  const isMobile = useIsMobile();
   const { region, selectedId } = useMapStore();
   const { selectedCampoId, campos } = useCamposStore();
 
@@ -31,12 +33,16 @@ function MapController({ items }: { items: ScoreItem[] }) {
       const campo = campos.find((c) => c.id === selectedCampoId);
       if (campo) {
         const layer = L.geoJSON(campo.geojson);
-        map.fitBounds(layer.getBounds(), { padding: [50, 50], maxZoom: 13 });
+        map.fitBounds(layer.getBounds(), { padding: isMobile ? [20, 20] : [50, 50], maxZoom: 13 });
       }
     } else if (selectedId) {
       const item = items.find((i) => i.id === selectedId);
       if (item) {
-        map.flyTo([item.lat, item.lon + 1.5], 9, { duration: 1.2 });
+        if (isMobile) {
+          map.flyTo([item.lat - 0.5, item.lon], 9, { duration: 1.2 });
+        } else {
+          map.flyTo([item.lat, item.lon + 1.5], 9, { duration: 1.2 });
+        }
       }
     } else if (region && REGION_CENTERS[region]) {
       const { lat, lon, zoom } = REGION_CENTERS[region];
@@ -44,7 +50,7 @@ function MapController({ items }: { items: ScoreItem[] }) {
     } else {
       map.flyTo(ARGENTINA_CENTER, ARGENTINA_ZOOM, { duration: 1.2 });
     }
-  }, [region, selectedId, selectedCampoId, campos, items, map]);
+  }, [region, selectedId, selectedCampoId, campos, items, map, isMobile]);
 
   return null;
 }
@@ -252,6 +258,7 @@ export default function ArgentinaMap({
   monitoringItems?: MonitoringScoreItem[];
   enableDrawing?: boolean;
 }) {
+  const isMobile = useIsMobile();
   const { mode, temporada, region, riskLevel, alertCategory } = useMapStore();
   const { campos, selectedCampoId } = useCamposStore();
 
@@ -297,8 +304,8 @@ export default function ArgentinaMap({
       <ArgentinaBorder />
       <MapController items={items} />
 
-      {/* Drawing controls — only when authenticated */}
-      {enableDrawing && (
+      {/* Drawing controls — only when authenticated, hidden on mobile */}
+      {enableDrawing && !isMobile && (
         <DrawControl items={items} filtered={filteredPreSeason} />
       )}
 

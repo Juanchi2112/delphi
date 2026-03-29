@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Map, X } from "lucide-react";
 import { useCamposStore, type Campo } from "@/stores/useCamposStore";
 import { useAuthStore } from "@/stores/useAuthStore";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { supabase } from "@/lib/supabase";
 import { extractLocalidadKey } from "@/lib/utils";
 import type { RiskLevel, MonitoringScoreItem } from "@/lib/types";
@@ -122,6 +123,7 @@ export default function CamposDrawer({
 }: {
   monitoringItems?: MonitoringScoreItem[];
 }) {
+  const isMobile = useIsMobile();
   const {
     campos,
     loading,
@@ -245,12 +247,17 @@ export default function CamposDrawer({
         {drawerOpen && (
           <motion.aside
             data-onboarding="onboarding-drawer"
-            initial={{ x: "-100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
+            initial={isMobile ? { y: "100%", opacity: 0 } : { x: "-100%", opacity: 0 }}
+            animate={isMobile ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
+            exit={isMobile ? { y: "100%", opacity: 0 } : { x: "-100%", opacity: 0 }}
             transition={{ type: "spring", stiffness: 200, damping: 25 }}
-            className="absolute left-0 top-0 bottom-0 w-[320px] bg-stone-900/95 backdrop-blur-xl border-r border-stone-700 z-[1001] flex flex-col overflow-hidden"
+            className={
+              isMobile
+                ? "absolute inset-x-0 bottom-0 h-[60vh] w-full bg-stone-900/95 backdrop-blur-xl border-t border-stone-700 z-[1001] flex flex-col overflow-hidden rounded-t-2xl"
+                : "absolute left-0 top-0 bottom-0 w-[320px] bg-stone-900/95 backdrop-blur-xl border-r border-stone-700 z-[1001] flex flex-col overflow-hidden"
+            }
           >
+            {isMobile && <div className="w-10 h-1 bg-stone-600 rounded-full mx-auto mt-3 mb-1 shrink-0" />}
             {/* Close button */}
             <button
               onClick={toggleDrawer}

@@ -3,6 +3,7 @@ import type { MonitoringScoreItem, AlertsResponse } from "@/lib/types";
 import HeroSection from "@/components/landing/HeroSection";
 import ProblemSection from "@/components/landing/ProblemSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
+import ImpactSection from "@/components/landing/ImpactSection";
 import MapSection from "@/components/map/MapSection";
 import StatsSection from "@/components/stats/StatsSection";
 import PricingSection from "@/components/pricing/PricingSection";
@@ -42,6 +43,7 @@ export default async function Home() {
       <main className="flex-1">
         <HeroSection>
           <ProblemSection />
+          <ImpactSection />
           <FeaturesSection />
         </HeroSection>
 

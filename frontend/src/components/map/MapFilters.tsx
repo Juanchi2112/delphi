@@ -31,9 +31,9 @@ export default function MapFilters({
   } = useMapStore();
 
   return (
-    <div className="flex flex-wrap items-center gap-3 px-4 py-3">
+    <div className="flex items-center gap-3 px-4 py-2 sm:py-3 overflow-x-auto sm:overflow-x-visible sm:flex-wrap scrollbar-hide">
       {/* Mode toggle */}
-      <div className="flex items-center gap-1 bg-stone-900/80 rounded-md p-1">
+      <div className="flex items-center gap-1 bg-stone-900/80 rounded-md p-1 shrink-0">
         <button
           onClick={() => setMode("precampana")}
           className={`px-3 py-1.5 rounded text-xs font-medium transition-all cursor-pointer ${
@@ -57,12 +57,12 @@ export default function MapFilters({
       </div>
 
       {/* Separator */}
-      <div className="w-px h-6 bg-stone-700/50" />
+      <div className="w-px h-6 bg-stone-700/50 hidden sm:block shrink-0" />
 
       {/* Season toggle (pre-season only) */}
       {mode === "precampana" && (
         <>
-          <div className="flex items-center gap-1 bg-stone-900/80 rounded-md p-1">
+          <div className="flex items-center gap-1 bg-stone-900/80 rounded-md p-1 shrink-0">
             {seasons.map((s) => (
               <button
                 key={s}
@@ -77,12 +77,12 @@ export default function MapFilters({
               </button>
             ))}
           </div>
-          <div className="w-px h-6 bg-stone-700/50" />
+          <div className="w-px h-6 bg-stone-700/50 hidden sm:block shrink-0" />
         </>
       )}
 
       {/* Region pills */}
-      <div className="flex flex-wrap gap-1.5">
+      <div className="flex gap-1.5 shrink-0">
         <button
           onClick={() => setRegion(null)}
           className={`px-3 py-1.5 rounded text-xs font-medium transition-colors cursor-pointer border ${
@@ -109,11 +109,11 @@ export default function MapFilters({
       </div>
 
       {/* Separator */}
-      <div className="w-px h-6 bg-stone-700/50" />
+      <div className="w-px h-6 bg-stone-700/50 hidden sm:block shrink-0" />
 
       {/* Risk level pills (pre-season) or Alert category pills (monitoring) */}
       {mode === "precampana" ? (
-        <div className="flex gap-1.5">
+        <div className="flex gap-1.5 shrink-0">
           {RISK_LEVELS.map((l) => {
             const cfg = RISK_CONFIG[l];
             const active = riskLevel === l;
@@ -134,7 +134,7 @@ export default function MapFilters({
           })}
         </div>
       ) : (
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex gap-1.5 shrink-0">
           {ALERT_CATEGORIES.map((cat) => {
             const cfg = ALERT_CONFIG[cat];
             const active = alertCategory === cat;
