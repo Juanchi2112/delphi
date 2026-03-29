@@ -259,7 +259,9 @@ export default function CamposDrawer({
               <X size={14} />
             </button>
 
-            {drawerContent}
+            <div className="flex flex-col flex-1 min-h-0">
+              {drawerContent}
+            </div>
           </motion.aside>
         )}
       </AnimatePresence>
