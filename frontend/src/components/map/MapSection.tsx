@@ -36,6 +36,7 @@ export default function MapSection({
 }) {
   const mode = useMapStore((s) => s.mode);
   const user = useAuthStore((s) => s.user);
+  const authLoading = useAuthStore((s) => s.loading);
   const { setCampos, setLoading } = useCamposStore();
 
   useEffect(() => {
@@ -63,26 +64,28 @@ export default function MapSection({
 
       {/* Map */}
       <div data-onboarding="map-markers" className="flex-1 min-h-0 relative">
-        <div className={!user ? "blur-sm pointer-events-none select-none h-full" : "h-full"}>
-          <ArgentinaMap
-            items={items}
-            monitoringItems={monitoringItems}
-            enableDrawing={!!user}
-          />
-        </div>
+        <ArgentinaMap
+          items={items}
+          monitoringItems={monitoringItems}
+          enableDrawing={!!user}
+        />
 
-        {/* Login overlay when not authenticated */}
-        {!user && (
-          <div className="absolute inset-0 z-[1000] flex items-center justify-center">
-            <div className="flex flex-col items-center gap-4 rounded-2xl border border-stone-700/60 bg-stone-950/80 backdrop-blur-md px-10 py-8">
-              <p className="text-stone-300 text-sm">Iniciá sesión para usar el mapa</p>
-              <Link
-                href="/login"
-                className="rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-500"
-              >
-                Iniciar sesión
-              </Link>
-            </div>
+        {/* Demo banner — invite to login for full features */}
+        {!user && !authLoading && (
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[1000]">
+            <Link
+              href="/login"
+              className="flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-stone-950/90 backdrop-blur-md px-5 py-3 shadow-lg shadow-emerald-500/5 hover:border-emerald-500/50 transition-all group"
+            >
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+              </span>
+              <span className="text-sm text-stone-300 group-hover:text-stone-100 transition-colors">
+                <span className="text-emerald-400 font-medium">Demo gratuita</span>
+                {" — "}Registrate para marcar tus campos y generar informes IA
+              </span>
+            </Link>
           </div>
         )}
 
