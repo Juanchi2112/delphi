@@ -1,126 +1,122 @@
 # Delphi
 
-Predictive intelligence platform for corn leafhopper (`Dalbulus maidis`) outbreak risk in Argentina.
+Plataforma de inteligencia predictiva para riesgo de brote de chicharrita del maiz (*Dalbulus maidis*) en Argentina. Usa machine learning sobre datos climaticos reales y 330+ trampas de monitoreo del INTA.
 
-This repository now separates:
+## Arquitectura
 
-- **Offline pipeline/training** (`src/`, `train.py`, notebooks) for data preparation.
-- **Serving backend** (`backend/`) for deployable API used by the interactive map frontend.
-
-## Quick Architecture
-
-1. Build dataset and train model offline.
-2. Generate precomputed serving artifacts (`scores_map.json`, `metadata.json`).
-3. Run FastAPI backend that serves scores in-memory (no database required for MVP).
-
-## Repository Layout
-
-- `src/`: data pipeline, weather and feature engineering.
-- `train.py`: trains XGBoost model, saves `output/model.json`.
-- `backend/`: FastAPI service and precompute scripts for deployment.
-- `output/`: generated artifacts (`dataset.csv`, `model.json`, `scores_map.json`, `metadata.json`).
-- `01_eda.ipynb`, `02_modelo.ipynb`, `xgboost.ipynb`: exploratory/model notebooks.
-
-## Requirements
-
-- Python 3.10+
-- pip
-
-## 1) Offline pipeline (optional if artifacts already exist)
-
-Generate clean trap data and final dataset:
-
-```bash
-python -m src.pipeline --stage load
-python -m src.pipeline --stage geocode
-python -m src.pipeline --stage assemble
+```
+Offline Pipeline (src/)              Backend (backend/)               Frontend (frontend/)
+━━━━━━━━━━━━━━━━━━━━━               ━━━━━━━━━━━━━━━━━━               ━━━━━━━━━━━━━━━━━━━━
+csvs/*.csv (38 informes)             scores_map.json ──┐              Next.js + React
+    │                                metadata.json  ──┤              Leaflet (mapa)
+    ▼                                monitoring_*.json─┘              Recharts (timeline)
+src/pipeline → features                    │                          Supabase (auth + campos)
+    │                                FastAPI (in-memory)                    │
+    ▼                                ├── /scores                     Vercel (deploy)
+train.py → model.json                ├── /localidades/{id}
+    │                                ├── /monitoring/*
+    ▼                                ├── /informes (AI reports)
+precompute_scores.py                 └── Railway (deploy)
+precompute_monitoring.py
 ```
 
-Train model:
+## Layout del repositorio
 
-```bash
-python train.py
+```
+├── src/                  Pipeline de datos (load, geocode, features)
+├── train.py              Entrena modelo XGBoost
+├── backend/
+│   ├── app/              FastAPI (routers, services, schemas)
+│   └── scripts/          precompute_scores.py, precompute_monitoring.py
+├── frontend/             Next.js 16 + React 19 + Tailwind
+│   └── src/
+│       ├── app/          Pages (landing, dashboard, login)
+│       ├── components/   Map, detail panels, monitoring, onboarding
+│       ├── stores/       Zustand (map, auth, campos)
+│       └── lib/          API client, types, constants
+├── notebooks/            EDA, modelos, analisis
+├── csvs/                 38 CSVs de la Red Nacional de Trampas
+└── output/               Artifacts generados (scores, metadata)
 ```
 
-Expected outputs:
+## Setup rapido
 
-- `output/dataset.csv`
-- `output/model.json`
-
-## 2) Generate serving artifacts
-
-```bash
-python -m backend.scripts.precompute_scores \
-  --dataset output/dataset.csv \
-  --model output/model.json \
-  --scores-out output/scores_map.json \
-  --metadata-out output/metadata.json \
-  --artifact-version 2026-03-28
-```
-
-## 3) Run backend locally
-
-Install backend dependencies:
+### Backend
 
 ```bash
 pip install -r backend/requirements.txt
-```
-
-Start API:
-
-```bash
 uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Main endpoints:
-
-- `GET /health`
-- `GET /scores`
-- `GET /localidades/{id}`
-- `GET /metadata`
-
-API contract is frozen in `backend/CONTRACT.md`.
-
-## 4) Local smoke test
+### Frontend
 
 ```bash
-python -m backend.scripts.smoke_test
+cd frontend
+npm install
+npm run dev
 ```
 
-## 5) Railway deploy
+Requiere `.env.local` en `frontend/`:
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
 
-### Recommended setup
+## Endpoints del backend
 
-1. Push repo to GitHub.
-2. In Railway: **New Project -> Deploy from GitHub Repo**.
-3. Keep root directory at repository root.
-4. Set start command:
+### Pre-campana (scores estaticos)
+- `GET /health` — status + metadata
+- `GET /scores` — scores por localidad (filtros: temporada, region, risk_level, min_risk)
+- `GET /localidades/{id}` — detalle + SHAP explainability
+- `GET /metadata` — stats del dataset
+
+### Monitoreo quincenal (14 dias)
+- `GET /monitoring/scores` — ultima lectura por localidad (filtros: temporada, region, alert_category)
+- `GET /monitoring/localidades/{key}` — timeline completa + SHAP
+- `GET /monitoring/alerts` — resumen de alertas por categoria
+- `GET /monitoring/metadata` — stats del monitoreo
+
+### Informes AI
+- `POST /informes/{localidad_id}` — genera informe de riesgo con OpenAI
+
+Contrato completo en `backend/CONTRACT.md`.
+
+## Deploy
+
+- **Backend**: Railway (Nixpacks, auto-deploy desde main)
+- **Frontend**: Vercel (auto-deploy desde main, root directory: `frontend`)
+
+### Variables de entorno (Railway)
+```
+API_VERSION=v1
+ARTIFACT_VERSION=2026-03-29
+SCORES_PATH=output/scores_map.json
+METADATA_PATH=output/metadata.json
+MONITORING_SCORES_PATH=output/monitoring_map.json
+MONITORING_METADATA_PATH=output/monitoring_metadata.json
+OPENAI_API_KEY=sk-...
+```
+
+## Generar artifacts (offline)
 
 ```bash
-uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+# Pipeline de datos
+python -m src.pipeline --stage load
+python -m src.pipeline --stage geocode
+python -m src.pipeline --stage assemble
+
+# Entrenar modelo
+python train.py
+
+# Pre-campana scores
+python -m backend.scripts.precompute_scores
+
+# Monitoreo quincenal scores
+python -m backend.scripts.precompute_monitoring
 ```
 
-5. Add env vars:
+## Equipo
 
-- `API_VERSION=v1`
-- `ARTIFACT_VERSION=2026-03-28`
-- `MODEL_PATH=output/model.json`
-- `DATASET_PATH=output/dataset.csv`
-- `SCORES_PATH=output/scores_map.json`
-- `METADATA_PATH=output/metadata.json`
-
-6. Deploy and verify:
-
-- `/health`
-- `/scores?temporada=2025-2026&limit=10`
-- `/metadata`
-
-## Demo Stability Notes
-
-- Serving layer does not depend on external APIs at request time.
-- Invalid map points are filtered during precompute (`invalid_bbox`, invalid locality names).
-- Backend works as stateless API with in-memory JSON payload.
-
-## Team
-
-HackITBA 2026 - Delphi team.
+HackITBA 2026 — Delphi team (Juanchi, AP, Nacho, Alex)
+Universidad de San Andres, Ingenieria en AI

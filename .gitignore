@@ -1,14 +1,57 @@
-.env
+# === OS ===
 .DS_Store
+Thumbs.db
+
+# === Python ===
 __pycache__/
 *.pyc
 *.pyo
+*.egg-info/
+.pytest_cache/
+
+# === Env / secrets ===
+.env
+.env.local
+frontend/.env.local
+
+# === Cache (regenerable locally) ===
+cache/weather/
+cache/ndvi/
+cache/pdfs_maizar/
+
+# === Generated output (models, datasets, plots) ===
+output/*.csv
+output/*.pt
+output/*.pth
+output/*.png
+output/model.json
+output/model_14d.json
+output/model_14d_metadata.json
+output/hybrid_14d_ready/
+# KEEP tracked (Railway runtime needs these):
+#   output/scores_map.json
+#   output/metadata.json
+#   output/monitoring_map.json
+#   output/monitoring_metadata.json
+
+# === Notebooks ===
 .ipynb_checkpoints/
+
+# === Frontend build ===
 node_modules/
 .next/
-frontend/.env.local
+frontend/.next/
+frontend/.vercel/
+frontend/tsconfig.tsbuildinfo
+
+# === IDE / tools ===
+.vscode/
+.idea/
+*.swp
 .claude/
-# NDVI bundle (ndvi_array.npy ~256MB + parquet); regenerate from notebook
-output/hybrid_14d_ready/
-# Per-tile Sentinel NDVI cache (local only)
-cache/ndvi/
+.mcp.json
+.playwright-mcp/
+skills-lock.json
+
+# === Docker ===
+.dockerignore
