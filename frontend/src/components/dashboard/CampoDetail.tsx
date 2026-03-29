@@ -41,17 +41,20 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
     removeCampo(campo.id);
   };
 
+  const [reportError, setReportError] = useState<string | null>(null);
+
   const handleGenerateReport = async () => {
     if (!campo.localidad_id) return;
     setReportLoading(true);
+    setReportError(null);
     try {
       const r = await generateReport(campo.localidad_id, {
         campo_nombre: campo.nombre,
         hectareas: campo.hectareas,
       });
       setReport(r);
-    } catch {
-      /* ignore */
+    } catch (e) {
+      setReportError("No se pudo generar el informe. Intenta eliminar el campo y crearlo de nuevo.");
     } finally {
       setReportLoading(false);
     }
@@ -159,20 +162,27 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
 
         {/* Generate report button */}
         {!report && (
-          <button
-            onClick={handleGenerateReport}
-            disabled={reportLoading || !campo.localidad_id}
-            className="w-full py-2.5 bg-emerald-500 text-stone-950 font-semibold rounded-lg hover:bg-emerald-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm"
-          >
-            {reportLoading ? (
-              <span className="flex items-center justify-center gap-2">
-                <span className="w-4 h-4 border-2 border-stone-900 border-t-transparent rounded-full animate-spin" />
-                Generando informe...
-              </span>
-            ) : (
-              "Generar Informe IA"
+          <>
+            <button
+              onClick={handleGenerateReport}
+              disabled={reportLoading || !campo.localidad_id}
+              className="w-full py-2.5 bg-emerald-500 text-stone-950 font-semibold rounded-lg hover:bg-emerald-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm"
+            >
+              {reportLoading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <span className="w-4 h-4 border-2 border-stone-900 border-t-transparent rounded-full animate-spin" />
+                  Generando informe...
+                </span>
+              ) : (
+                "Generar Informe IA"
+              )}
+            </button>
+            {reportError && (
+              <p className="text-xs text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg px-3 py-2">
+                {reportError}
+              </p>
             )}
-          </button>
+          </>
         )}
 
         {/* Report */}
