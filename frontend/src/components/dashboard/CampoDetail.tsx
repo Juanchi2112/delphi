@@ -88,7 +88,7 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {/* Stats grid */}
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           <div className="bg-stone-800/50 rounded-lg p-3">
             <p className="text-[10px] text-stone-500 uppercase">Hectareas</p>
             <p className="text-lg font-semibold text-stone-200 font-[family-name:var(--font-geist-mono)]">
@@ -96,7 +96,7 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
             </p>
           </div>
           <div className="bg-stone-800/50 rounded-lg p-3">
-            <p className="text-[10px] text-stone-500 uppercase">Riesgo</p>
+            <p className="text-[10px] text-stone-500 uppercase">Pre-campana</p>
             {riskPct != null ? (
               <p
                 className="text-lg font-semibold font-[family-name:var(--font-geist-mono)]"
@@ -106,6 +106,26 @@ export default function CampoDetail({ campo }: { campo: Campo }) {
               </p>
             ) : (
               <p className="text-lg text-stone-500">—</p>
+            )}
+          </div>
+          <div className="bg-stone-800/50 rounded-lg p-3">
+            <p className="text-[10px] text-stone-500 uppercase">Monitoreo</p>
+            {monData ? (
+              <p
+                className="text-lg font-semibold font-[family-name:var(--font-geist-mono)]"
+                style={{
+                  color:
+                    monData.risk_score >= 0.65
+                      ? "#DC2626"
+                      : monData.risk_score >= 0.35
+                        ? "#F59E0B"
+                        : "#10B981",
+                }}
+              >
+                {Math.round(monData.risk_score * 100)}%
+              </p>
+            ) : (
+              <p className="text-lg text-stone-500 animate-pulse">···</p>
             )}
           </div>
         </div>
