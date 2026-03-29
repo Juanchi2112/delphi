@@ -1,3 +1,6 @@
+# Notebooks (03_modelo_14d MLP, híbrido): usar el mismo venv que el kernel de Jupyter
+torch>=2.0
+tqdm>=4.60
 pandas==2.3.3
 numpy==2.0.2
 scikit-learn==1.6.1
