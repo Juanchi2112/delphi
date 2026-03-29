@@ -13,9 +13,9 @@ import CampoDetail from "@/components/dashboard/CampoDetail";
 import RiskBadge from "@/components/detail/RiskBadge";
 
 const PRICE_TIERS = [
-  { max: 500, label: "Productor", price: 39 },
-  { max: 5000, label: "Asesor", price: 99 },
-  { max: Infinity, label: "Corporativo", price: null },
+  { max: 800, label: "Starter", price: "USD 2K" },
+  { max: 3000, label: "Pro", price: "USD 6K" },
+  { max: Infinity, label: "Enterprise", price: "Custom" },
 ];
 
 function getTier(hectareas: number) {
@@ -214,7 +214,7 @@ export default function CamposDrawer({
                 Plan {tier.label}
               </span>
               <span className="text-sm font-semibold text-stone-200 font-[family-name:var(--font-geist-mono)]">
-                {tier.price ? `USD ${tier.price}/mes` : "A medida"}
+                {tier.price}/temporada
               </span>
             </div>
           </div>

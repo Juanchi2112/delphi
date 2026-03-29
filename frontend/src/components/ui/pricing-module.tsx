@@ -29,46 +29,46 @@ interface PricingTier {
 
 const TIERS: PricingTier[] = [
   {
-    name: "Explorador",
-    price: "Gratis",
-    description: "Para productores que quieren conocer el panorama general.",
+    name: "Starter",
+    price: "USD 2K",
+    priceNote: "/temporada",
+    description: "Para productores de 200–800 ha que quieren proteger su inversión.",
     features: [
-      { label: "Mapa general de riesgo por región", included: true },
-      { label: "3 consultas de localidad por mes", included: true },
-      { label: "Datos de temporada actual", included: true },
-      { label: "Análisis SHAP de factores", included: false },
-      { label: "Alertas por email y WhatsApp", included: false },
+      { label: "Mapa de riesgo por localidad", included: true },
+      { label: "Análisis SHAP de factores de riesgo", included: true },
+      { label: "Monitoreo quincenal con alertas", included: true },
+      { label: "Informes IA con recomendaciones", included: true },
+      { label: "Soporte por email", included: true },
     ],
-    cta: "Comenzar gratis",
+    cta: "Elegir Starter",
   },
   {
-    name: "Productor",
-    price: "USD 29",
-    priceNote: "/mes",
-    description: "Para productores que necesitan monitoreo activo de sus lotes.",
+    name: "Pro",
+    price: "USD 6K",
+    priceNote: "/temporada",
+    description: "Para productores y asesores de 800–3.000 ha con múltiples lotes.",
     features: [
-      { label: "Localidades ilimitadas", included: true },
-      { label: "Análisis SHAP de factores de riesgo", included: true },
-      { label: "Alertas por email y WhatsApp", included: true },
+      { label: "Todo lo de Starter", included: true },
+      { label: "Lotes ilimitados", included: true },
+      { label: "Informes IA ilimitados", included: true },
       { label: "Comparación entre temporadas", included: true },
-      { label: "Recomendaciones personalizadas", included: true },
+      { label: "Soporte prioritario", included: true },
     ],
-    cta: "Elegir Productor",
+    cta: "Elegir Pro",
     recommended: true,
   },
   {
-    name: "Asesor",
-    price: "USD 99",
-    priceNote: "/mes",
-    description: "Para asesores agronómicos que gestionan múltiples clientes.",
+    name: "Enterprise",
+    price: "Custom",
+    description: "Para operaciones de 3.000+ ha, semilleras y aseguradoras.",
     features: [
-      { label: "Dashboard multi-cliente", included: true },
+      { label: "Todo lo de Pro", included: true },
       { label: "Acceso a API REST", included: true },
-      { label: "Reportes PDF descargables", included: true },
-      { label: "Hasta 50 lotes monitoreados", included: true },
-      { label: "Soporte prioritario", included: true },
+      { label: "Dashboard multi-tenant", included: true },
+      { label: "Integraciones custom (ERP, CRM)", included: true },
+      { label: "SLA garantizado + soporte dedicado", included: true },
     ],
-    cta: "Elegir Asesor",
+    cta: "Contactar Ventas",
   },
 ];
 
@@ -81,9 +81,9 @@ export default function PricingModule() {
             Planes
           </h2>
           <p className="text-stone-400 text-lg max-w-lg mx-auto">
-            Suscripción durante campaña (septiembre–marzo).
+            B2B SaaS — Suscripción por temporada (anual).
             <br />
-            Desde acceso básico hasta inteligencia corporativa.
+            Tiers por cantidad de hectáreas.
           </p>
         </div>
       </ScrollReveal>
