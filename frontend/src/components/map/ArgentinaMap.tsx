@@ -393,20 +393,6 @@ export default function ArgentinaMap({ items }: { items: ScoreItem[] }) {
 
             return (
               <g key={item.id}>
-                {/* Glow ring — CSS animation, no motion.circle */}
-                {item.risk_level === "high" && !isFaded && (
-                  <circle
-                    className="glow-ring"
-                    cx={cx}
-                    cy={cy}
-                    r={(config.radius + 3) / currentScale}
-                    fill="none"
-                    stroke={config.color}
-                    strokeWidth={0.5 / currentScale}
-                    data-base-r={config.radius}
-                  />
-                )}
-
                 {/* Main dot */}
                 <circle
                   cx={cx}

@@ -31,11 +31,7 @@ export default async function Home() {
       <Navbar />
 
       <main className="flex-1">
-        <HeroSection
-          recordsValid={recordsValid}
-          regionsCount={regionsCount}
-          seasonsCount={seasons.length}
-        >
+        <HeroSection>
           <FeaturesSection />
         </HeroSection>
 

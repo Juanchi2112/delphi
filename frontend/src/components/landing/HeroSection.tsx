@@ -4,18 +4,10 @@ import React from "react";
 import { motion } from "motion/react";
 import InfiniteGrid from "@/components/ui/the-infinite-grid";
 import ShimmerButton from "@/components/ui/shimmer-button";
-import HighlightCard from "@/components/ui/highlight-card";
-import { DollarSign, MapPin, Wheat, Calendar } from "lucide-react";
 
 export default function HeroSection({
-  recordsValid,
-  regionsCount,
-  seasonsCount,
   children,
 }: {
-  recordsValid: number;
-  regionsCount: number;
-  seasonsCount: number;
   children?: React.ReactNode;
 }) {
   return (
@@ -58,34 +50,6 @@ export default function HeroSection({
           </ShimmerButton>
         </motion.div>
 
-        {/* Stats cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto w-full px-4"
-        >
-        <HighlightCard
-          title="USD 2.500M"
-          description={["en pérdidas anuales", "por chicharrita del maíz"]}
-          icon={<DollarSign className="w-9 h-9 text-stone-300" />}
-        />
-        <HighlightCard
-          title={`${recordsValid.toLocaleString("es-AR")}+`}
-          description={["localidades monitoreadas", "en toda Argentina"]}
-          icon={<MapPin className="w-9 h-9 text-stone-300" />}
-        />
-        <HighlightCard
-          title={`${regionsCount}`}
-          description={["regiones agrícolas", "bajo vigilancia activa"]}
-          icon={<Wheat className="w-9 h-9 text-stone-300" />}
-        />
-        <HighlightCard
-          title={`${seasonsCount}`}
-          description={["temporadas de datos", "para entrenar modelos"]}
-          icon={<Calendar className="w-9 h-9 text-stone-300" />}
-        />
-        </motion.div>
       </div>
 
       {children}
