@@ -1,0 +1,17 @@
+# Cache & data
+cache/
+csvs/
+monitoreo/
+frontend/
+*.ipynb
+*.png
+*.jpg
+*.JPG
+*.pt
+.mcp.json
+.playwright-mcp/
+test-*.png
+__pycache__/
+.next/
+node_modules/
+.git/
