@@ -82,8 +82,8 @@ export default function MapSection({
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
               </span>
               <span className="text-sm text-stone-300 group-hover:text-stone-100 transition-colors">
-                <span className="text-emerald-400 font-medium">Registrate gratis</span>
-                {" — "}Marca tus campos, analiza el riesgo y genera informes con IA
+                <span className="text-emerald-400 font-medium">Acceso gratuito por tiempo limitado</span>
+                {" — "}Crea tu cuenta para probar todas las funcionalidades del MVP
               </span>
             </Link>
           </div>
