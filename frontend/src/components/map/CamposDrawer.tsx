@@ -227,6 +227,7 @@ export default function CamposDrawer({
     <>
       {/* Floating toggle button */}
       <button
+        data-onboarding="campos-drawer-button"
         onClick={toggleDrawer}
         className="absolute bottom-20 left-4 z-[1001] flex items-center gap-2 px-3 py-2 bg-emerald-500/90 hover:bg-emerald-400 text-stone-950 font-medium text-sm rounded-lg shadow-lg transition-colors cursor-pointer backdrop-blur-sm"
       >
@@ -243,6 +244,7 @@ export default function CamposDrawer({
       <AnimatePresence>
         {drawerOpen && (
           <motion.aside
+            data-onboarding="onboarding-drawer"
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}

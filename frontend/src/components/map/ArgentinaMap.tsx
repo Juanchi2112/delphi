@@ -289,7 +289,7 @@ export default function ArgentinaMap({
       scrollWheelZoom={false}
       attributionControl={false}
       minZoom={4}
-      maxZoom={13}
+      maxZoom={19}
     >
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"

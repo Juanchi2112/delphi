@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, MapPin, Sparkles } from "lucide-react";
+import { GraduationCap, MapPin } from "lucide-react";
 import { useState } from "react";
 
 const teamMembers = [
@@ -60,21 +60,7 @@ function TeamMemberCard({
           {/* Subtle gradient overlay on hover */}
           <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/0 via-emerald-500/0 to-emerald-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-          {/* Sparkle on hover */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.6 }}
-            animate={
-              isHovered
-                ? { opacity: 1, scale: 1 }
-                : { opacity: 0, scale: 0.6 }
-            }
-            transition={{ duration: 0.3 }}
-            className="absolute right-3 top-3 z-10"
-          >
-            <Sparkles className="h-4 w-4 text-emerald-400" aria-hidden />
-          </motion.div>
-
-          <div className="relative z-10 p-6">
+<div className="relative z-10 p-6">
             {/* Avatar */}
             <div className="mb-5 flex justify-center">
               <motion.div

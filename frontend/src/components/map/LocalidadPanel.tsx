@@ -61,6 +61,7 @@ export default function LocalidadPanel() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100%", opacity: 0 }}
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
+          data-onboarding="localidad-panel"
           className="absolute right-0 top-0 bottom-0 w-[360px] bg-stone-900/95 backdrop-blur-xl border-l border-stone-700 z-[1001] overflow-y-auto"
         >
           {/* Close button */}

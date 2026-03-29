@@ -15,7 +15,7 @@ export default function MapLegend() {
   const mode = useMapStore((s) => s.mode);
 
   return (
-    <div className="absolute bottom-6 left-4 z-[1000] glass-subtle rounded-lg px-3 py-2 flex items-center gap-4">
+    <div data-onboarding="map-legend" className="absolute bottom-6 left-4 z-[1000] glass-subtle rounded-lg px-3 py-2 flex items-center gap-4">
       {mode === "precampana"
         ? (["low", "medium", "high"] as const).map((level) => {
             const cfg = RISK_CONFIG[level];
