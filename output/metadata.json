@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-29T03:30:50Z",
+  "generated_at": "2026-03-29T09:55:44Z",
   "artifact_version": "2026-03-29",
-  "records_total": 831,
-  "records_valid": 772,
-  "records_discarded": 59,
+  "records_total": 913,
+  "records_valid": 913,
+  "records_discarded": 0,
   "discard_reasons": {
-    "invalid_bbox": 4,
-    "invalid_localidad": 55,
+    "invalid_bbox": 0,
+    "invalid_localidad": 0,
     "missing_coordinates": 0
   },
   "seasons_available": [
