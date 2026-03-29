@@ -1,0 +1,7 @@
+# Railway deploy — backend only (dev deps in requirements-dev.txt)
+fastapi
+uvicorn[standard]
+pandas
+xgboost
+pydantic-settings
+openai
