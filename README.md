@@ -1,45 +1,71 @@
 # Delphi
 
-Plataforma de inteligencia predictiva para riesgo de brote de chicharrita del maiz (*Dalbulus maidis*) en Argentina. Usa machine learning sobre datos climaticos reales y 330+ trampas de monitoreo del INTA.
+Predictive intelligence platform for agricultural pest outbreaks in Argentina.
 
-## Arquitectura
+Delphi helps anticipate maize leafhopper (*Dalbulus maidis*) risk before damage occurs. It combines trap monitoring data, climate variables, and geospatial analysis to generate early warnings and support better planting decisions.
 
-```
+[Live demo](https://frontend-lac-three-63.vercel.app/) | [3-minute presentation video](docs/videos/delphi-presentation.mp4) | [API contract](backend/CONTRACT.md)
+
+> Winner of the AI & Automatizations category at HackITBA 2026.
+
+## Overview
+
+- Pre-season outbreak risk scoring across Argentina
+- 14-day tactical monitoring based on recent captures and local spread
+- Explainable predictions with SHAP-based feature contributions
+- Interactive map and locality-level drill-down for decision support
+
+The platform is built on real climate data and biweekly monitoring reports from the INTA National Trap Monitoring Network, covering 330+ traps and 38 reports across two seasons.
+
+## What Delphi Does
+
+- Predicts outbreak risk before sowing using historical climate and geographic features
+- Tracks short-term changes in risk using recent monitoring, weather, and neighborhood propagation signals
+- Surfaces locality-specific risk drivers instead of returning a black-box score
+- Makes the results explorable through a web app with maps, timelines, and AI-generated reports
+
+## Presentation Video
+
+A 3-minute walkthrough of the problem, the proposed solution, and a short live product demo: [watch the presentation](docs/videos/delphi-presentation.mp4).
+
+## Architecture
+
+```text
 Offline Pipeline (src/)              Backend (backend/)               Frontend (frontend/)
-━━━━━━━━━━━━━━━━━━━━━               ━━━━━━━━━━━━━━━━━━               ━━━━━━━━━━━━━━━━━━━━
-csvs/*.csv (38 informes)             scores_map.json ──┐              Next.js + React
-    │                                metadata.json  ──┤              Leaflet (mapa)
-    ▼                                monitoring_*.json─┘              Recharts (timeline)
-src/pipeline → features                    │                          Supabase (auth + campos)
-    │                                FastAPI (in-memory)                    │
-    ▼                                ├── /scores                     Vercel (deploy)
-train.py → model.json                ├── /localidades/{id}
-    │                                ├── /monitoring/*
-    ▼                                ├── /informes (AI reports)
-precompute_scores.py                 └── Railway (deploy)
+-----------------------             ------------------               ---------------------
+csvs/*.csv (38 reports)              scores_map.json ---+            Next.js + React
+    |                                metadata.json  ----|            Map + timelines
+    v                                monitoring_*.json -+            Supabase (auth + fields)
+src/pipeline -> features                    |                        Vercel deployment
+    |                                FastAPI (in-memory)
+    v                                |- /scores
+train.py -> model.json               |- /localidades/{id}
+    |                                |- /monitoring/*
+    v                                |- /informes (AI reports)
+precompute_scores.py                 +- Railway deployment
 precompute_monitoring.py
 ```
 
-## Layout del repositorio
+## Repository Layout
 
-```
-├── src/                  Pipeline de datos (load, geocode, features)
-├── train.py              Entrena modelo XGBoost
-├── backend/
-│   ├── app/              FastAPI (routers, services, schemas)
-│   └── scripts/          precompute_scores.py, precompute_monitoring.py
-├── frontend/             Next.js 16 + React 19 + Tailwind
-│   └── src/
-│       ├── app/          Pages (landing, dashboard, login)
-│       ├── components/   Map, detail panels, monitoring, onboarding
-│       ├── stores/       Zustand (map, auth, campos)
-│       └── lib/          API client, types, constants
-├── notebooks/            EDA, modelos, analisis
-├── csvs/                 38 CSVs de la Red Nacional de Trampas
-└── output/               Artifacts generados (scores, metadata)
+```text
+|-- src/                  Data pipeline (load, geocode, features)
+|-- train.py              Trains the XGBoost model
+|-- backend/
+|   |-- app/              FastAPI app (routers, services, schemas)
+|   `-- scripts/          precompute_scores.py, precompute_monitoring.py
+|-- frontend/             Next.js 16 + React 19 + Tailwind
+|   `-- src/
+|       |-- app/          Pages (landing, dashboard, login)
+|       |-- components/   Map, detail panels, monitoring, onboarding
+|       |-- stores/       Zustand stores
+|       `-- lib/          API client, types, constants
+|-- notebooks/            EDA, modeling, analysis
+|-- csvs/                 38 CSV reports from the monitoring network
+`-- output/               Generated artifacts (scores, metadata)
 ```
 
-## Setup rapido
+## Quick Start
 
 ### Backend
 
@@ -56,39 +82,44 @@ npm install
 npm run dev
 ```
 
-Requiere `.env.local` en `frontend/`:
-```
+Create `frontend/.env.local`:
+
+```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 ```
 
-## Endpoints del backend
+## Backend API
 
-### Pre-campana (scores estaticos)
-- `GET /health` — status + metadata
-- `GET /scores` — scores por localidad (filtros: temporada, region, risk_level, min_risk)
-- `GET /localidades/{id}` — detalle + SHAP explainability
-- `GET /metadata` — stats del dataset
+### Pre-season static scores
 
-### Monitoreo quincenal (14 dias)
-- `GET /monitoring/scores` — ultima lectura por localidad (filtros: temporada, region, alert_category)
-- `GET /monitoring/localidades/{key}` — timeline completa + SHAP
-- `GET /monitoring/alerts` — resumen de alertas por categoria
-- `GET /monitoring/metadata` — stats del monitoreo
+- `GET /health` - status and metadata
+- `GET /scores` - locality scores with filters for season, region, risk level, and minimum risk
+- `GET /localidades/{id}` - locality detail plus SHAP explainability
+- `GET /metadata` - dataset statistics
 
-### Informes AI
-- `POST /informes/{localidad_id}` — genera informe de riesgo con OpenAI
+### Biweekly monitoring
 
-Contrato completo en `backend/CONTRACT.md`.
+- `GET /monitoring/scores` - latest reading per locality
+- `GET /monitoring/localidades/{key}` - full monitoring timeline plus SHAP
+- `GET /monitoring/alerts` - alert summary by category
+- `GET /monitoring/metadata` - monitoring dataset statistics
 
-## Deploy
+### AI reports
 
-- **Backend**: Railway (Nixpacks, auto-deploy desde main)
-- **Frontend**: Vercel (auto-deploy desde main, root directory: `frontend`)
+- `POST /informes/{localidad_id}` - generates an AI risk report with OpenAI
 
-### Variables de entorno (Railway)
-```
+See the full contract in `backend/CONTRACT.md`.
+
+## Deployment
+
+- Backend: Railway (Nixpacks, auto-deploy from `main`)
+- Frontend: Vercel (auto-deploy from `main`, root directory `frontend`)
+
+### Railway environment variables
+
+```env
 API_VERSION=v1
 ARTIFACT_VERSION=2026-03-29
 SCORES_PATH=output/scores_map.json
@@ -98,25 +129,29 @@ MONITORING_METADATA_PATH=output/monitoring_metadata.json
 OPENAI_API_KEY=sk-...
 ```
 
-## Generar artifacts (offline)
+## Generating Artifacts
 
 ```bash
-# Pipeline de datos
+# Data pipeline
 python -m src.pipeline --stage load
 python -m src.pipeline --stage geocode
 python -m src.pipeline --stage assemble
 
-# Entrenar modelo
+# Train model
 python train.py
 
-# Pre-campana scores
+# Pre-season scores
 python -m backend.scripts.precompute_scores
 
-# Monitoreo quincenal scores
+# Biweekly monitoring scores
 python -m backend.scripts.precompute_monitoring
 ```
 
-## Equipo
+## Team
 
-HackITBA 2026 — Delphi team (Juanchi, AP, Nacho, Alex)
-Universidad de San Andres, Ingenieria en AI
+HackITBA 2026 - Delphi team (Juanchi, Ana Paula, Nacho, Alex)  
+Universidad de San Andres - AI Engineering
+
+<p align="center">
+  <img src="docs/images/delphi-team.jpeg" alt="Delphi team at HackITBA 2026" width="820" />
+</p>
